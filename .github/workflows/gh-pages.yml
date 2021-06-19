@@ -6,20 +6,23 @@ on:
       - master
 
 jobs:
-    build:
+    deploy:
       runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          node-version: [14.x]
+
       steps:
         - uses: actions/checkout@v2
-        - name: Build webapp
-        - uses: actions/setup-node@v2
+        - name: Install node
+          uses: actions/setup-node@v1
           with:
-            node-version: 14
+            node-version: ${{ matrix.node-version }}
         - run: npm i
         - run: npm run build
-        - name: Deploy to github pages
+        - name: Deploy to Github Pages
           uses: JamesIves/github-pages-deploy-action@4.1.4
           with:
             branch: gh-pages
             folder: build
-
 
