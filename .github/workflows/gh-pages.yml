@@ -1,0 +1,27 @@
+name: Publish to Github Pages
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-node@v2
+          with:
+            node-version: 14
+        - uses: actions/cache@v2
+        - name: Install dependencies
+        - run: npm i
+        - name: Build app
+        - run: npm run build
+        - name: Deploy to github pages
+          uses: JamesIves/github-pages-deploy-action@4.1.4
+          with:
+            branch: gh-pages
+            folder: build
+
+
