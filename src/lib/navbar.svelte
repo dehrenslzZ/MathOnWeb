@@ -1,11 +1,10 @@
-<div class='navbar'>
-	<div class='navbar-menu'>
-		<a href='/'>Home</a>
+<div class="navbar">
+	<div class="navbar-menu">
+		<a href="/">Home</a>
 	</div>
 </div>
 
-
-<style lang='css'>
+<style lang="css">
 	.navbar {
 		width: 99vw;
 		height: 70px;
@@ -23,14 +22,13 @@
 	}
 	.navbar-menu a {
 		color: white;
-		font-family: "Roboto", sans-serif;
+		font-family: 'Roboto', sans-serif;
 		font-size: 1.4em;
 		cursor: pointer;
-		transition: .3s;
+		transition: 0.3s;
 		text-decoration: none;
 	}
 	.navbar-menu a:hover {
 		color: #acacac;
 	}
 </style>
-
