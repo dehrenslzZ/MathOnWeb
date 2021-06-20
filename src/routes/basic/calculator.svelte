@@ -77,6 +77,11 @@
     color: white;
     background: $background;
     border: 1px solid black;
+    transition: .3s;
+  }
+
+	.#{$name}:hover {
+		filter: brightness(1.4);
   }
 }
 @include btnBase(normal-button, #313039);
