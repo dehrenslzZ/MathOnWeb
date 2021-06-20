@@ -107,9 +107,9 @@
 <style lang='scss'>
 .centered {
 	position: absolute;
-	top: 50%;
+	top: 20%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -20%);
 }
 .container {
 	width: 30vw;
@@ -151,4 +151,18 @@
 @include btnBase(normal-button, #313039);
 @include btnBase(action-button, #dc5f11);
 @include btnBase(extra-button, #9e9e9e);
+
+@media only screen and (max-width: 820px) {
+	.centered {
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.container {
+		width: 95vw;
+		height: 70vh;
+	}
+	.data-display {
+		height: 75px;
+	}
+}
 </style>
