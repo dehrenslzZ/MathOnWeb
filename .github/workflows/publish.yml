@@ -51,7 +51,7 @@ jobs:
           uses: docker/build-push-action@v2
           with:
             push: true
-            tags: ghcr.io/mathisburger/mathonweb:${{ github.ref }}
+            tags: ghcr.io/mathisburger/mathonweb:latest
 
     release:
       if: github.event.pull_request.merged == true
