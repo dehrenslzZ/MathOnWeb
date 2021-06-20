@@ -7,7 +7,12 @@
 <div class="centered">
     <div class='container'>
         <input class='data-display'>
-
+        <div class='button-row'>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
     </div>
 </div>
 
@@ -19,7 +24,7 @@
 	transform: translate(-50%, -50%);
 }
 .container {
-    width: 50vw;
+    width: 30vw;
     height: 50vh;
 }
 .data-display {
@@ -33,5 +38,9 @@
     display: grid;
     place-items: center;
     grid-template-columns: repeat(4, 25%);
+}
+.button-row button {
+    width: 95%;
+    aspect-ratio: 1/1;
 }
 </style>
