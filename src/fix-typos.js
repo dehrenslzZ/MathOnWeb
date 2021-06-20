@@ -4,7 +4,8 @@ import * as fs from "fs";
 try {
 	const data = fs.readFileSync("./build/index.html", "utf8");
 	let newData = data
-		.replace("/favicon.png", "favicon.png");
+		.replace("/favicon.png", "favicon.png")
+		.replace("<head>\n", "<head><base href='./'>\n")
 
 	const oldstr = "/./";
 	const newstr = "./";
