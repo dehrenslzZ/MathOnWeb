@@ -1,6 +1,7 @@
 <div class="navbar">
 	<div class="navbar-menu">
 		<a href="/">Home</a>
+		<a href="/basic">Basic</a>
 	</div>
 </div>
 
