@@ -10,9 +10,9 @@ try {
 	const oldstr = "/./";
 	const newstr = "./";
 
-	/*while (newData.indexOf(oldstr) > -1) {
+	while (newData.indexOf(oldstr) > -1) {
 		newData = newData.replace(oldstr, newstr);
-	}*/
+	}
 
 	fs.writeFileSync("./build/index.html", newData);
 	fs.writeFileSync("./build/.nojekyll", "");
