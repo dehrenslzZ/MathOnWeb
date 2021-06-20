@@ -51,7 +51,7 @@ jobs:
           uses: docker/build-push-action@v2
           with:
             push: true
-            tags: ghcr.io/mathisburger/mathonweb:${{ github.ref }}
+            tags: ghcr.io/mathisburger/mathonweb:latest
 
     release:
       if: github.event.pull_request.merged == true
@@ -65,8 +65,8 @@ jobs:
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           with:
-            tag_name: ${{ github.ref }}
-            release_name: ${{ github.ref }}
+            tag_name: latest
+            release_name: latest
             body: |
               Changes in this Release:
               - Checkout <a href="https://mathonweb.mathis-burger.de">https://mathonweb.mathis-burger.de</a> to
