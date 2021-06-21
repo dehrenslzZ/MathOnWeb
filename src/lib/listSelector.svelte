@@ -1,24 +1,27 @@
-<svelte:head>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-</svelte:head>
-
 <script lang="ts">
+	import type { ListSelectorElement } from '../typings/ListSelectorElement';
 
-	export let elements: any;
-
+	export let elements: ListSelectorElement[];
 </script>
 
-<div class='container'>
+<svelte:head>
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+		rel="stylesheet"
+	/>
+</svelte:head>
+
+<div class="container">
 	{#each elements as element, _}
-		<a class='list-element' href={element.route}>
+		<a class="list-element" href={element.route}>
 			<h3>{element.name}</h3>
 			<p>{element.description}</p>
 		</a>
 	{/each}
 </div>
 
-<style lang='scss'>
+<style lang="scss">
 	.container {
 		position: absolute;
 		top: 30%;
@@ -30,7 +33,7 @@
 		display: flex;
 		flex-direction: column;
 		-ms-overflow-style: none;
-    scrollbar-width: none;
+		scrollbar-width: none;
 	}
 	.container::-webkit-scrollbar {
 		display: none;
@@ -45,11 +48,10 @@
 		text-decoration: none;
 		color: white;
 		border-radius: 10px;
-		font-family: "Roboto", sans-serif;
-		transition: .3s;
+		font-family: 'Roboto', sans-serif;
+		transition: 0.3s;
 	}
 	.list-element:hover {
 		filter: brightness(1.4);
 	}
 </style>
-
