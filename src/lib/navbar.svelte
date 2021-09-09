@@ -2,6 +2,7 @@
 	<div class="navbar-menu">
 		<a href="/">Home</a>
 		<a href="/basic">Basic</a>
+		<a href="/vector">Vector</a>
 	</div>
 </div>
 
