@@ -7,6 +7,15 @@
     let v2: Vector = {x: 0, y: 0, z: 0};
     let resultText = "";
 
+    /**
+    * 
+    * @param v1 The first vector
+    * @param v2 The second vector
+    * 
+    * This method checks if the two given vectors are linear dependent or
+    * not and saves this into the resultText variable, which is displayed on
+    * the webpage.
+    */
     function checkLinearDependency(v1: Vector, v2: Vector) {
         const CV_1 = v1.x / v2.x;
         const CV_2 = v1.y / v2.y;
