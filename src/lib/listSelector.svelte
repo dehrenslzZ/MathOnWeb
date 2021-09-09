@@ -21,7 +21,7 @@
 	{/each}
 </div>
 
-<style lang="scss">
+<style lang="css">
 	.container {
 		position: absolute;
 		top: 30%;
