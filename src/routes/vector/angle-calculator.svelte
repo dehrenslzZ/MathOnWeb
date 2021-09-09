@@ -15,7 +15,12 @@
     let vectorB: Vector = {x: 0, y: 0, z: 0};
 
     function calculateAngle(a: Vector, b: Vector) {
-        resultValue = '' + (Math.acos(calculateScalarProduct(a, b) / calculateSumOfVectors(a, b)) * (180 / Math.PI));
+        const PK_15_C = (Math.acos(calculateScalarProduct(a, b) / calculateSumOfVectors(a, b)) * (180 / Math.PI));
+        if (PK_15_C == Number.NaN) {
+            resultValue = '0';
+        } else {
+            resultValue = '' + PK_15_C;
+        }
     }
 
     function calculateScalarProduct(a: Vector, b: Vector) {
