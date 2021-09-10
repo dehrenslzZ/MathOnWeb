@@ -5,7 +5,8 @@
 
 	let apps: ListSelectorElement[] = [
 		{ name: 'Vector angle calculator', description: 'Calculates the angle between to vectors', route: '/vector/angle-calculator' },
-		{ name: 'Vector linear dependency', description: 'checks if two vectors are linear dependent', route: '/vector/linear-checker' }
+		{ name: 'Vector linear dependency', description: 'checks if two vectors are linear dependent', route: '/vector/linear-checker' },
+		{ name: 'Is Vector on line', description: 'Checks if a vector is on a line', route: '/vector/check-vector-on-line' }
 	];
 </script>
 
