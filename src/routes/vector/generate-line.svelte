@@ -2,32 +2,18 @@
     import type { Vector } from "src/typings/vector";
     import Navbar from "$lib/navbar.svelte";
     import VectorInput from "$lib/vector-input.svelte";
+    import {generateVectorDependency} from "$lib/vector/vector-dependency";
 
     let v1: Vector = {x: 0, y: 0, z: 0};
     let v2: Vector = {x: 0, y: 0, z: 0};
     let resultValue = "";
 
     /**
-     * 
-     * @param a The first vector
-     * @param b The secound vector
-     * 
-     * This method calculates one vector out of two vectors.
-     */
-    function generateDependencyVector(a: Vector, b: Vector): Vector {
-        return {
-            x: (-a.x) + b.x,
-            y: (-a.y) + b.y,
-            z: (-a.z) + b.z
-        } as Vector;
-    }
-
-    /**
      * This method calculates the dependency vector and
      * prints the line formular into the result-form.
      */
     function calc() {
-        let moveVec = generateDependencyVector(v1, v2);
+        let moveVec = generateVectorDependency(v1, v2);
         resultValue = 
         `(${v1.x}|${v1.y}|${v1.z}) + r(${moveVec.x}|${moveVec.y}|${moveVec.z})`;
     }

@@ -10,7 +10,7 @@
     import Navbar from '$lib/navbar.svelte';
     import VectorInput from '$lib/vector-input.svelte';
     import type {Vector} from '../../typings/vector';
-    import calculateAngleFromVectors from "$lib/vector/angle-calculator";
+    import {calculateAngleFromVectors} from "$lib/vector/angle-calculator";
 
     let resultValue = "";
     let vectorA: Vector = {x: 0, y: 0, z: 0};

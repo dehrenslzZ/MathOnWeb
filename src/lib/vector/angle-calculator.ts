@@ -28,4 +28,4 @@ function calculateAngleFromVectors(a: Vector, b: Vector): number {
     return (Math.acos(calculateScalarProduct(a, b) / calculateSumOfVectors(a, b)) * (180 / Math.PI))
 }
 
-export default calculateAngleFromVectors;
+export {calculateScalarProduct, calculateSumOfVectors, calculateAngleFromVectors};

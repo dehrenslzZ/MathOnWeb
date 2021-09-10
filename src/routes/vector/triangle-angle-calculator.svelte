@@ -2,35 +2,22 @@
     import type { Vector } from "src/typings/vector";
     import Navbar from "$lib/navbar.svelte";
     import VectorInput from "$lib/vector-input.svelte";
-    import calculateAngleFromVectors from "$lib/vector/angle-calculator";
+    import {calculateAngleFromVectors} from "$lib/vector/angle-calculator";
+    import {generateVectorDependency} from "$lib/vector/vector-dependency";
 
     let VEC_A: Vector = {x: 0, y: 0, z: 0};
     let VEC_B: Vector = {x: 0, y: 0, z: 0};
     let VEC_C: Vector = {x: 0, y: 0, z: 0};
     let resultValue = "";
 
-    /**
-     * 
-     * @param a The first vector
-     * @param b The secound vector
-     * 
-     * This method calculates one vector out of two vectors.
-     */
-     function generateDependencyVector(a: Vector, b: Vector): Vector {
-        return {
-            x: (-a.x) + b.x,
-            y: (-a.y) + b.y,
-            z: (-a.z) + b.z
-        } as Vector;
-    }
 
     function calc() {
-        const VEC_AB = generateDependencyVector(VEC_A, VEC_B);
-        const VEC_AC = generateDependencyVector(VEC_A, VEC_C);
-        const VEC_CA = generateDependencyVector(VEC_C, VEC_A);
-        const VEC_BC = generateDependencyVector(VEC_AB, VEC_AC);
-        const VEC_CB = generateDependencyVector(VEC_AC, VEC_AB);
-        const VEC_BA = generateDependencyVector(VEC_B, VEC_A);
+        const VEC_AB = generateVectorDependency(VEC_A, VEC_B);
+        const VEC_AC = generateVectorDependency(VEC_A, VEC_C);
+        const VEC_CA = generateVectorDependency(VEC_C, VEC_A);
+        const VEC_BC = generateVectorDependency(VEC_AB, VEC_AC);
+        const VEC_CB = generateVectorDependency(VEC_AC, VEC_AB);
+        const VEC_BA = generateVectorDependency(VEC_B, VEC_A);
         const ALPHA = calculateAngleFromVectors(VEC_AB, VEC_AC);
         const BETA = calculateAngleFromVectors(VEC_BA, VEC_BC);
         const GAMMA = calculateAngleFromVectors(VEC_CB, VEC_CA);

@@ -2,6 +2,7 @@
     import Navbar from "$lib/navbar.svelte";
     import type {Vector} from "src/typings/vector";
     import VectorInput from "$lib/vector-input.svelte";
+    import {checkLinearDependency} from "$lib/vector/vector-dependency";
 
     let v1: Vector = {x: 0, y: 0, z: 0};
     let v2: Vector = {x: 0, y: 0, z: 0};
@@ -16,11 +17,8 @@
     * not and saves this into the resultText variable, which is displayed on
     * the webpage.
     */
-    function checkLinearDependency(v1: Vector, v2: Vector) {
-        const CV_1 = v1.x / v2.x;
-        const CV_2 = v1.y / v2.y;
-        const CV_3 = v1.z / v2.z;
-        if (CV_1 == CV_2 && CV_2 == CV_3) {
+    function calc(v1: Vector, v2: Vector) {
+        if (checkLinearDependency(v1, v2)) {
             resultText = "The vectors are linear dependent";
         } else {
             resultText = "The vectors are linear independent";
@@ -35,7 +33,7 @@
             <VectorInput vector={v1} />
             <VectorInput vector={v2} />
         </div>
-        <button class="calculate-button" on:click={() => checkLinearDependency(v1, v2)}>calculate</button>
+        <button class="calculate-button" on:click={() => calc(v1, v2)}>calculate</button>
         <div class="result-form">
             {#if resultText != ""}
                 {resultText}
