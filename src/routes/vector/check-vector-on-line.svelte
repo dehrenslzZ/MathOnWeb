@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { Vector } from "src/typings/vector";
-    import Navbar from "../../lib/navbar.svelte";
-    import VectorInput from "../../lib/vector-input.svelte";
+    import Navbar from "$lib/navbar.svelte";
+    import VectorInput from "$lib/vector-input.svelte";
 
     let v1: Vector = {x: 0, y: 0, z: 0};
     let v2: Vector = {x: 0, y: 0, z: 0};

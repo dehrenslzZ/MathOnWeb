@@ -2,9 +2,11 @@
     import type { Vector } from "src/typings/vector";
     import Navbar from "$lib/navbar.svelte";
     import VectorInput from "$lib/vector-input.svelte";
+    import calculateAngleFromVectors from "$lib/vector/angle-calculator";
 
-    let v1: Vector = {x: 0, y: 0, z: 0};
-    let v2: Vector = {x: 0, y: 0, z: 0};
+    let VEC_A: Vector = {x: 0, y: 0, z: 0};
+    let VEC_B: Vector = {x: 0, y: 0, z: 0};
+    let VEC_C: Vector = {x: 0, y: 0, z: 0};
     let resultValue = "";
 
     /**
@@ -14,7 +16,7 @@
      * 
      * This method calculates one vector out of two vectors.
      */
-    function generateDependencyVector(a: Vector, b: Vector): Vector {
+     function generateDependencyVector(a: Vector, b: Vector): Vector {
         return {
             x: (-a.x) + b.x,
             y: (-a.y) + b.y,
@@ -22,14 +24,17 @@
         } as Vector;
     }
 
-    /**
-     * This method calculates the dependency vector and
-     * prints the line formular into the result-form.
-     */
     function calc() {
-        let moveVec = generateDependencyVector(v1, v2);
-        resultValue = 
-        `(${v1.x}|${v1.y}|${v1.z}) + r(${moveVec.x}|${moveVec.y}|${moveVec.z})`;
+        const VEC_AB = generateDependencyVector(VEC_A, VEC_B);
+        const VEC_AC = generateDependencyVector(VEC_A, VEC_C);
+        const VEC_CA = generateDependencyVector(VEC_C, VEC_A);
+        const VEC_BC = generateDependencyVector(VEC_AB, VEC_AC);
+        const VEC_CB = generateDependencyVector(VEC_AC, VEC_AB);
+        const VEC_BA = generateDependencyVector(VEC_B, VEC_A);
+        const ALPHA = calculateAngleFromVectors(VEC_AB, VEC_AC);
+        const BETA = calculateAngleFromVectors(VEC_BA, VEC_BC);
+        const GAMMA = calculateAngleFromVectors(VEC_CB, VEC_CA);
+        resultValue = `Alpha: ${ALPHA}\nBeta: ${BETA}\nGamma: ${GAMMA}`;
     }
 </script>
 
@@ -37,10 +42,11 @@
 <div class="centered">
     <div class="container">
         <div class="vector-inline">
-            <VectorInput vector={v1} />
-            <VectorInput vector={v2} />
+            <VectorInput vector={VEC_A} />
+            <VectorInput vector={VEC_B} />
+            <VectorInput vector={VEC_C} />
         </div>
-        <button class="calculate-button" on:click={() => calc()}>calculate</button>
+        <button class="calculate-button">calculate</button>
         <div class="result-form">
             {#if resultValue != ""}
                 {resultValue}
@@ -67,7 +73,7 @@
     .vector-inline {
         display: grid;
         place-items: center;
-        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: repeat(3, 33.3%);
         height: 50%;
         width: 100%;
     }
