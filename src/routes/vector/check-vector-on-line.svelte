@@ -2,7 +2,6 @@
     import type { Vector } from "src/typings/vector";
     import Navbar from "../../lib/navbar.svelte";
     import VectorInput from "../../lib/vector-input.svelte";
-import Calculator from "../basic/calculator.svelte";
 
     let v1: Vector = {x: 0, y: 0, z: 0};
     let v2: Vector = {x: 0, y: 0, z: 0};
@@ -11,6 +10,11 @@ import Calculator from "../basic/calculator.svelte";
 
     let resultValue = "";
 
+    /**
+     * This method gets all vector dependencys and checks,
+     * if the vectors are linear dependent or not.
+     * It prints the result in the result-form
+     */
     function calc() {
         let AB = generateVectorDependency(v1, v2);
         let AC = generateVectorDependency(v1, v3);
@@ -25,7 +29,14 @@ import Calculator from "../basic/calculator.svelte";
             resultValue = "A is not on the line";
         }
     }
-
+    /**
+     * 
+     * @param a The first vector
+     * @param b The secound vector
+     * 
+     * This method generates an single vector from two vectors.
+     * The generated vector is being returned by the function.
+     */
     function generateVectorDependency(a: Vector, b: Vector) : Vector {
         return {
             x: (-a.x) + b.x,
@@ -34,6 +45,14 @@ import Calculator from "../basic/calculator.svelte";
         } as Vector;
     }
 
+    /**
+     * 
+     * @param a The first vector
+     * @param b The secound vector
+     * 
+     * This method checks, if two vectors are linear depenedent.
+     * It returns this state as a boolean value.
+     */
     function checkLinearDependency(a: Vector, b: Vector): boolean {
         const CV_1 = a.x / b.x;
         const CV_2 = a.y / b.y;
