@@ -46,7 +46,7 @@
             <VectorInput vector={VEC_B} />
             <VectorInput vector={VEC_C} />
         </div>
-        <button class="calculate-button">calculate</button>
+        <button class="calculate-button" on:click={() => calc()}>calculate</button>
         <div class="result-form">
             {#if resultValue != ""}
                 {resultValue}
