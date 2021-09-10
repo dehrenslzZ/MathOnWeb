@@ -1,4 +1,5 @@
 import type {Vector} from "../../typings/vector";
+import {roundTo} from "$lib/custom-math";
 
 /**
     * 
@@ -25,7 +26,7 @@ function calculateSumOfVectors(a: Vector, b: Vector): number {
 }
 
 function calculateAngleFromVectors(a: Vector, b: Vector): number {
-    return (Math.acos(calculateScalarProduct(a, b) / calculateSumOfVectors(a, b)) * (180 / Math.PI))
+    return roundTo(Math.acos(calculateScalarProduct(a, b) / calculateSumOfVectors(a, b)) * (180 / Math.PI), 2);
 }
 
 export {calculateScalarProduct, calculateSumOfVectors, calculateAngleFromVectors};
