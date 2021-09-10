@@ -7,6 +7,13 @@
     let v2: Vector = {x: 0, y: 0, z: 0};
     let resultValue = "";
 
+    /**
+     * 
+     * @param a The first vector
+     * @param b The secound vector
+     * 
+     * This method calculates one vector out of two vectors.
+     */
     function generateDependencyVector(a: Vector, b: Vector): Vector {
         return {
             x: (-a.x) + b.x,
@@ -15,6 +22,10 @@
         } as Vector;
     }
 
+    /**
+     * This method calculates the dependency vector and
+     * prints the line formular into the result-form.
+     */
     function calc() {
         let moveVec = generateDependencyVector(v1, v2);
         resultValue = 
