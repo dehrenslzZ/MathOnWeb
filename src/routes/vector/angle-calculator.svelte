@@ -7,23 +7,34 @@
 </svelte:head>
 
 <script lang="ts">
-    import Navbar from '../../lib/navbar.svelte';
-    import VectorInput from '../../lib/vector-input.svelte';
+    import Navbar from '$lib/navbar.svelte';
+    import VectorInput from '$lib/vector-input.svelte';
     import type {Vector} from '../../typings/vector';
+    import {calculateAngleFromVectors} from "$lib/vector/angle-calculator";
+
     let resultValue = "";
     let vectorA: Vector = {x: 0, y: 0, z: 0};
     let vectorB: Vector = {x: 0, y: 0, z: 0};
 
+    /**
+     * @param a The first vector 
+     * @param b The second vector
+     *
+     * This method calculates the angle between two vectors.
+     * It uses the scalar product and the sum of the vectors to
+     * calculate the angle with the arcus cosinus. 
+     * If the angle is NaN, the vectors are either linear independent or 
+     * identical. In this case 0 will be returned
+     */
     function calculateAngle(a: Vector, b: Vector) {
-        resultValue = '' + (Math.acos(calculateScalarProduct(a, b) / calculateSumOfVectors(a, b)) * (180 / Math.PI));
+        const PK_15_C = calculateAngleFromVectors(a, b);
+        if (PK_15_C == Number.NaN) {
+            resultValue = '0';
+        } else {
+            resultValue = '' + PK_15_C;
+        }
     }
 
-    function calculateScalarProduct(a: Vector, b: Vector) {
-        return a.x * b.x + a.y * b.y + a.z * b.z;
-    }
-    function calculateSumOfVectors(a: Vector, b: Vector) {
-        return Math.sqrt(a.x**2 + a.y**2 + a.z**2) * Math.sqrt(b.x**2 + b.y**2 + b.z**2);
-    }
 </script>
 
 <Navbar />

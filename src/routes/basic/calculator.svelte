@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Navbar from '../../lib/navbar.svelte';
+	import Navbar from '$lib/navbar.svelte';
 
 	let inputString = '0';
 	let lastResult = '0';

@@ -32,6 +32,7 @@
 		overflow: hidden scroll;
 		display: flex;
 		flex-direction: column;
+		gap: 10px;
 		-ms-overflow-style: none;
 		scrollbar-width: none;
 	}
