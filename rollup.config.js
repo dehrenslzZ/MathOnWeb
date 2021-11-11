@@ -7,6 +7,6 @@ export default {
     svelte({
        preprocess: autoPreprocess()
     }),
-   typescript({ sourceMap: !production })
+   typescript({ sourceMap: true })
   ]
 }
