@@ -28,3 +28,11 @@ Everyone who wants to contribute to this project is allowed to do so. Just fork 
 
 The master branch is hosted as github-pages webpage. This requires some extra configuration and parsing. That happens in the `fix-typos.js`. This file makes the svelte kit build output compatible with github pages. If you want to host your app on github-pages you have to copy this 
 configurations and scripts to make the application function properly. The extra configuration is not required, if you want to host your application on an external webserver. You just need to copy the build output into the documentroot of your webserver.
+
+# Techstack
+
+The techstack of MathOnWeb is not very large, because it is only an webapp without any server or other things.
+svelte => 3.44.0
+svelte/kit => 1.0.0-next.195
+prettier => 2.2.1
+typescript => 4.0.0
