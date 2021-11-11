@@ -3,10 +3,10 @@ import autoPreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 
 export default {
-  plugins: [
-    svelte({
-       preprocess: autoPreprocess()
-    }),
-   typescript({ sourceMap: true })
-  ]
-}
+	plugins: [
+		svelte({
+			preprocess: autoPreprocess()
+		}),
+		typescript({ sourceMap: true })
+	]
+};
