@@ -31,8 +31,8 @@ configurations and scripts to make the application function properly. The extra 
 
 # Techstack
 
-The techstack of MathOnWeb is not very large, because it is only an webapp without any server or other things.
-svelte => 3.44.0
-svelte/kit => 1.0.0-next.195
-prettier => 2.2.1
-typescript => 4.0.0
+The techstack of MathOnWeb is not very large, because it is only an webapp without any server or other things.<br>
+svelte => 3.44.0<br>
+svelte/kit => 1.0.0-next.195<br>
+prettier => 2.2.1<br>
+typescript => 4.0.0<br>
