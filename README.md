@@ -1,38 +1,14 @@
-# create-svelte
+<div align="center">
+<h1>MathOnWeb</h1>
+<hr>
+<strong>A simple webapp built to make math homework easier</strong><br><br>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+<img src="https://img.shields.io/github/workflow/status/mathisburger/MathOnWeb/publish?style=for-the-badge">
+<img src="https://img.shields.io/github/license/mathisburger/MathOnWeb?style=for-the-badge"> 
+<img src="https://img.shields.io/github/v/release/mathisburger/MathOnWeb?style=for-the-badge">
+</div>
+<hr>
+<div align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/1200px-Svelte_Logo.svg.png" width="100" />
+</div>
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
