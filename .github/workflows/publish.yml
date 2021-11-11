@@ -1,10 +1,9 @@
-name: Publish to Github Pages
+name: publish
 
 on:
   pull_request:
     types:
       - closed
-
 
 jobs:
   gh-pages:
