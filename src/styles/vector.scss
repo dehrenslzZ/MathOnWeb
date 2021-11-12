@@ -1,0 +1,7 @@
+.vector-inline {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 50%);
+    height: 50%;
+    width: 100%;
+}

@@ -41,4 +41,4 @@
 	</div>
 </div>
 
-<script src="../../app.scss" />
+<style src="../../app.scss"></style>
