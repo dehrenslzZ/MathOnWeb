@@ -5,9 +5,9 @@
 
 	let apps: ListSelectorElement[] = [
 		{
-			name: '4 field table',
-			description: 'Can calculate a 4 field table',
-			route: '/stochastics/4-field-table'
+			name: 'four field table completer',
+			description: 'Completes a four field table',
+			route: '/stochastics/4-field-table-completer'
 		}
 	];
 </script>
