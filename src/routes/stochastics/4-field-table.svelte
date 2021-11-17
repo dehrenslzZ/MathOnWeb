@@ -18,7 +18,6 @@
 
     // Is being executed after the calculate button was clicked
     function onClick() {
-        console.log(table);
         const [newTable, error] = CompleteTable(table);
         if (error.errorOccurred) {
             console.log("ERror occured");
