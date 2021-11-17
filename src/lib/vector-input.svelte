@@ -13,29 +13,6 @@
 	<div class="vector-symbols">)</div>
 </div>
 
-<style lang="css">
-	.vector-container {
-		display: flex;
-		flex-direction: row;
-	}
-	.vector-symbols {
-		color: white;
-		font-size: 140px;
-		height: 100%;
-		text-align: center;
-		margin-top: -20px;
-	}
-	.vector-flex {
-		display: flex;
-		flex-direction: column;
-		width: fit-content;
-		height: fit-content;
-		padding: 5px;
-		gap: 3px;
-	}
-	.vector-flex input {
-		width: 40px;
-		height: 40px;
-		border: none;
-	}
+<style lang="scss">
+	@import "../styles/vector-input.scss";
 </style>
