@@ -23,14 +23,12 @@
 
 <style lang="css">
 	.container {
-		position: absolute;
-		top: 30%;
-		left: 50%;
-		transform: translate(-50%, -30%);
-		width: 70vw;
-		height: 60vh;
+		width: 100vw;
+		height: 100vh;
+		margin-top: 5em;
 		overflow: hidden scroll;
 		display: flex;
+		align-items: center;
 		flex-direction: column;
 		gap: 10px;
 		-ms-overflow-style: none;
@@ -40,7 +38,7 @@
 		display: none;
 	}
 	.list-element {
-		width: 100%;
+		width: 80%;
 		height: fit-content;
 		display: grid;
 		grid-template-columns: 30% 70%;

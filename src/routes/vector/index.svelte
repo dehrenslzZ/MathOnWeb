@@ -28,6 +28,11 @@
 			name: 'Triangle angle calculator',
 			description: 'Calculates all angles of an triangle, with vectors',
 			route: '/vector/triangle-angle-calculator'
+		},
+		{
+			name: 'Layer type converter',
+			description: 'Converts the differnt types of layers',
+			route: '/vector/layer-type-calculator'
 		}
 	];
 </script>
