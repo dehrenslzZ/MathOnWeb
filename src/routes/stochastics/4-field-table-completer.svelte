@@ -1,8 +1,10 @@
 <script lang="ts">
+	import Snackbar from '$lib/snackbar.svelte';
 	import FourFieldTable from '$lib/stochastics/four-field-table.component.svelte';
 	import Navbar from '$lib/navbar.svelte';
 	import type { FourFieldTableValues } from '$src/typings/four-field-table';
 	import { CompleteTable } from '$lib/stochastics/complete-table';
+
 
 	let table: FourFieldTableValues = {
 		AB: null,
@@ -20,11 +22,19 @@
 	function onClick() {
 		const [newTable, error] = CompleteTable(table);
 		if (error.errorOccurred) {
-			console.log('ERror occured');
+			showSnackbar = true;
+			errorSnackbar = error.message;
+			setTimeout(() => {
+				showSnackbar = false;
+				errorSnackbar = '';
+			}, 2000);
 		} else {
 			table = newTable;
 		}
 	}
+
+	let showSnackbar = false;
+	let errorSnackbar = '';
 </script>
 
 <Navbar />
@@ -35,6 +45,9 @@
 		<button class="calculate-button" on:click={onClick}> Complete table </button>
 	</div>
 </div>
+{#if showSnackbar}
+	<Snackbar message={errorSnackbar} />
+{/if}
 
 <style lang="scss">
 	@import '../../styles/general.scss';
