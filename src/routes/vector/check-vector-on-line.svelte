@@ -49,7 +49,8 @@
 		</div>
 	</div>
 </div>
+
 <style lang="scss">
-	@import "../../styles/general.scss";
-	@import "../../styles/vector.scss";
+	@import '../../styles/general.scss';
+	@import '../../styles/vector.scss';
 </style>

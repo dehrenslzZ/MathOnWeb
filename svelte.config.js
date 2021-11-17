@@ -8,7 +8,7 @@ const config = {
 	preprocess: preprocess({
 		replace: [['process.env.NODE_ENV', JSON.stringify(process.env.NODE_ENV)]],
 		scss: {
-			includePaths: ["src"]
+			includePaths: ['src']
 		}
 	}),
 

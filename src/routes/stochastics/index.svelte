@@ -8,7 +8,7 @@
 			name: '4 field table',
 			description: 'Can calculate a 4 field table',
 			route: '/stochastics/4-field-table'
-		},
+		}
 	];
 </script>
 

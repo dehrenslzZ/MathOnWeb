@@ -101,8 +101,9 @@
 		</div>
 	</div>
 </div>
+
 <style lang="scss">
-	@import "../../styles/general.scss";
+	@import '../../styles/general.scss';
 	.data-display {
 		width: 100%;
 		height: 100px;

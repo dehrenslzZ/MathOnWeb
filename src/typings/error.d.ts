@@ -1,5 +1,5 @@
 export interface ErrorMessage {
-    errorOccurred: boolean;
-    message?: string;
-    code?: number;
+	errorOccurred: boolean;
+	message?: string;
+	code?: number;
 }
