@@ -11,6 +11,6 @@
     </div>
 </div>
 
-
-
-<style src="../../styles/general.scss"></style>
+<style lang="scss">
+    @import "../../styles/general.scss";
+</style>
