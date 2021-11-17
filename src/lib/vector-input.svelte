@@ -3,13 +3,28 @@
 	export let vector: Vector;
 </script>
 
-<div class="vector-flex">
-	<input type="number" bind:value={vector.x} />
-	<input type="number" bind:value={vector.y} />
-	<input type="number" bind:value={vector.z} />
+<div class="vector-container">
+	<div class="vector-symbols">(</div>
+	<div class="vector-flex">
+		<input type="number" bind:value={vector.x} />
+		<input type="number" bind:value={vector.y} />
+		<input type="number" bind:value={vector.z} />
+	</div>
+	<div class="vector-symbols">)</div>
 </div>
 
 <style lang="css">
+	.vector-container {
+		display: flex;
+		flex-direction: row;
+	}
+	.vector-symbols {
+		color: white;
+		font-size: 140px;
+		height: 100%;
+		text-align: center;
+		margin-top: -20px;
+	}
 	.vector-flex {
 		display: flex;
 		flex-direction: column;

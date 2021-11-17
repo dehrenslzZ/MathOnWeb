@@ -1,5 +1,6 @@
 <script lang="ts">
 import Navbar from "$lib/navbar.svelte";
+import GeoLayerInput from "$lib/vector/geo-layer-input.svelte";
 
 
 </script>
@@ -7,7 +8,7 @@ import Navbar from "$lib/navbar.svelte";
 <Navbar />
 <div class="centered">
     <div class="container">
-        
+        <GeoLayerInput type="parameter" />
     </div>
 </div>
 
