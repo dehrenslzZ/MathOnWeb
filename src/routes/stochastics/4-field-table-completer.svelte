@@ -5,7 +5,6 @@
 	import type { FourFieldTableValues } from '$src/typings/four-field-table';
 	import { CompleteTable } from '$lib/stochastics/complete-table';
 
-
 	let table: FourFieldTableValues = {
 		AB: null,
 		aB: null,
