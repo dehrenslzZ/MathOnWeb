@@ -1,4 +1,12 @@
 .parameter-layer {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.parameter-layer .text {
+    font-size: 40px;
+    color: white;
+    text-align: center;
 }

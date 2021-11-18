@@ -3,11 +3,12 @@
 	import Navbar from '$lib/navbar.svelte';
 	import VectorInput from '$lib/vector-input.svelte';
 	import { generateVectorDependency, checkLinearDependency } from '$lib/vector/vector-dependency';
+import { DefaultsProvider } from '$lib/defaults-provider';
 
-	let v1: Vector = { x: 0, y: 0, z: 0 };
-	let v2: Vector = { x: 0, y: 0, z: 0 };
-	let v3: Vector = { x: 0, y: 0, z: 0 };
-	let v4: Vector = { x: 0, y: 0, z: 0 };
+	let v1 = new DefaultsProvider().getVectorDefault();
+	let v2 = new DefaultsProvider().getVectorDefault();
+	let v3 = new DefaultsProvider().getVectorDefault();
+	let v4 = new DefaultsProvider().getVectorDefault();
 
 	let resultValue = '';
 

@@ -3,10 +3,11 @@
 	import VectorInput from '$lib/vector-input.svelte';
 	import type { Vector } from '../../typings/vector';
 	import { calculateAngleFromVectors } from '$lib/vector/angle-calculator';
+import { DefaultsProvider } from '$lib/defaults-provider';
 
 	let resultValue = '';
-	let vectorA: Vector = { x: 0, y: 0, z: 0 };
-	let vectorB: Vector = { x: 0, y: 0, z: 0 };
+	let vectorA = new DefaultsProvider().getVectorDefault();
+	let vectorB = new DefaultsProvider().getVectorDefault();
 
 	/**
 	 * @param a The first vector

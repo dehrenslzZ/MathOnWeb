@@ -1,13 +1,14 @@
 <script lang="ts">
+	import { DefaultsProvider } from '$lib/defaults-provider';
 	import type { Vector } from 'src/typings/vector';
 	import Navbar from '$lib/navbar.svelte';
 	import VectorInput from '$lib/vector-input.svelte';
 	import { calculateAngleFromVectors } from '$lib/vector/angle-calculator';
 	import { generateVectorDependency } from '$lib/vector/vector-dependency';
 
-	let VEC_A: Vector = { x: 0, y: 0, z: 0 };
-	let VEC_B: Vector = { x: 0, y: 0, z: 0 };
-	let VEC_C: Vector = { x: 0, y: 0, z: 0 };
+	let VEC_A = new DefaultsProvider().getVectorDefault();
+	let VEC_B = new DefaultsProvider().getVectorDefault();
+	let VEC_C = new DefaultsProvider().getVectorDefault();
 	let resultValue = '';
 
 	function calc() {

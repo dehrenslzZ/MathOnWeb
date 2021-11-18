@@ -2,8 +2,9 @@
 	import type { GeoLayerParameter } from './../../typings/geo-layer';
 import Navbar from "$lib/navbar.svelte";
 import GeoLayerInput from "$lib/vector/geo-layer-input.svelte";
+import { DefaultsProvider } from '$lib/defaults-provider';
 
-let geoLayerParameter: GeoLayerParameter;
+let geoLayerParameter: GeoLayerParameter = new DefaultsProvider().getGeoLayerParameterDefault();
 
 </script>
 

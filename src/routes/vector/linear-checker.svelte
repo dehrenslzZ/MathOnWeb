@@ -1,11 +1,12 @@
 <script lang="ts">
+	import { DefaultsProvider } from '$lib/defaults-provider';
 	import Navbar from '$lib/navbar.svelte';
 	import type { Vector } from 'src/typings/vector';
 	import VectorInput from '$lib/vector-input.svelte';
 	import { checkLinearDependency } from '$lib/vector/vector-dependency';
 
-	let v1: Vector = { x: 0, y: 0, z: 0 };
-	let v2: Vector = { x: 0, y: 0, z: 0 };
+	let v1 = new DefaultsProvider().getVectorDefault();
+	let v2 = new DefaultsProvider().getVectorDefault();
 	let resultText = '';
 
 	/**

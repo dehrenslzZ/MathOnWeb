@@ -9,7 +9,9 @@ import VectorInput from "$lib/vector-input.svelte";
 {#if type === "parameter"}
 <div class="parameter-layer">
     <VectorInput bind:vector={geoLayerParameter.startVector} />
+    <div class="text">+r</div>
     <VectorInput bind:vector={geoLayerParameter.rVector} />
+    <div class="text">+s</div>
     <VectorInput bind:vector={geoLayerParameter.sVector} />
 </div>
 {/if}
