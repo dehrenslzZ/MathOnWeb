@@ -1,3 +1,4 @@
+import { roundTo } from '$lib/custom-math';
 import type { ErrorMessage } from '$src/typings/error';
 import type { FourFieldTableValues } from '$src/typings/four-field-table';
 
@@ -11,13 +12,14 @@ import type { FourFieldTableValues } from '$src/typings/four-field-table';
  */
 export function CompleteTable(table: FourFieldTableValues): [FourFieldTableValues, ErrorMessage] {
 	let internalCounter = 0;
+	const roundValue = getMaxInitialDecimals(table);
 	table = NumberizeTable(table);
 	while (internalCounter < 20) {
 		for (let i = 1; i <= 6; i++) {
 			table = solveRowOrColumn(table, i);
 		}
 		if (checkAllFieldFilled(table) && checkTableIsValid(table)) {
-			return [table, { errorOccurred: false }];
+			return [roundTableValues(table, roundValue), { errorOccurred: false }];
 		}
 		internalCounter += 1;
 	}
@@ -160,15 +162,56 @@ function checkTableIsValid(table: FourFieldTableValues): boolean {
 	);
 }
 
+/**
+ * Parses the whole table to numberous values
+ * 
+ * @param table The initial table
+ * @returns The table with all values parsed to an integer value
+ */
 function NumberizeTable(table: FourFieldTableValues): FourFieldTableValues {
-	table.AB = +table.AB;
-	table.ALL = +table.ALL;
-	table.A_ALL = +table.A_ALL;
-	table.BA = +table.BA;
-	table.B_ALL = +table.B_ALL;
-	table.aB = +table.aB;
-	table.a_ALL = +table.a_ALL;
-	table.ab = +table.ab;
-	table.b_ALL = +table.b_ALL;
+	table.AB = table.AB === null ? null : +table.AB;
+	table.ALL = table.ALL === null ? null : +table.ALL;
+	table.A_ALL = table.A_ALL === null ? null : +table.A_ALL;
+	table.BA = table.BA === null ? null : +table.BA;
+	table.B_ALL = table.B_ALL === null ? null : +table.B_ALL;
+	table.aB = table.aB === null ? null : +table.aB;
+	table.a_ALL = table.a_ALL === null ? null : +table.a_ALL;
+	table.ab = table.ab === null ? null : +table.ab;
+	table.b_ALL = table.b_ALL === null ? null : +table.b_ALL;
 	return table;
+}
+
+
+/**
+ * Calculates the maximun number of decimals in a four field table
+ * 
+ * @param table The initial table that is given to the parent function
+ * @returns The maximun number of decimals given
+ */
+function getMaxInitialDecimals(table: FourFieldTableValues): number {
+	
+	let max = 0;
+	for (const k in table ) {
+		const len = ('' + table[k]).split('').length;
+		if (len > max) {
+			max = len;
+		}
+	}
+	return max <= 2 ? max : max - 2;
+}
+
+/**
+ * Rounds all values of a four field table to the given number
+ * of decimals. 
+ * 
+ * @param table The table that should be rounded
+ * @param round The number of decimals, the value should be rounded to
+ * @returns The table with all the rounded values
+ */
+function roundTableValues(table: FourFieldTableValues, round: number): FourFieldTableValues {
+	const obj = {};
+	for (const k in table) {
+		obj[k] = roundTo(table[k], round);
+	}
+	return obj as FourFieldTableValues;
 }
