@@ -103,16 +103,7 @@
 </div>
 
 <style lang="scss">
-	.centered {
-		position: absolute;
-		top: 20%;
-		left: 50%;
-		transform: translate(-50%, -20%);
-	}
-	.container {
-		width: 30vw;
-		height: 50vh;
-	}
+	@import '../../styles/general.scss';
 	.data-display {
 		width: 100%;
 		height: 100px;

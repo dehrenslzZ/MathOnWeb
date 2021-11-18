@@ -3,10 +3,11 @@
 	import VectorInput from '$lib/vector-input.svelte';
 	import type { Vector } from '../../typings/vector';
 	import { calculateAngleFromVectors } from '$lib/vector/angle-calculator';
+	import { DefaultsProvider } from '$lib/defaults-provider';
 
 	let resultValue = '';
-	let vectorA: Vector = { x: 0, y: 0, z: 0 };
-	let vectorB: Vector = { x: 0, y: 0, z: 0 };
+	let vectorA = new DefaultsProvider().getVectorDefault();
+	let vectorB = new DefaultsProvider().getVectorDefault();
 
 	/**
 	 * @param a The first vector
@@ -54,48 +55,7 @@
 	</div>
 </div>
 
-<style lang="css">
-	.centered {
-		position: absolute;
-		top: 20%;
-		left: 50%;
-		transform: translate(-50%, -20%);
-	}
-	.container {
-		width: 30vw;
-		height: 50vh;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 10px;
-	}
-	.vector-inline {
-		display: grid;
-		place-items: center;
-		grid-template-columns: repeat(2, 50%);
-		height: 50%;
-		width: 100%;
-	}
-	.calculate-button {
-		background-color: rgb(16, 75, 109);
-		color: white;
-		border: none;
-		font-family: 'Roboto', sans-serif;
-		font-size: 2em;
-		padding: 10px;
-		border-radius: 5px;
-		transition: 0.3s;
-	}
-	.calculate-button:hover {
-		filter: brightness(1.5);
-	}
-	.result-form {
-		height: 6em;
-		width: 18em;
-		background-color: white;
-		display: grid;
-		place-items: center;
-		font-size: 2em;
-		text-overflow: clip;
-	}
+<style lang="scss">
+	@import '../../styles/general.scss';
+	@import '../../styles/vector.scss';
 </style>
