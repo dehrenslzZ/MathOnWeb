@@ -52,9 +52,9 @@ export class LayerConvertingService implements LayerConvertingServiceInterface {
      */
     private getLayerVectors(layer: GeoLayerCoordinate): Vector[] {
         return [
-            {x: layer.result, y: 0, z: 0},
-            {x: 0, y: layer.result, z: 0},
-            {x: 0, y: 0, z: layer.result},
+            {x: layer.result / layer.x, y: 0, z: 0},
+            {x: 0, y: layer.result / layer.y, z: 0},
+            {x: 0, y: 0, z: layer.result / layer.z},
         ];
     }
     

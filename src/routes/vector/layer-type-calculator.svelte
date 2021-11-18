@@ -11,8 +11,8 @@ let geoLayerParameter: GeoLayerParameter = new DefaultsProvider().getGeoLayerPar
 <Navbar />
 <div class="centered">
     <div class="container">
-        <GeoLayerInput type="parameter" geoLayerParameter={geoLayerParameter} />
-        <GeoLayerInput type="coordinate" geoLayerParameter={geoLayerParameter} />
+        <GeoLayerInput type="parameter" bind:geoLayerParameter={geoLayerParameter} />
+        <GeoLayerInput type="coordinate" bind:geoLayerParameter={geoLayerParameter} />
     </div>
 </div>
 
