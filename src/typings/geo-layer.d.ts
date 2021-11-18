@@ -5,3 +5,9 @@ export interface GeoLayerParameter {
     rVector: Vector;
     sVector: Vector;
 }
+export interface GeoLayerCoordinate {
+    x: number;
+    y: number;
+    z: number;
+    result: number;
+}

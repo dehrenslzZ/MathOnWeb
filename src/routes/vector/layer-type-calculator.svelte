@@ -12,6 +12,7 @@ let geoLayerParameter: GeoLayerParameter = new DefaultsProvider().getGeoLayerPar
 <div class="centered">
     <div class="container">
         <GeoLayerInput type="parameter" geoLayerParameter={geoLayerParameter} />
+        <GeoLayerInput type="coordinate" geoLayerParameter={geoLayerParameter} />
     </div>
 </div>
 
