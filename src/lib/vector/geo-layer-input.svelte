@@ -1,18 +1,18 @@
 <script lang="ts">
-	import type { GeoLayerParameter } from './../../typings/geo-layer';
+	import { DefaultsProvider } from './../defaults-provider';
+	import type { GeoLayerCoordinate, GeoLayerParameter } from './../../typings/geo-layer';
 import VectorInput from "$lib/vector-input.svelte";
 import { LayerConvertingService } from './layer-converting-service';
 
     export let type: string;
     export let geoLayerParameter: GeoLayerParameter;
     const converter = new LayerConvertingService();
+    let coordinateCache = new DefaultsProvider().getGeoLayerCoordinateDefault();
 
     function onCoordinateFormChange(event: any, key: string) {
         const val = event.target.value;
-        let coordinate = converter.convertToCoordinate(geoLayerParameter);
-        coordinate[key] = +val;
-        geoLayerParameter = converter.convertToParameter(coordinate);
-        console.log(geoLayerParameter);
+        coordinateCache[key] = +val;
+        geoLayerParameter = converter.fixNaNInfinity(converter.convertToParameter(coordinateCache));
     }
 </script>
 
@@ -29,25 +29,25 @@ import { LayerConvertingService } from './layer-converting-service';
 <div class="geo-layer">
     <input 
         type="number" 
-        value={converter.convertToCoordinate(geoLayerParameter).x}
+        value={coordinateCache.x}
         on:change={(event) => onCoordinateFormChange(event, 'x')}
     />
     <div class="text-sm">x + </div>
     <input 
         type="number" 
-        value={converter.convertToCoordinate(geoLayerParameter).y}
+        value={coordinateCache.y}
         on:change={(event) => onCoordinateFormChange(event, 'y')}
     />
     <div class="text-sm">y + </div>
     <input 
         type="number" 
-        value={converter.convertToCoordinate(geoLayerParameter).z}
+        value={coordinateCache.z}
         on:change={(event) => onCoordinateFormChange(event, 'z')}
     />
     <div class="text-sm">z = </div>
     <input 
         type="number" 
-        value={converter.convertToCoordinate(geoLayerParameter).result}
+        value={coordinateCache.result}
         on:change={(event) => onCoordinateFormChange(event, 'result')}
     />
 </div>

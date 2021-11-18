@@ -1,3 +1,4 @@
+import { DefaultsProvider } from "$lib/defaults-provider";
 import type { GeoLayerCoordinate, GeoLayerParameter } from "$src/typings/geo-layer";
 import type { Vector } from "$src/typings/vector";
 import { calculateScalarProduct } from "./angle-calculator";
@@ -6,6 +7,7 @@ import { calculateCrossProduct } from "./cross-product";
 interface LayerConvertingServiceInterface {
     convertToCoordinate(layer: GeoLayerParameter): GeoLayerCoordinate;
     convertToParameter(layer: GeoLayerCoordinate): GeoLayerParameter;
+    fixNaNInfinity(layer: GeoLayerParameter): GeoLayerParameter;
 }
 
 export class LayerConvertingService implements LayerConvertingServiceInterface {
@@ -43,6 +45,27 @@ export class LayerConvertingService implements LayerConvertingServiceInterface {
             sVector: vecs[2],
         };
     }
+
+    /**
+     * 
+     * @param layer 
+     * @returns 
+     */
+    fixNaNInfinity(layer: GeoLayerParameter): GeoLayerParameter {
+        const obj = new DefaultsProvider().getGeoLayerParameterDefault();
+        for (const k in layer) {
+            const vec = new DefaultsProvider().getVectorDefault();
+            for (const k2 in layer[k]) {
+                const val = layer[k][k2];
+                if (!Number.isNaN(val) && Number.isFinite(val)) {
+                    vec[k2] = val;
+                }
+                obj[k] = vec;
+            }
+        }
+        return obj;
+    }
+
 
     /**
      * Calculates three vectors that are in the layer
