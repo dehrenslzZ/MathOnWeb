@@ -164,7 +164,7 @@ function checkTableIsValid(table: FourFieldTableValues): boolean {
 
 /**
  * Parses the whole table to numberous values
- * 
+ *
  * @param table The initial table
  * @returns The table with all values parsed to an integer value
  */
@@ -181,17 +181,15 @@ function NumberizeTable(table: FourFieldTableValues): FourFieldTableValues {
 	return table;
 }
 
-
 /**
  * Calculates the maximun number of decimals in a four field table
- * 
+ *
  * @param table The initial table that is given to the parent function
  * @returns The maximun number of decimals given
  */
 function getMaxInitialDecimals(table: FourFieldTableValues): number {
-	
 	let max = 0;
-	for (const k in table ) {
+	for (const k in table) {
 		const len = ('' + table[k]).split('').length;
 		if (len > max) {
 			max = len;
@@ -202,8 +200,8 @@ function getMaxInitialDecimals(table: FourFieldTableValues): number {
 
 /**
  * Rounds all values of a four field table to the given number
- * of decimals. 
- * 
+ * of decimals.
+ *
  * @param table The table that should be rounded
  * @param round The number of decimals, the value should be rounded to
  * @returns The table with all the rounded values

@@ -14,5 +14,5 @@
 </div>
 
 <style lang="scss">
-	@import "../styles/vector-input.scss";
+	@import '../styles/vector-input.scss';
 </style>

@@ -1,24 +1,24 @@
 .geo-layer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
 }
 .text-style-default {
-    color: white;
-    text-align: center;
+	color: white;
+	text-align: center;
 }
 .geo-layer .text {
-    font-size: 40px;
-    @extend .text-style-default;
+	font-size: 40px;
+	@extend .text-style-default;
 }
 .geo-layer .text-sm {
-    font-size: 25px;
-    @extend .text-style-default;
+	font-size: 25px;
+	@extend .text-style-default;
 }
 .geo-layer input {
-    width: 40px;
-    height: 40px;
-    border: none;
+	width: 40px;
+	height: 40px;
+	border: none;
 }
