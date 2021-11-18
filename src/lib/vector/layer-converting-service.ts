@@ -47,9 +47,11 @@ export class LayerConvertingService implements LayerConvertingServiceInterface {
     }
 
     /**
+     * Fixes all NaN and Infinite values in layer and 
+     * makes them be 0.
      * 
-     * @param layer 
-     * @returns 
+     * @param layer The initial layer in parameter form 
+     * @returns The fixed layer in parameter form
      */
     fixNaNInfinity(layer: GeoLayerParameter): GeoLayerParameter {
         const obj = new DefaultsProvider().getGeoLayerParameterDefault();
