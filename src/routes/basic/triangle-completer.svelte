@@ -5,10 +5,12 @@
 <Navbar />
 <div class="center">
     <div class="triangle-container">
-        <div class="triangle">
-            <div class="bottom-kath" />
-            <div class="left-kath" />
-            <div class="hypothenuse" />
+        <div class="outer-triangle">
+            <div class="triangle">
+                <div class="bottom-kath" />
+                <div class="left-kath" />
+                <div class="hypothenuse" />
+            </div>
         </div>
     </div>
 </div>

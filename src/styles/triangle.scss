@@ -8,6 +8,13 @@ $triangleHeight: 250px;
     margin-top: 5em;
 }
 
+.outer-triangle {
+    width: calc($triangleHeight + 100px);
+    height: calc($triangleWidth + 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .triangle {
     width: $triangleWidth;
     height: $triangleHeight;
