@@ -4,12 +4,17 @@
 
 <Navbar />
 <div class="center">
-    <div class="container">
-        
+    <div class="triangle-container">
+        <div class="triangle">
+            <div class="bottom-kath" />
+            <div class="left-kath" />
+            <div class="hypothenuse" />
+        </div>
     </div>
 </div>
 
 
 <style lang="scss">
     @import "../../styles/general.scss";
+    @import "../../styles/triangle.scss";
 </style>

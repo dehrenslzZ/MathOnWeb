@@ -1,0 +1,30 @@
+$triangleWidth: 500px;
+$triangleHeight: 250px;
+
+.triangle-container {
+    @import "./general.scss";
+    @extend .container;
+    width: 100vw;
+    margin-top: 5em;
+}
+
+.triangle {
+    width: $triangleWidth;
+    height: $triangleHeight;
+}
+
+@mixin KathMixin($name, $top, $left, $length, $rotation) {
+    .triangle .#{$name} {
+        position: relative;
+        top: $top;
+        left: $left;
+        display: block;
+        transform: rotate($rotation);
+        width: $length;
+        height: 2px;
+        background-color: white;
+    }
+}
+@include KathMixin(bottom-kath, 240px, 0, $triangleWidth, 0deg);
+@include KathMixin(left-kath, calc(240px / 4 * 3), calc(-120px / 2), 125px, -90deg);
+@include KathMixin(hypothenuse, 175px, -6px, 513px, 13.8deg);
