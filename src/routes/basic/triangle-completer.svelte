@@ -11,6 +11,7 @@
                 <div class="left-kath" />
                 <div class="hypothenuse" />
             </div>
+            <input type="number" class="input-hypothenuse" />
         </div>
     </div>
 </div>
