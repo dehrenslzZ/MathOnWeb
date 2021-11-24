@@ -1,21 +1,26 @@
-@mixin AngleInput($name, $input, $angle) {
-    .#{$name}.#{$angle} {
-        @if $input == TRUE {
-            @extend .inner-input;
-        }
-        @extend .angle;
+@mixin AngleInput($type, $name, $angle) {
+    .#{$type}.#{$name} {
+        @extend .angle-extend;
     }
-    .inner-input {
-        
+    .#{$type}.#{$name}.pos-topleft {
+        border-radius: 100px 0 0 0;
     }
-    .angle {
+    .#{$type}.#{$name}.pos-topright {
+        border-radius: 0 100px 0 0;
+    }
+    .#{$type}.#{$name}.pos-bottomleft {
+        border-radius: 0 0 100px 0;
+    }
+    .#{$type}.#{$name}.pos-bottomright {
+        border-radius: 0 0 0 100px;
+    }
+    .angle-extend {
         height: 100px;
         width: 100px;
-        transform: skew(-45deg);
+        border: 1px solid white;
     }
+    
 }
 
-@for $var from 1 to 359 {
-    @include AngleInput(angle, FALSE, $var);
-    @include AngleInput(angle-input, TRUE, 'angle-' + $var);
-}
+@include AngleInput(angle, angle-90, 90);
+
