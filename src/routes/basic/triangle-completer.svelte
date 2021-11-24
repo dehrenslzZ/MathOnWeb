@@ -6,6 +6,8 @@
 <div class="center">
     <div class="triangle-container">
         <div class="outer-triangle">
+            <input type="number" class="input-kath-left" />
+            <input type="number" class="input-kath-bottom" />
             <div class="triangle">
                 <div class="bottom-kath" />
                 <div class="left-kath" />

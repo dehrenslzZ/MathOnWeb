@@ -44,8 +44,8 @@ $triangleHeight: 250px;
         left: $left;
     }
     .triangle-input {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
         border: none;
         transition: .3s;
     }
@@ -54,4 +54,6 @@ $triangleHeight: 250px;
         filter: brightness(1.2);
     }
 }
-@include TriangleInput(input-hypothenuse, 100px, 250px);
+@include TriangleInput(input-hypothenuse, 20px, -270px);
+@include TriangleInput(input-kath-left, 60px, 25px);
+@include TriangleInput(input-kath-bottom, 140px, 225px);
