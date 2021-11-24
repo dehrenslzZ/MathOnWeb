@@ -1,0 +1,11 @@
+@mixin AngleInput($name, $input) {
+    .#{$name} {
+        @if $input == TRUE {
+            @extend .inner-input;
+        }
+        
+    }
+    .inner-input {
+
+    }
+}
