@@ -19,6 +19,7 @@ function solveTriangle(triangle: Triangle): Triangle {
     if (triangle.hypothenuse === null || triangle.hypothenuse === 0) {
         triangle.hypothenuse = Math.sqrt((triangle.kathete1**2) + (triangle.kathete2**2));
     }
+    return triangle;
 }
 
 /**
