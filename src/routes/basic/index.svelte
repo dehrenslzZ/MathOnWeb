@@ -5,7 +5,11 @@
 
 	let apps: ListSelectorElement[] = [
 		{ name: 'Calculator', description: 'A basic calculator', route: '/basic/calculator' },
-		{ name: 'Triangle completer', description: 'completes a triangle', route: '/basic/triangle-completer' },
+		{
+			name: 'Triangle completer',
+			description: 'completes a triangle',
+			route: '/basic/triangle-completer'
+		}
 	];
 </script>
 

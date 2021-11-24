@@ -11,13 +11,12 @@ interface DefaultsProviderInterface {
 
 // Provides some functions to generate default values.
 export class DefaultsProvider implements DefaultsProviderInterface {
-
 	/**
 	 * Generates a default triangle with values
 	 * @returns A default triangle
 	 */
 	getDefaultTriangle(): Triangle {
-		return {kathete1: 0, kathete2: 0, hypothenuse: 0};
+		return { kathete1: 0, kathete2: 0, hypothenuse: 0 };
 	}
 	/**
 	 * Generates a default layer as coordinate form
