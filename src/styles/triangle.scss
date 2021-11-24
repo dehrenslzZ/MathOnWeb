@@ -1,0 +1,61 @@
+$triangleWidth: 500px;
+$triangleHeight: 250px;
+
+.triangle-container {
+	@import './general.scss';
+	@extend .container;
+	width: 100vw;
+	margin-top: 5em;
+}
+
+.outer-triangle {
+	width: calc($triangleWidth + 100px);
+	height: calc($triangleHeight + 100px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.triangle {
+	width: $triangleWidth;
+	height: $triangleHeight;
+	z-index: 1;
+	overflow: hidden;
+}
+
+@mixin KathMixin($name, $top, $left, $length, $rotation) {
+	.triangle .#{$name} {
+		position: relative;
+		top: $top;
+		left: $left;
+		display: block;
+		transform: rotate($rotation);
+		width: $length;
+		height: 2px;
+		background-color: white;
+	}
+}
+@include KathMixin(bottom-kath, 240px, 0, $triangleWidth, 0deg);
+@include KathMixin(left-kath, calc(240px / 4 * 3), calc(-120px / 2), 125px, -90deg);
+@include KathMixin(hypothenuse, 175px, -6px, 513px, 13.8deg);
+
+@mixin TriangleInput($name, $top, $left) {
+	.outer-triangle .#{$name} {
+		@extend .triangle-input;
+		position: relative;
+		top: $top;
+		left: $left;
+	}
+	.triangle-input {
+		width: 30px;
+		height: 30px;
+		border: none;
+		transition: 0.3s;
+	}
+	.triangle-input:focus {
+		outline: none;
+		filter: brightness(1.2);
+	}
+}
+@include TriangleInput(input-hypothenuse, 20px, -270px);
+@include TriangleInput(input-kath-left, 60px, 25px);
+@include TriangleInput(input-kath-bottom, 140px, 225px);
