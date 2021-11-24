@@ -18,6 +18,8 @@ $triangleHeight: 250px;
 .triangle {
     width: $triangleWidth;
     height: $triangleHeight;
+    z-index: 1;
+    overflow: hidden;
 }
 
 @mixin KathMixin($name, $top, $left, $length, $rotation) {

@@ -5,7 +5,6 @@
 
 <Navbar />
 <div class="center">
-    <AngleInput />
     <div class="triangle-container">
         <div class="outer-triangle">
             <input type="number" class="input-kath-left" />
