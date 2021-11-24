@@ -1,26 +1,3 @@
-@mixin AngleInput($type, $name, $angle) {
-    .#{$type}.#{$name} {
-        @extend .angle-extend;
-    }
-    .#{$type}.#{$name}.pos-topleft {
-        border-radius: 100px 0 0 0;
-    }
-    .#{$type}.#{$name}.pos-topright {
-        border-radius: 0 100px 0 0;
-    }
-    .#{$type}.#{$name}.pos-bottomleft {
-        border-radius: 0 0 100px 0;
-    }
-    .#{$type}.#{$name}.pos-bottomright {
-        border-radius: 0 0 0 100px;
-    }
-    .angle-extend {
-        height: 100px;
-        width: 100px;
-        border: 1px solid white;
-    }
-    
-}
 
-@include AngleInput(angle, angle-90, 90);
+
 
