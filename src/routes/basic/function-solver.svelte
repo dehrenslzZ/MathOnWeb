@@ -1,15 +1,27 @@
 <script lang="ts">
     import Navbar from "$lib/navbar.svelte";
-import Snackbar from "$lib/snackbar.svelte";
+    import Snackbar from "$lib/snackbar.svelte";
     import solveFunction from "$lib/solve-function";
 
     let func: string = "";
     let showSnackbar = false;
     let snackbarText = '';
+    let resultExists = false;
+    let resultText= '';
 
     function solve() {
         const [result, err] = solveFunction(func, 4);
-        console.log(result);
+        if (err.errorOccurred) {
+            snackbarText = err.message;
+            showSnackbar = true;
+            setTimeout(() => {
+                showSnackbar = false;
+                snackbarText = '';
+            }, 2000);
+        } else {
+            resultText = `The result for the variable is: ${result}`;
+            resultExists = true;
+        }
     }
 </script>
 
@@ -26,6 +38,11 @@ import Snackbar from "$lib/snackbar.svelte";
         <button class="calculate-button" on:click={solve}>
             Solve
         </button>
+        {#if resultExists}
+            <div class="result-form">
+                {resultText}
+            </div>
+        {/if}
     </div>
 </div>
 
