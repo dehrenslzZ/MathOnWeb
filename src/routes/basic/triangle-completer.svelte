@@ -30,6 +30,14 @@ import Snackbar from '$lib/snackbar.svelte';
 			triangle = resp_triangle;
 		}
 	}
+
+	function parseAngle(angle: number): number {
+		angle = angle * 180 / Math.PI;
+		if (angle < 0) {
+			return 180 - (angle *-1);
+		}
+		return angle;
+	}
 </script>
 
 <Navbar />
@@ -69,11 +77,11 @@ import Snackbar from '$lib/snackbar.svelte';
 				<p>Alpha angle</p>
 			</div>
 			<div class="input-flex">
-				<input class="triangle-input" on:change={(event) => onChange(event, 'beta')} value={(triangle.beta * 180 / Math.PI)} />
+				<input class="triangle-input" on:change={(event) => onChange(event, 'beta')} value={parseAngle(triangle.beta)} />
 				<p>Beta angle</p>
 			</div>
 			<div class="input-flex">
-				<input class="triangle-input" on:change={(event) => onChange(event, 'gamma')} value={triangle.gamma * 180 / Math.PI} />
+				<input class="triangle-input" on:change={(event) => onChange(event, 'gamma')} value={parseAngle(triangle.gamma)} />
 				<p>Gamma angle</p>
 			</div>
 		</div>
