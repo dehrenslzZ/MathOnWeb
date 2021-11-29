@@ -39,6 +39,20 @@
 				value={triangle.hypothenuse}
 			/>
 		</div>
+		<div class="input-container">
+			<div class="input-flex">
+				<input class="triangle-input" on:change={(event) => onChange(event, 'alpha')} />
+				<p>Alpha angle</p>
+			</div>
+			<div class="input-flex">
+				<input class="triangle-input" on:change={(event) => onChange(event, 'beta')} />
+				<p>Beta angle</p>
+			</div>
+			<div class="input-flex">
+				<input class="triangle-input" on:change={(event) => onChange(event, 'gamma')} />
+				<p>Gamma angle</p>
+			</div>
+		</div>
 	</div>
 </div>
 
