@@ -8,12 +8,18 @@ type VarResType = {
     result: number;
 };
 
+/**
+ * Solves a mathematic function.
+ * 
+ * @param func The initial math function
+ * @param wanted The wanted result of the function
+ * @returns The result of the solving action
+ */
 function solveFunction(func: string,  wanted: number): [number, ErrorMessage] {
     const variable_lettter = getVariable(func);
     if (variable_lettter === null) {
         return [0, {errorOccurred: true, message: 'The function does not contain a valid variable'}];
     }
-    console.log(variable_lettter);
     let startVariableValue = 0;
     const variableResult = new Array<VarResType>();
     let iterationCount = 0;
@@ -29,6 +35,14 @@ function solveFunction(func: string,  wanted: number): [number, ErrorMessage] {
     return [0, {errorOccurred: true, message: 'Reached max iterations count'}];
 }
 
+/**
+ * Calculates the next possible variable by the last performed
+ * attempts that were executed.
+ * 
+ * @param mapping The variable result mapping of the performed attempts
+ * @param wanted The result that is wanted by the function
+ * @returns The prediction of a new variable that could be matching
+ */
 function calculateNextVariable(mapping: Array<VarResType>, wanted: number): number {
     let lastValues: Array<VarResType> = [];
     if (mapping.length > 3) {
@@ -45,6 +59,13 @@ function calculateNextVariable(mapping: Array<VarResType>, wanted: number): numb
     }
 }
 
+/**
+ * Fetches the variable char from the function
+ * string and returns it.
+ * 
+ * @param func The initial function
+ * @returns The char that stands as a variable
+ */
 function getVariable(func: string): string|null {
     const vars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".split("");
     for (const i in vars) {
@@ -55,6 +76,15 @@ function getVariable(func: string): string|null {
     return null;
 }
 
+/**
+ * parses a variable into a function and calculates
+ * the coresponding result.
+ * 
+ * @param func the math function in raw format
+ * @param variable The given variable as number
+ * @param variable_letter The letter that identifies the variable
+ * @returns The result of the eval calculation
+ */
 function calculate(func: string, variable: number, variable_letter: string): number {
     return eval(func.replaceAll(variable_letter, '' + variable));
 }
