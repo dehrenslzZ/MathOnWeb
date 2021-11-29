@@ -41,7 +41,6 @@ function solveKathHypo(triangle: Triangle): Triangle {
 	return triangle;
 }
 
-
 /**
  * Performs all three math operations on triangle and tries
  * to solve all values that are needed for beta-angle.

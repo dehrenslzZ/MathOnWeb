@@ -69,7 +69,7 @@ import Snackbar from '$lib/snackbar.svelte';
 				<p>Alpha angle</p>
 			</div>
 			<div class="input-flex">
-				<input class="triangle-input" on:change={(event) => onChange(event, 'beta')} value={triangle.beta * 180 / Math.PI} />
+				<input class="triangle-input" on:change={(event) => onChange(event, 'beta')} value={(triangle.beta * 180 / Math.PI)} />
 				<p>Beta angle</p>
 			</div>
 			<div class="input-flex">
