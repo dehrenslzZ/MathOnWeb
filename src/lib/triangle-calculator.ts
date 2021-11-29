@@ -9,15 +9,12 @@ import type { Triangle } from '$src/typings/triangle';
  */
 function solveTriangle(triangle: Triangle): [Triangle, ErrorMessage] {
 	let initialTriangle = Object.assign({}, triangle);
-	console.log(triangle);
 	for (let i=0; i<20; i++) {
 		if (checkCompleted(initialTriangle)) {
 			return [initialTriangle, {errorOccurred: false}];
 		}
 		initialTriangle = solveKathHypo(initialTriangle);
-		console.log("Hypo", Object.assign({}, initialTriangle));
 		initialTriangle = solveWithBeta(initialTriangle);
-		console.log("Beta", Object.assign({}, initialTriangle));
 		initialTriangle = solveWithGamma(initialTriangle);
 	}
 	return [triangle, {errorOccurred: true, code: 500, message: 'Reached max iterations count'}];
@@ -69,12 +66,15 @@ function solveWithBeta(triangle: Triangle): Triangle {
 function solveBetaWithSin(triangle: Triangle): Triangle {
 	if (triangle.kathete1 !== 0 && triangle.kathete1 !== null && triangle.hypothenuse !== 0 && triangle.hypothenuse !== null) {
 		triangle.beta = Math.sin(triangle.kathete1 / triangle.hypothenuse);
+		return triangle;
 	}
 	if (triangle.beta !== null && triangle.beta !== 0 && triangle.hypothenuse !== 0 && triangle.hypothenuse !== null) {
 		triangle.kathete1 = Math.sin(triangle.beta) * triangle.hypothenuse;
+		return triangle;
 	}
 	if (triangle.beta !== null && triangle.beta !== 0 && triangle.kathete1 !== 0 && triangle.kathete1 !== null) {
 		triangle.hypothenuse = triangle.kathete1 / Math.sin(triangle.beta);
+		return triangle;
 	}
 	return triangle;
 }
@@ -89,12 +89,15 @@ function solveBetaWithSin(triangle: Triangle): Triangle {
  function solveBetaWithCos(triangle: Triangle): Triangle {
 	if (triangle.kathete2 !== 0 && triangle.kathete2 !== null && triangle.hypothenuse !== 0 && triangle.hypothenuse !== null) {
 		triangle.beta = Math.cos(triangle.kathete2 / triangle.hypothenuse);
+		return triangle;
 	}
 	if (triangle.beta !== null && triangle.beta !== 0 && triangle.hypothenuse !== 0 && triangle.hypothenuse !== null) {
 		triangle.kathete2 = Math.cos(triangle.beta) * triangle.hypothenuse;
+		return triangle;
 	}
 	if (triangle.beta !== null && triangle.beta !== 0 && triangle.kathete2 !== 0 && triangle.kathete2 !== null) {
 		triangle.hypothenuse = triangle.kathete2 / Math.cos(triangle.beta);
+		return triangle;
 	}
 	return triangle;
 }
@@ -109,12 +112,15 @@ function solveBetaWithSin(triangle: Triangle): Triangle {
  function solveBetaWithTan(triangle: Triangle): Triangle {
 	if (triangle.kathete1 !== 0 && triangle.kathete1 !== null && triangle.kathete2 !== 0 && triangle.kathete2 !== null) {
 		triangle.beta = Math.tan(triangle.kathete1 / triangle.kathete2);
+		return triangle;
 	}
 	if (triangle.beta !== null && triangle.beta !== 0 && triangle.kathete2 !== 0 && triangle.kathete2 !== null) {
 		triangle.kathete1 = Math.tan(triangle.beta) * triangle.kathete2;
+		return triangle;
 	}
 	if (triangle.beta !== null && triangle.beta !== 0 && triangle.kathete1 !== 0 && triangle.kathete1 !== null) {
 		triangle.kathete2 = triangle.kathete1 / Math.tan(triangle.beta);
+		return triangle;
 	}
 	return triangle;
 }
@@ -143,12 +149,15 @@ function solveBetaWithSin(triangle: Triangle): Triangle {
 function solveGammaWithSin(triangle: Triangle): Triangle {
 	if (triangle.kathete2 !== 0 && triangle.kathete2 !== null && triangle.hypothenuse !== 0 && triangle.hypothenuse !== null) {
 		triangle.gamma = Math.sin(triangle.kathete2 / triangle.hypothenuse);
+		return triangle;
 	}
 	if (triangle.gamma !== null && triangle.gamma !== 0 && triangle.hypothenuse !== 0 && triangle.hypothenuse !== null) {
 		triangle.kathete2 = Math.sin(triangle.gamma) * triangle.hypothenuse;
+		return triangle;
 	}
 	if (triangle.gamma !== null && triangle.gamma !== 0 && triangle.kathete2 !== 0 && triangle.kathete2 !== null) {
 		triangle.hypothenuse = triangle.kathete2 / Math.sin(triangle.gamma);
+		return triangle;
 	}
 	return triangle;
 }
@@ -163,12 +172,15 @@ function solveGammaWithSin(triangle: Triangle): Triangle {
  function solveGammaWithCos(triangle: Triangle): Triangle {
 	if (triangle.kathete1 !== 0 && triangle.kathete1 !== null && triangle.hypothenuse !== 0 && triangle.hypothenuse !== null) {
 		triangle.gamma = Math.cos(triangle.kathete1 / triangle.hypothenuse);
+		return triangle;
 	}
 	if (triangle.gamma !== null && triangle.gamma !== 0 && triangle.hypothenuse !== 0 && triangle.hypothenuse !== null) {
 		triangle.kathete1 = Math.cos(triangle.gamma) * triangle.hypothenuse;
+		return triangle;
 	}
 	if (triangle.gamma !== null && triangle.gamma !== 0 && triangle.kathete1 !== 0 && triangle.kathete1 !== null) {
 		triangle.hypothenuse = triangle.kathete1 / Math.cos(triangle.gamma);
+		return triangle;
 	}
 	return triangle;
 }
@@ -183,12 +195,15 @@ function solveGammaWithSin(triangle: Triangle): Triangle {
  function solveGammaWithTan(triangle: Triangle): Triangle {
 	if (triangle.kathete1 !== 0 && triangle.kathete1 !== null && triangle.kathete2 !== 0 && triangle.kathete2 !== null) {
 		triangle.gamma = Math.tan(triangle.kathete2 / triangle.kathete1);
+		return triangle;
 	}
 	if (triangle.gamma !== null && triangle.gamma !== 0 && triangle.kathete1 !== 0 && triangle.kathete1 !== null) {
 		triangle.kathete2 = Math.tan(triangle.gamma) * triangle.kathete1;
+		return triangle;
 	}
 	if (triangle.gamma !== null && triangle.gamma !== 0 && triangle.kathete2 !== 0 && triangle.kathete2 !== null) {
 		triangle.kathete1 = triangle.kathete2 / Math.tan(triangle.gamma);
+		return triangle;
 	}
 	return triangle;
 }
