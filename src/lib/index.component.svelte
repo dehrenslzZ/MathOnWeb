@@ -37,5 +37,6 @@
 		color: white;
 		font-family: 'Roboto', sans-serif;
 		text-overflow: clip;
+		font-size: 1.2em;
 	}
 </style>

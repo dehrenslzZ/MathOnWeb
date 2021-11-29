@@ -9,6 +9,11 @@
 			name: 'Triangle completer',
 			description: 'completes a triangle',
 			route: '/basic/triangle-completer'
+		},
+		{
+			name: 'Function solver',
+			description: 'solves an matn function',
+			route: '/basic/function-solver'
 		}
 	];
 </script>
