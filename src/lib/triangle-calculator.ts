@@ -8,18 +8,19 @@ import type { Triangle } from '$src/typings/triangle';
  * @returns The calculated triangle
  */
 function solveTriangle(triangle: Triangle): [Triangle, ErrorMessage] {
-	const initialTriangle = Object.assign({}, triangle);
-	console.log("init", triangle);
+	let initialTriangle = Object.assign({}, triangle);
+	console.log(triangle);
 	for (let i=0; i<20; i++) {
-		console.log(triangle);
-		if (checkCompleted(triangle)) {
-			return [triangle, {errorOccurred: false}];
+		if (checkCompleted(initialTriangle)) {
+			return [initialTriangle, {errorOccurred: false}];
 		}
-		triangle = solveKathHypo(triangle);
-		triangle = solveWithBeta(triangle);
-		triangle = solveWithGamma(triangle);
+		initialTriangle = solveKathHypo(initialTriangle);
+		console.log("Hypo", Object.assign({}, initialTriangle));
+		initialTriangle = solveWithBeta(initialTriangle);
+		console.log("Beta", Object.assign({}, initialTriangle));
+		initialTriangle = solveWithGamma(initialTriangle);
 	}
-	return [initialTriangle, {errorOccurred: true, code: 500, message: 'Reached max iterations count'}];
+	return [triangle, {errorOccurred: true, code: 500, message: 'Reached max iterations count'}];
 }
 
 

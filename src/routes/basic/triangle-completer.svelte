@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { DefaultsProvider } from '$lib/defaults-provider';
 	import Navbar from '$lib/navbar.svelte';
-	import Snackbar from '$lib/snackbar.svelte';
+import Snackbar from '$lib/snackbar.svelte';
 	import solveTriangle from '$lib/triangle-calculator';
 	let triangle = new DefaultsProvider().getDefaultTriangle();
 	let showSnackbar = false;
@@ -9,7 +9,11 @@
 
 	function onChange(event: any, field: string) {
 		let copy_triangle = Object.assign({}, triangle);
-		copy_triangle[field] = (+event.target.value) * Math.PI / 180;
+		if (field === 'beta' || field === 'gamma') {
+			copy_triangle[field] = (+event.target.value) * Math.PI / 180;
+		} else {
+			copy_triangle[field] = +event.target.value;
+		}
 		triangle = copy_triangle;
 	}
 
@@ -21,7 +25,7 @@
 			setTimeout(() => {
 				showSnackbar = false;
 				errorSnackbar = '';
-			}, 2000);0
+			}, 2000);
 		} else {
 			triangle = resp_triangle;
 		}
@@ -38,12 +42,14 @@
 			<input
 				type="number"
 				class="input-kath-left"
-				bind:value={triangle.kathete1}
+				on:change={(event) => onChange(event, 'kathete1')}
+				value={triangle.kathete1}
 			/>
 			<input
 				type="number"
 				class="input-kath-bottom"
-				bind:value={triangle.kathete2}
+				on:change={(event) => onChange(event, 'kathete2')}
+				value={triangle.kathete2}
 			/>
 			<div class="triangle">
 				<div class="bottom-kath" />
@@ -53,7 +59,8 @@
 			<input
 				type="number"
 				class="input-hypothenuse"
-				bind:value={triangle.hypothenuse}
+				on:change={(event) => onChange(event, 'hypothenuse')}
+				value={triangle.hypothenuse}
 			/>
 		</div>
 		<div class="input-container">
