@@ -16,7 +16,7 @@ export class DefaultsProvider implements DefaultsProviderInterface {
 	 * @returns A default triangle
 	 */
 	getDefaultTriangle(): Triangle {
-		return { kathete1: 0, kathete2: 0, hypothenuse: 0 };
+		return { kathete1: 0, kathete2: 0, hypothenuse: 0, alpha: 90 * Math.PI / 180, beta: 0, gamma: 0 };
 	}
 	/**
 	 * Generates a default layer as coordinate form

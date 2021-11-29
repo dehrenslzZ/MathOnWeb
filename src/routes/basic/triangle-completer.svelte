@@ -1,17 +1,49 @@
 <script lang="ts">
 	import { DefaultsProvider } from '$lib/defaults-provider';
 	import Navbar from '$lib/navbar.svelte';
+import Snackbar from '$lib/snackbar.svelte';
 	import solveTriangle from '$lib/triangle-calculator';
 	let triangle = new DefaultsProvider().getDefaultTriangle();
+	let showSnackbar = false;
+	let errorSnackbar = '';
 
 	function onChange(event: any, field: string) {
 		let copy_triangle = Object.assign({}, triangle);
-		copy_triangle[field] = +event.target.value;
-		triangle = solveTriangle(copy_triangle);
+		if (field === 'beta' || field === 'gamma') {
+			copy_triangle[field] = (+event.target.value) * Math.PI / 180;
+		} else {
+			copy_triangle[field] = +event.target.value;
+		}
+		triangle = copy_triangle;
+	}
+
+	function solve() {
+		const [resp_triangle, err] = solveTriangle(triangle);
+		if (err.errorOccurred) {
+			errorSnackbar = err.message;
+			showSnackbar = true;
+			setTimeout(() => {
+				showSnackbar = false;
+				errorSnackbar = '';
+			}, 2000);
+		} else {
+			triangle = resp_triangle;
+		}
+	}
+
+	function parseAngle(angle: number): number {
+		angle = angle * 180 / Math.PI;
+		if (angle < 0) {
+			return 180 - (angle *-1);
+		}
+		return angle;
 	}
 </script>
 
 <Navbar />
+{#if showSnackbar}
+	<Snackbar message={errorSnackbar} />
+{/if}
 <div class="center">
 	<div class="triangle-container">
 		<div class="outer-triangle">
@@ -39,6 +71,21 @@
 				value={triangle.hypothenuse}
 			/>
 		</div>
+		<div class="input-container">
+			<div class="input-flex">
+				<input class="triangle-input" value="90" disabled />
+				<p>Alpha angle</p>
+			</div>
+			<div class="input-flex">
+				<input class="triangle-input" on:change={(event) => onChange(event, 'beta')} value={parseAngle(triangle.beta)} />
+				<p>Beta angle</p>
+			</div>
+			<div class="input-flex">
+				<input class="triangle-input" on:change={(event) => onChange(event, 'gamma')} value={parseAngle(triangle.gamma)} />
+				<p>Gamma angle</p>
+			</div>
+		</div>
+		<button class="calculate-button" on:click={solve}>Solve</button>
 	</div>
 </div>
 
