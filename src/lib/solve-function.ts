@@ -1,7 +1,7 @@
 import type { ErrorMessage } from "$src/typings/error";
 import { roundTo } from "./custom-math";
 
-const SOLVER_MAX_ITERATIONS = 1000;
+const SOLVER_MAX_ITERATIONS = 10000;
 
 type VarResType = {
     variable: number;
