@@ -1,7 +1,7 @@
 import type { ErrorMessage } from "$src/typings/error";
 import { roundTo } from "./custom-math";
 
-const SOLVER_MAX_ITERATIONS = 1000;
+const SOLVER_MAX_ITERATIONS = 100000;
 
 type VarResType = {
     variable: number;
@@ -30,7 +30,6 @@ function solveFunction(func: string,  wanted: number): [number, ErrorMessage] {
         }
         variableResult.push({variable: startVariableValue, result: result});
         startVariableValue = calculateNextVariable(variableResult, wanted);
-        console.log("new", startVariableValue);
         iterationCount++;
     }
     return [0, {errorOccurred: true, message: 'Reached max iterations count'}];
@@ -46,18 +45,20 @@ function solveFunction(func: string,  wanted: number): [number, ErrorMessage] {
  */
 function calculateNextVariable(mapping: Array<VarResType>, wanted: number): number {
     let lastValues: Array<VarResType> = [];
-    if (mapping.length > 3) {
+    if (mapping.length > 2) {
         lastValues = mapping.slice(mapping.length - 3, mapping.length - 1);
     } else {
         return mapping[mapping.length - 1].variable + 1;
     }
+    if (lastValues[1].variable === lastValues[0].variable) {
+        return lastValues[1].variable + 1;
+    }
     const isGettingCloser = (wanted - lastValues[1].result) < (wanted - lastValues[0].result);
     const step = lastValues[1].variable - lastValues[0].variable;
-    console.log(isGettingCloser, step);
-    if (!isGettingCloser) {
-        return lastValues[1].variable + ((step * 0.99) * -1);
+    if (isGettingCloser) {
+        return lastValues[1].variable + 1;
     } else {
-        return lastValues[1].variable + step;
+        return lastValues[1].variable * ((step * 0.99) * -1);
     }
 }
 

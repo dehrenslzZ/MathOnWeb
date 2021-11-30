@@ -31,6 +31,7 @@
     <Snackbar message={snackbarText} />
 {/if}
 <div class="centered">
+    <div class="experimental-text">This is still an experimental feature!</div>
     <div class="container">
         <div class="function-flex">
             <p>f(x)=</p>
