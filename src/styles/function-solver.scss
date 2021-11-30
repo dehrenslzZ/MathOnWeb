@@ -1,36 +1,36 @@
 .function-flex {
-    width: 350px;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+	width: 350px;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
 }
 .function-flex p {
-    font-size: 1.3em;
-    color: white;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.3em;
+	color: white;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
 }
 .function-flex .function-input {
-    width: 300px;
-    height: 50px;
-    font-size: 1.3em;
-    border: none;
-    outline: none;
+	width: 300px;
+	height: 50px;
+	font-size: 1.3em;
+	border: none;
+	outline: none;
 }
 .function-flex .wanted-input {
-    width: 100px;
-    height: 50px;
-    font-size: 1.3em;
-    border: none;
-    outline: none;
+	width: 100px;
+	height: 50px;
+	font-size: 1.3em;
+	border: none;
+	outline: none;
 }
 .experimental-text {
-    color: red;
-    font-size: 2em;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    text-overflow: wrap;
+	color: red;
+	font-size: 2em;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	text-overflow: wrap;
 }

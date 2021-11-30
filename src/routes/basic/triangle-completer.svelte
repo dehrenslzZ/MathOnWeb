@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { DefaultsProvider } from '$lib/defaults-provider';
 	import Navbar from '$lib/navbar.svelte';
-import Snackbar from '$lib/snackbar.svelte';
+	import Snackbar from '$lib/snackbar.svelte';
 	import solveTriangle from '$lib/triangle-calculator';
 	let triangle = new DefaultsProvider().getDefaultTriangle();
 	let showSnackbar = false;
@@ -10,7 +10,7 @@ import Snackbar from '$lib/snackbar.svelte';
 	function onChange(event: any, field: string) {
 		let copy_triangle = Object.assign({}, triangle);
 		if (field === 'beta' || field === 'gamma') {
-			copy_triangle[field] = (+event.target.value) * Math.PI / 180;
+			copy_triangle[field] = (+event.target.value * Math.PI) / 180;
 		} else {
 			copy_triangle[field] = +event.target.value;
 		}
@@ -32,9 +32,9 @@ import Snackbar from '$lib/snackbar.svelte';
 	}
 
 	function parseAngle(angle: number): number {
-		angle = angle * 180 / Math.PI;
+		angle = (angle * 180) / Math.PI;
 		if (angle < 0) {
-			return 180 - (angle *-1);
+			return 180 - angle * -1;
 		}
 		return angle;
 	}
@@ -77,11 +77,19 @@ import Snackbar from '$lib/snackbar.svelte';
 				<p>Alpha angle</p>
 			</div>
 			<div class="input-flex">
-				<input class="triangle-input" on:change={(event) => onChange(event, 'beta')} value={parseAngle(triangle.beta)} />
+				<input
+					class="triangle-input"
+					on:change={(event) => onChange(event, 'beta')}
+					value={parseAngle(triangle.beta)}
+				/>
 				<p>Beta angle</p>
 			</div>
 			<div class="input-flex">
-				<input class="triangle-input" on:change={(event) => onChange(event, 'gamma')} value={parseAngle(triangle.gamma)} />
+				<input
+					class="triangle-input"
+					on:change={(event) => onChange(event, 'gamma')}
+					value={parseAngle(triangle.gamma)}
+				/>
 				<p>Gamma angle</p>
 			</div>
 		</div>
