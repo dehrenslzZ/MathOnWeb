@@ -1,7 +1,7 @@
 import type { ErrorMessage } from "$src/typings/error";
 import { roundTo } from "./custom-math";
 
-const SOLVER_MAX_ITERATIONS = 100000;
+const SOLVER_MAX_ITERATIONS = 1000;
 
 type VarResType = {
     variable: number;
@@ -28,7 +28,7 @@ function solveFunction(func: string,  wanted: number): [number, ErrorMessage] {
         if (roundTo(result, 5) === roundTo(wanted, 5)) {
             return [startVariableValue, {errorOccurred: false}];
         }
-        variableResult.push({variable: startVariableValue, result: result});
+        variableResult.push({variable: startVariableValue, result: roundTo(result, 5)});
         startVariableValue = calculateNextVariable(variableResult, wanted);
         iterationCount++;
     }
@@ -53,12 +53,12 @@ function calculateNextVariable(mapping: Array<VarResType>, wanted: number): numb
     if (lastValues[1].variable === lastValues[0].variable) {
         return lastValues[1].variable + 1;
     }
-    const isGettingCloser = (wanted - lastValues[1].result) < (wanted - lastValues[0].result);
+    const isGettingCloser = (wanted - lastValues[1].result) < (wanted - lastValues[0].result) && (wanted - lastValues[1].result) > 0;
     const step = lastValues[1].variable - lastValues[0].variable;
     if (isGettingCloser) {
         return lastValues[1].variable + 1;
     } else {
-        return lastValues[1].variable * ((step * 0.99) * -1);
+        return lastValues[1].variable - (step - 0.01);
     }
 }
 

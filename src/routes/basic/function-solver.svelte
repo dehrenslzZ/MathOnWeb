@@ -11,7 +11,7 @@
     let resultText= '';
 
     function solve() {
-        const [result, err] = solveFunction(func, parseInt(wanted, 10));
+        const [result, err] = solveFunction(func, +wanted);
         if (err.errorOccurred) {
             snackbarText = err.message;
             showSnackbar = true;
@@ -31,7 +31,10 @@
     <Snackbar message={snackbarText} />
 {/if}
 <div class="centered">
-    <div class="experimental-text">This is still an experimental feature!</div>
+    <div class="experimental-text">
+        This feature is still experimental!<br>
+        So the results are not 100% trustable.
+    </div>
     <div class="container">
         <div class="function-flex">
             <p>f(x)=</p>
