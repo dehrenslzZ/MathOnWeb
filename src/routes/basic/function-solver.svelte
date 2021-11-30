@@ -3,8 +3,8 @@
 	import Snackbar from '$lib/snackbar.svelte';
 	import solveFunction from '$lib/solve-function';
 
-	let func: string = '';
-	let wanted: string = '';
+	let func = '';
+	let wanted = '';
 	let showSnackbar = false;
 	let snackbarText = '';
 	let resultExists = false;
