@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { DefaultsProvider } from './../defaults-provider';
-	import type { GeoLayerCoordinate, GeoLayerParameter } from './../../typings/geo-layer';
+	import type { GeoLayerParameter } from './../../typings/geo-layer';
 	import VectorInput from '$lib/vector-input.svelte';
 	import { LayerConvertingService } from './layer-converting-service';
 
