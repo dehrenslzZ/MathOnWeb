@@ -4,13 +4,14 @@
     import solveFunction from "$lib/solve-function";
 
     let func: string = "";
+    let wanted: string = '';
     let showSnackbar = false;
     let snackbarText = '';
     let resultExists = false;
     let resultText= '';
 
     function solve() {
-        const [result, err] = solveFunction(func, 4);
+        const [result, err] = solveFunction(func, parseInt(wanted, 10));
         if (err.errorOccurred) {
             snackbarText = err.message;
             showSnackbar = true;
@@ -34,6 +35,8 @@
         <div class="function-flex">
             <p>f(x)=</p>
             <input class="function-input" bind:value={func} />
+            <p>=</p>
+            <input class="wanted-input" bind:value={wanted} />
         </div>
         <button class="calculate-button" on:click={solve}>
             Solve

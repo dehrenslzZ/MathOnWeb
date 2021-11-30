@@ -30,6 +30,7 @@ function solveFunction(func: string,  wanted: number): [number, ErrorMessage] {
         }
         variableResult.push({variable: startVariableValue, result: result});
         startVariableValue = calculateNextVariable(variableResult, wanted);
+        console.log("new", startVariableValue);
         iterationCount++;
     }
     return [0, {errorOccurred: true, message: 'Reached max iterations count'}];
@@ -50,8 +51,9 @@ function calculateNextVariable(mapping: Array<VarResType>, wanted: number): numb
     } else {
         return mapping[mapping.length - 1].variable + 1;
     }
-    const isGettingCloser = (wanted - lastValues[1].result) > (wanted - lastValues[0].result);
+    const isGettingCloser = (wanted - lastValues[1].result) < (wanted - lastValues[0].result);
     const step = lastValues[1].variable - lastValues[0].variable;
+    console.log(isGettingCloser, step);
     if (!isGettingCloser) {
         return lastValues[1].variable + ((step * 0.99) * -1);
     } else {
