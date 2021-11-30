@@ -33,7 +33,8 @@
 <div class="centered">
     <div class="experimental-text">
         This feature is still experimental!<br>
-        So the results are not 100% trustable.
+        So there are big performance issues and<br> the results 
+        are not 100% trustable.
     </div>
     <div class="container">
         <div class="function-flex">
