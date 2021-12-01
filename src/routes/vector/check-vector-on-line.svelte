@@ -71,6 +71,5 @@
 			grid-template-rows: repeat(2, 50%);
 			width: 90vw;
 		}
-		
 	}
 </style>

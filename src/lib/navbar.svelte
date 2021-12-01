@@ -1,10 +1,15 @@
 <script lang="ts">
 	let navbarExtended = false;
-	export let largerMargin: boolean|undefined = undefined;
+	export let largerMargin: boolean | undefined = undefined;
 </script>
 
 <div class={`navbar ${navbarExtended ? 'extended' : ''}`}>
-	<button class="navbar-toggler" on:click={() => {navbarExtended = !navbarExtended}}></button>
+	<button
+		class="navbar-toggler"
+		on:click={() => {
+			navbarExtended = !navbarExtended;
+		}}
+	/>
 	<div class="navbar-menu">
 		<a href="/">Home</a>
 		<a href="/basic">Basic</a>
@@ -14,5 +19,5 @@
 </div>
 
 <style lang="scss">
-	@import "../styles/navbar.scss";
+	@import '../styles/navbar.scss';
 </style>

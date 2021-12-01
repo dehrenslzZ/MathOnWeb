@@ -22,5 +22,5 @@
 </div>
 
 <style lang="css">
-	@import "../styles/list-selector.scss";
+	@import '../styles/list-selector.scss';
 </style>

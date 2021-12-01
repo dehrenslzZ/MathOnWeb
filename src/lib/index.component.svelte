@@ -14,5 +14,5 @@
 </div>
 
 <style lang="css">
-	@import "../styles/homepage.scss";
+	@import '../styles/homepage.scss';
 </style>
