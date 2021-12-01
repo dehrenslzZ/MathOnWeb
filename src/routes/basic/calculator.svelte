@@ -105,12 +105,4 @@
 <style lang="scss">
 	@import '../../styles/general.scss';
 	@import '../../styles/calculator.scss';
-	.container {
-		width: 25vw;
-		height: 90vh !important;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 0px !important;
-	}
 </style>
