@@ -54,7 +54,9 @@
 <style lang="scss">
 	@import '../../styles/general.scss';
 	@import '../../styles/vector.scss';
-	
+	.vector-inline {
+		grid-template-columns: repeat(4, 25%);
+	}
 	@media only screen and (max-height: 1100px) and (min-height: 900px) {
 		.vector-inline {
 			transform: scale(1.3) !important;
