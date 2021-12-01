@@ -45,4 +45,24 @@
 <style lang="scss">
 	@import '../../styles/general.scss';
 	@import '../../styles/vector.scss';
+	.vector-inline {
+		grid-template-columns: repeat(3, 33%);
+	}
+
+	@media only screen and (max-height: 1100px) and (min-height: 900px) {
+		.vector-inline {
+			transform: scale(1.4) !important;
+		}
+		.calculate-button {
+			margin-left: 250px;
+			margin-top: 0;
+		}
+	}
+	@media only screen and (max-width: 680px) {
+		.vector-inline {
+			grid-template-columns: repeat(2, 50%);
+			grid-template-rows: repeat(2, 50%);
+			width: 90vw;
+		}
+	}
 </style>

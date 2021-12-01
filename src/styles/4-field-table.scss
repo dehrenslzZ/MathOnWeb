@@ -33,3 +33,15 @@
 	transform: scale(1.1);
 	border: none;
 }
+
+@media only screen and (max-width: 680px) {
+	.field-table {
+		transform: scale(0.8);
+	}
+}
+
+@media only screen and (max-height: 1100px) and (min-height: 900px) {
+	.field-table {
+		transform: scale(1.4);
+	}
+}

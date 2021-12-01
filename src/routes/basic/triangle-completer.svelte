@@ -44,7 +44,7 @@
 {#if showSnackbar}
 	<Snackbar message={errorSnackbar} />
 {/if}
-<div class="center">
+<div class="centered">
 	<div class="triangle-container">
 		<div class="outer-triangle">
 			<input
