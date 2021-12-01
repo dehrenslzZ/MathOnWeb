@@ -63,7 +63,7 @@
 	}
 </script>
 
-<Navbar />
+<Navbar largerMargin={true} />
 
 <div class="centered">
 	<div class="container">

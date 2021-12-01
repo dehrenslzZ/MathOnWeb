@@ -1,5 +1,6 @@
 <script lang="ts">
 	let navbarExtended = false;
+	export let largerMargin: boolean|undefined = undefined;
 </script>
 
 <div class={`navbar ${navbarExtended ? 'extended' : ''}`}>

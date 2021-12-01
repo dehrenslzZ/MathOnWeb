@@ -22,3 +22,8 @@
 	height: 40px;
 	border: none;
 }
+@media only screen and (max-width: 680px) {
+	.geo-layer .text-sm {
+		width: 40px;
+	}
+}

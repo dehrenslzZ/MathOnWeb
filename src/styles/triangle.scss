@@ -102,6 +102,7 @@ $triangleHeight: 250px;
 }
 @media only screen and (max-height: 1100px) and (min-height: 900px) {
 	.triangle-container {
+		margin-top: -10%;
 		width: 70%;
 		transform: scale(1.4);
 	}

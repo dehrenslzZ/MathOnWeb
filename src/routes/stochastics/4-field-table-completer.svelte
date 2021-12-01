@@ -50,4 +50,9 @@
 
 <style lang="scss">
 	@import '../../styles/general.scss';
+	@media only screen and (max-height: 1100px) and (min-height: 900px) {
+		.calculate-button {
+			margin-top: 4em;
+		}
+	}
 </style>

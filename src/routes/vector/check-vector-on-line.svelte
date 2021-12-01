@@ -63,4 +63,12 @@
 			margin-top: 100px;
 		}
 	}
+	@media only screen and (max-width: 680px) {
+		.vector-inline {
+			grid-template-columns: repeat(2, 50%);
+			grid-template-rows: repeat(2, 50%);
+			width: 90vw;
+		}
+		
+	}
 </style>

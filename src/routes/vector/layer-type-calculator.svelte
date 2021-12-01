@@ -24,4 +24,9 @@
 			transform: scale(1.7) !important;
 		}
 	}
+	@media only screen and (max-width: 680px) {
+		.container {
+			transform: scale(0.7) !important;
+		}
+	}
 </style>
