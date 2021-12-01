@@ -34,3 +34,25 @@
 	font-size: 2em;
 	text-overflow: clip;
 }
+
+@media only screen and (max-width: 680px) {
+	.result-form {
+		margin-top: 20px;
+		width: 80vw;
+	}
+	.calculate-button {
+		margin-top: 20px;
+		transform: scale(1.4);
+	}
+}
+
+@media only screen and (max-height: 1100px) and (min-height: 900px) {
+	.calculate-button {
+		margin-top: 40px;
+		transform: scale(1.8);
+	}
+	.result-form {
+		margin-top: 60px;
+		transform: scale(1.2);
+	}
+}
