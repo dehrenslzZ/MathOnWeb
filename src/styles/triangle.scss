@@ -5,7 +5,7 @@ $triangleHeight: 250px;
 	@import './general.scss';
 	@extend .container;
 	width: 100vw;
-	margin-top: 5em;
+	margin-top: -20em;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
@@ -85,4 +85,24 @@ $triangleHeight: 250px;
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.2em;
+}
+
+@media only screen and (max-width: 680px) {
+	.triangle-container {
+		transform: scale(0.7);
+	}
+	.input-container {
+		margin-top: 120px;
+		transform: scale(1.6);
+	}
+	.triangle-container .calculate-button {
+		margin-top: 150px;
+		transform: scale(2);
+	}
+}
+@media only screen and (max-height: 1100px) and (min-height: 900px) {
+	.triangle-container {
+		width: 70%;
+		transform: scale(1.4);
+	}
 }
