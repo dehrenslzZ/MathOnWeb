@@ -39,7 +39,7 @@
         display: block;
     }
     .navbar.extended .navbar-toggler {
-        margin-top: 20px;
+        margin-top: 15px;
     }
     .navbar-menu {
         display: none;
@@ -51,17 +51,20 @@
         width: 99vw;
         position: absolute;
         left: 50%;
+        top: 5px;
         transform: translateX(-50%);
         z-index: 5;
     }
     .navbar.extended {
-        height: fit-content;
+        height: 254px;
         background: #2e2d35;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: row;
+        animation-name: animateNavbarGrow;
+        animation-fill-mode: forwards;
+        animation-duration: .6s;
     }
     .navbar.extended .navbar-menu {
         display: flex;
@@ -69,7 +72,25 @@
         background: #2e2d35;
         justify-content: center;
         align-items: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        height: 245px;
+        animation-name: animateNavbarMenuGrow;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+    }
+    @keyframes animateNavbarGrow {
+        0% {
+            height: 70px;
+        }
+        100% {
+            height: 254px;
+        }
+    }
+    @keyframes animateNavbarMenuGrow {
+        0% {
+            height: 70px;
+        }
+        100% {
+            height: 245px;
+        }
     }
 }
