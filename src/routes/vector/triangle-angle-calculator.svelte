@@ -45,4 +45,14 @@
 <style lang="scss">
 	@import '../../styles/general.scss';
 	@import '../../styles/vector.scss';
+
+	@media only screen and (max-height: 1100px) and (min-height: 900px) {
+		.vector-inline {
+			transform: scale(1.4) !important;
+		}
+		.calculate-button {
+			margin-left: 250px;
+			margin-top: 0;
+		}
+	}
 </style>
