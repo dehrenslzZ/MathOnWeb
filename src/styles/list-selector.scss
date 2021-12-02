@@ -1,5 +1,3 @@
-@import "theme.scss";
-
 .content-container {
 	width: 100vw;
 	height: 80vh;
@@ -21,12 +19,10 @@
 	height: fit-content;
 	display: grid;
 	grid-template-columns: 30% 70%;
-	@include themify {
-		background: themed('listElementBackground');
-		color: themed('textColor');
-	}
+	background: #232228;
 	text-align: center;
 	text-decoration: none;
+	color: white;
 	border-radius: 10px;
 	font-family: 'Roboto', sans-serif;
 	transition: 0.3s;

@@ -1,13 +1,9 @@
-@import "theme.scss";
-
 .vector-container {
 	display: flex;
 	flex-direction: row;
 }
 .vector-symbols {
-	@include themify {
-		border: 1px solid themed('textColor');
-	}
+	color: white;
 	font-size: 140px;
 	height: 100%;
 	text-align: center;

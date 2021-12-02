@@ -1,10 +1,8 @@
-@import "theme.scss";
 .field-table {
 	width: 400px;
 	height: 400px;
 	padding: 0;
 	margin: 0;
-
 	display: grid;
 	grid-template-columns: repeat(4, 100px);
 	grid-template-rows: repeat(4, 100px);
@@ -15,10 +13,8 @@
 	border: 1px solid white;
 	padding: 0;
 	margin: 0;
-	@include themify {
-		background-color: themed('tableElementBackground');
-		color: themed('textColor');
-	}
+	background-color: #0b0d11;
+	color: white;
 	font-size: 2em;
 	display: grid;
 	place-items: center;
@@ -27,14 +23,10 @@
 	text-align: center;
 }
 .field-table .table-element.special {
-	@include themify {
-		background-image: themed('tableElementBackgroundGradient');
-	}
+	background-image: linear-gradient(to bottom right, rgb(233, 233, 233), rgb(105, 105, 105));
 }
 .field-table input.table-element:focus {
-	@include themify {
-		background-color: themed('tableElementFocusColor');
-	}
+	background-color: rgb(172, 172, 172);
 	outline: none;
 	border-radius: 10px;
 	transform: scale(1.1);

@@ -1,5 +1,3 @@
-@import "theme.scss";
-
 $triangleWidth: 500px;
 $triangleHeight: 250px;
 
@@ -36,9 +34,7 @@ $triangleHeight: 250px;
 		transform: rotate($rotation);
 		width: $length;
 		height: 2px;
-		@include themify {
-			background-color: themed('textColor');
-		}
+		background-color: white;
 	}
 }
 @include KathMixin(bottom-kath, 240px, 0, $triangleWidth, 0deg);
@@ -73,9 +69,6 @@ $triangleHeight: 250px;
 	width: fit-content;
 	height: fit-content;
 	padding: 10px;
-	@include themify {
-		border: 1px solid themed('textColor');
-	}
 	border: 1px solid white;
 	margin-top: 40px;
 }
@@ -89,9 +82,7 @@ $triangleHeight: 250px;
 }
 
 .input-flex p {
-	@include themify {
-		border: 1px solid themed('textColor');
-	}
+	color: white;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.2em;
 }

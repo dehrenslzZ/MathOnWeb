@@ -22,5 +22,4 @@
 
 <style lang="scss">
 	@import '../styles/navbar.scss';
-	@import '../styles/theme.scss';
 </style>

@@ -13,6 +13,6 @@
 	</div>
 </div>
 
-<style lang="css">
+<style lang="scss">
 	@import '../styles/homepage.scss';
 </style>
