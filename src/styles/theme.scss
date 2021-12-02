@@ -1,28 +1,34 @@
 $themes: (
-    light: (
-        fourFieldTableBorder: 1px solid red, 
-    ),
-    dark: (
-        fourFieldTableBorder: 1px solid green,
-    ),
+  dark: (
+    tableElementBackground: #0b0d11,
+    textColor: white,
+    tableElementBackgroundGradient: linear-gradient(to bottom right, rgb(233, 233, 233), rgb(105, 105, 105)),
+    tableElementFocusColor: rgb(172, 172, 172),
+    calculateButtonColor: rgb(16, 75, 109),
+    resultFormBackground: white,
+    listElementBackground: #232228,
+    navbarBackground: #2e2d35,
+    navbarHoverColor: #acacac,
+  ),
 );
 
 @mixin themify($themes: $themes) {
     @each $theme, $map in $themes {
-
-        .theme-#{$theme} & {
-            $theme-map: () !global;
-            @each $key, $submap in $map {
-                $value: map-get(map-get($themes, $theme), '#{$key}');
-                $theme-map: map-merge($theme-map, ($key, $value)) !global;
-            }
-            @content;
-            $theme-map: null !global;
+  
+      .theme-#{$theme} & {
+        $theme-map: () !global;
+        @each $key, $submap in $map {
+          $value: map-get(map-get($themes, $theme), '#{$key}');
+          $theme-map: map-merge($theme-map, ($key: $value)) !global;
         }
+  
+        @content;
+        $theme-map: null !global;
+      }
+  
     }
+  }
 
-};
-
-@function themed($key) {
+  @function themed($key) {
     @return map-get($theme-map, $key);
-}
+  }

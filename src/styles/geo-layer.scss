@@ -1,3 +1,5 @@
+@import "theme.scss";
+
 .geo-layer {
 	display: flex;
 	flex-direction: row;
@@ -6,7 +8,9 @@
 	gap: 5px;
 }
 .text-style-default {
-	color: white;
+	@include themify {
+		color: themed('textColor');
+	}
 	text-align: center;
 }
 .geo-layer .text {

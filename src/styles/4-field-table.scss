@@ -2,11 +2,9 @@
 .field-table {
 	width: 400px;
 	height: 400px;
-	@include themify {
-		
-	}
 	padding: 0;
 	margin: 0;
+
 	display: grid;
 	grid-template-columns: repeat(4, 100px);
 	grid-template-rows: repeat(4, 100px);
@@ -17,8 +15,10 @@
 	border: 1px solid white;
 	padding: 0;
 	margin: 0;
-	background-color: #0b0d11;
-	color: white;
+	@include themify {
+		background-color: themed('tableElementBackground');
+		color: themed('textColor');
+	}
 	font-size: 2em;
 	display: grid;
 	place-items: center;
@@ -27,10 +27,14 @@
 	text-align: center;
 }
 .field-table .table-element.special {
-	background-image: linear-gradient(to bottom right, rgb(233, 233, 233), rgb(105, 105, 105));
+	@include themify {
+		background-image: themed('tableElementBackgroundGradient');
+	}
 }
 .field-table input.table-element:focus {
-	background-color: rgb(172, 172, 172);
+	@include themify {
+		background-color: themed('tableElementFocusColor');
+	}
 	outline: none;
 	border-radius: 10px;
 	transform: scale(1.1);

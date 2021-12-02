@@ -1,3 +1,5 @@
+@import "theme.scss";
+
 .centered {
 	display: grid;
 	place-items: center;
@@ -15,8 +17,10 @@
 	gap: 10px;
 }
 .calculate-button {
-	background-color: rgb(16, 75, 109);
-	color: white;
+	@include themify {
+		background-color: themed('calculateButtonColor');
+		color: themed('textColor')
+	}
 	border: none;
 	font-family: 'Roboto', sans-serif;
 	font-size: 2em;
@@ -30,7 +34,9 @@
 .result-form {
 	height: 6em;
 	width: 18em;
-	background-color: white;
+	@include themify {
+		background-color: themed('resultFormBackground');
+	}
 	display: grid;
 	place-items: center;
 	font-size: 2em;

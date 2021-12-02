@@ -1,3 +1,5 @@
+@import "theme.scss";
+
 .centered {
 	position: absolute;
 	top: 20%;
@@ -13,12 +15,16 @@
 	gap: 10px;
 }
 .container h1 {
-	color: white;
+	@include themify {
+		color: themed('textColor');
+	}
 	font-family: 'Roboto', sans-serif;
 	font-size: 2em;
 }
 .container p {
-	color: white;
+	@include themify {
+		color: themed('textColor');
+	}
 	font-family: 'Roboto', sans-serif;
 	text-overflow: clip;
 	font-size: 1.2em;

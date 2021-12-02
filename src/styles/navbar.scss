@@ -1,7 +1,10 @@
+@import "theme.scss";
 .navbar {
 	width: 99vw;
 	height: 70px;
-	background: #2e2d35;
+	@include themify {
+		background: themed('navbarBackground');
+	}
 	border-radius: 10px;
 	position: absolute;
 	top: 5px;
@@ -22,7 +25,9 @@
 	gap: 20px;
 }
 .navbar-menu a {
-	color: white;
+	@include themify {
+		color: themed('textColor');
+	}
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.4em;
 	cursor: pointer;
@@ -30,7 +35,9 @@
 	text-decoration: none;
 }
 .navbar-menu a:hover {
-	color: #acacac;
+	@include themify {
+		color: themed('navbarHoverColor');
+	}
 }
 @media only screen and (max-width: 680px) {
 	.navbar-toggler {
@@ -62,7 +69,9 @@
 	}
 	.navbar.extended {
 		height: 254px;
-		background: #2e2d35;
+		@include themify {
+			background: themed('navbarBackground');
+		}
 		justify-content: center;
 		align-items: flex-start;
 		display: flex;
@@ -74,7 +83,9 @@
 	.navbar.extended .navbar-menu {
 		display: flex;
 		flex-direction: column;
-		background: #2e2d35;
+		@include themify {
+			background: themed('navbarBackground');
+		}
 		justify-content: center;
 		align-items: center;
 		height: 245px;

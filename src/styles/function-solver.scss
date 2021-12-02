@@ -1,3 +1,4 @@
+@import "themes.scss";
 .function-flex {
 	width: 350px;
 	height: 50px;
@@ -9,7 +10,9 @@
 }
 .function-flex p {
 	font-size: 1.3em;
-	color: white;
+	@include themify {
+		color: themed('textColor');
+	}
 	font-weight: bold;
 	font-family: Arial, Helvetica, sans-serif;
 }
