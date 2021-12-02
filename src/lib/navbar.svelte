@@ -1,6 +1,8 @@
 <script lang="ts">
+	import {browser} from '$app/env';
 	let navbarExtended = false;
 	export let largerMargin: boolean | undefined = undefined;
+	$: if (browser)document.body.classList.add('theme-dark');
 </script>
 
 <div class={`navbar ${navbarExtended ? 'extended' : ''}`}>
@@ -20,4 +22,5 @@
 
 <style lang="scss">
 	@import '../styles/navbar.scss';
+	@import '../styles/theme.scss';
 </style>

@@ -1,7 +1,10 @@
+@import "theme.scss";
 .field-table {
 	width: 400px;
 	height: 400px;
-	border: 1px solid white;
+	@include themify {
+		
+	}
 	padding: 0;
 	margin: 0;
 	display: grid;
