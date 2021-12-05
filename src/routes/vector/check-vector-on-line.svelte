@@ -57,6 +57,7 @@
 	@media only screen and (max-height: 1100px) and (min-height: 900px) {
 		.vector-inline {
 			transform: scale(1.3) !important;
+			width: 150% !important;
 		}
 		.calculate-button {
 			margin-top: 100px;
@@ -64,9 +65,13 @@
 	}
 	@media only screen and (max-width: 680px) {
 		.vector-inline {
-			grid-template-columns: repeat(2, 50%);
-			grid-template-rows: repeat(2, 50%);
+			grid-template-columns: 100%;
+			grid-template-rows: repeat(4, 25%);
 			width: 90vw;
+			height: 120vh;
+		}
+		.centered {
+			overflow-y: scroll;
 		}
 	}
 </style>

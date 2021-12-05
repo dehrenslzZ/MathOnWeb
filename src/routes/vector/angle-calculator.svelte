@@ -48,4 +48,7 @@
 <style lang="scss">
 	@import '../../styles/general.scss';
 	@import '../../styles/vector.scss';
+	.container {
+		transform: scale(0.7);
+	}
 </style>
