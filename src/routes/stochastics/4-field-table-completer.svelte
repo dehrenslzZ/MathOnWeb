@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Snackbar from '$lib/snackbar.svelte';
 	import FourFieldTable from '$lib/stochastics/four-field-table.component.svelte';
-	import Navbar from '$lib/navbar.svelte';
 	import type { FourFieldTableValues } from '$src/typings/four-field-table';
 	import { CompleteTable } from '$lib/stochastics/complete-table';
 
@@ -35,8 +34,6 @@
 	let showSnackbar = false;
 	let errorSnackbar = '';
 </script>
-
-<Navbar />
 
 <div class="centered">
 	<div class="container">

@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { DefaultsProvider } from '$lib/defaults-provider';
-	import type { Vector } from 'src/typings/vector';
-	import Navbar from '$lib/navbar.svelte';
 	import VectorInput from '$lib/vector-input.svelte';
 	import { calculateAngleFromVectors } from '$lib/vector/angle-calculator';
 	import { generateVectorDependency } from '$lib/vector/vector-dependency';
@@ -25,7 +23,6 @@
 	}
 </script>
 
-<Navbar />
 <div class="centered">
 	<div class="container">
 		<div class="vector-inline">

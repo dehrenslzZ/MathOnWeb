@@ -1,8 +1,5 @@
 <script lang="ts">
-	import {browser} from '$app/env';
 	let navbarExtended = false;
-	export let largerMargin: boolean | undefined = undefined;
-	$: if (browser)document.getElementById('svelte').classList.add('theme-dark');
 </script>
 
 <div class={`navbar ${navbarExtended ? 'extended' : ''}`}>

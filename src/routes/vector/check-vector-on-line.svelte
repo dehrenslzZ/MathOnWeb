@@ -1,6 +1,4 @@
 <script lang="ts">
-	import type { Vector } from 'src/typings/vector';
-	import Navbar from '$lib/navbar.svelte';
 	import VectorInput from '$lib/vector-input.svelte';
 	import { generateVectorDependency, checkLinearDependency } from '$lib/vector/vector-dependency';
 	import { DefaultsProvider } from '$lib/defaults-provider';
@@ -33,7 +31,6 @@
 	}
 </script>
 
-<Navbar />
 <div class="centered">
 	<div class="container">
 		<div class="vector-inline">

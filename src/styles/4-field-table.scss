@@ -10,11 +10,11 @@
 .field-table .table-element {
 	width: 98px;
 	height: 98px;
-	border: 1px solid white;
+	border: var(--four-field-table-border);
 	padding: 0;
 	margin: 0;
-	background-color: #0b0d11;
-	color: white;
+	background-color: var(--four-field-table-background);
+	color: var(--four-field-table-color);
 	font-size: 2em;
 	display: grid;
 	place-items: center;
@@ -23,10 +23,10 @@
 	text-align: center;
 }
 .field-table .table-element.special {
-	background-image: linear-gradient(to bottom right, rgb(233, 233, 233), rgb(105, 105, 105));
+	background-image: var(--four-field-table-special-background);
 }
 .field-table input.table-element:focus {
-	background-color: rgb(172, 172, 172);
+	background-color: var(--four-field-table-focus-background);
 	outline: none;
 	border-radius: 10px;
 	transform: scale(1.1);
