@@ -34,7 +34,7 @@ $triangleHeight: 250px;
 		transform: rotate($rotation);
 		width: $length;
 		height: 2px;
-		background-color: white;
+		background-color: var(--triangle-color);
 	}
 }
 @include KathMixin(bottom-kath, 240px, 0, $triangleWidth, 0deg);
@@ -69,7 +69,7 @@ $triangleHeight: 250px;
 	width: fit-content;
 	height: fit-content;
 	padding: 10px;
-	border: 1px solid white;
+	border: var(--triangle-input-border);
 	margin-top: 40px;
 }
 
@@ -82,7 +82,7 @@ $triangleHeight: 250px;
 }
 
 .input-flex p {
-	color: white;
+	color: var(--text-color);
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.2em;
 }
