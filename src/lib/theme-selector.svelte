@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { theme } from './theme';
-	import Switch from './Switch.svelte';
+	import Switch from './switch.svelte';
 
 	function onChange(value: string) {
 		theme.set(value);

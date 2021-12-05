@@ -5,16 +5,12 @@
 	import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 	function change(event: any) {
-		onChange(event.target.checked === 'true' ? 'dark' : 'light')
+		onChange(event.target.checked === 'true' ? 'dark' : 'light');
 	}
 </script>
 
 <label class="switch">
-	<input
-		type="checkbox"
-		{checked}
-		on:change={(event) => change(event)}
-	/>
+	<input type="checkbox" {checked} on:change={(event) => change(event)} />
 	<span class="slider">
 		<div class="slider-icon">
 			{#if checked}
