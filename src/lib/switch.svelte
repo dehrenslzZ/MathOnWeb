@@ -9,7 +9,7 @@
 	<input
 		type="checkbox"
 		{checked}
-		on:change={(event) => onChange(event.target.checked ? 'dark' : 'light')}
+		on:change={(event) => onChange(event.target.value === 'true' ? 'dark' : 'light')}
 	/>
 	<span class="slider">
 		<div class="slider-icon">
