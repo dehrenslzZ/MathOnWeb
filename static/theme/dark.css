@@ -13,4 +13,15 @@
     --snackbar-background: red;
     --triangle-color: white;
     --triangle-input-border: 1px solid white;
+    --list-selector-background: #232228;
+    --list-selector-hover-brightness: brightness(1.4);
+    --calculator-data-display-background: white;
+    --inverted-text-color: black;
+    --result-form-color: white;
+}
+body {
+    background: #0b0d11; overflow: hidden
+}
+input {
+    background: white;
 }

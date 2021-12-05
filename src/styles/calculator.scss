@@ -7,6 +7,8 @@
 	border-radius: 0;
 	border: none;
 	font-size: 3em;
+	background: var(--calculator-data-display-background);
+	color: var(--inverted-text-color);
 }
 .button-row {
 	width: 100%;
