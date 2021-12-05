@@ -3,13 +3,17 @@
 	export let onChange;
 	import Fa from 'svelte-fa';
 	import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+
+	function change(event: any) {
+		onChange(event.target.checked === 'true' ? 'dark' : 'light')
+	}
 </script>
 
 <label class="switch">
 	<input
 		type="checkbox"
 		{checked}
-		on:change={(event) => onChange(event.target.checked === 'true' ? 'dark' : 'light')}
+		on:change={(event) => change(event)}
 	/>
 	<span class="slider">
 		<div class="slider-icon">
