@@ -1,7 +1,7 @@
 .navbar {
 	width: 99vw;
 	height: 70px;
-	background: #2e2d35;
+	background: var(--navbar-background);
 	border-radius: 10px;
 	position: absolute;
 	top: 5px;
@@ -22,7 +22,7 @@
 	gap: 20px;
 }
 .navbar-menu a {
-	color: white;
+	color: var(--text-color);
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.4em;
 	cursor: pointer;
@@ -30,7 +30,7 @@
 	text-decoration: none;
 }
 .navbar-menu a:hover {
-	color: #acacac;
+	color: var(--navbar-hover-color);
 }
 @media only screen and (max-width: 680px) {
 	.navbar-toggler {
