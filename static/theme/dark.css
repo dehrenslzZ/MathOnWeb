@@ -1,7 +1,8 @@
 :root {
     --four-field-table-border: 1px solid white;
     --four-field-table-background: #0b0d11;
-    --four-field-table-color: white;
     --four-field-table-special-background: linear-gradient(to bottom right, rgb(233, 233, 233), rgb(105, 105, 105));
     --four-field-table-focus-background: rgb(172, 172, 172);
+    --text-color: white;
+    --exterimental-text: red;
 }
