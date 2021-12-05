@@ -4,7 +4,6 @@
 	import Fa from 'svelte-fa';
 	import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
-	// prettier-ignore
 	function change(event: any) {
 		onChange(event.target.checked === 'true' ? 'dark' : 'light');
 	}
