@@ -1,6 +1,5 @@
 <script>
 	export let checked;
-	export let color = '#2196F3';
 	export let onChange;
 	import Fa from 'svelte-fa';
 	import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
