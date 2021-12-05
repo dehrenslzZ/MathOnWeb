@@ -8,6 +8,8 @@
     --calculate-button-background: rgb(16, 75, 109);
     --navbar-hover-color: #acacac;
     --navbar-background: #2e2d35;
+    --navbar-toggler-background: #48474e;
+    --navbar-toggler-border: 1px solid rgb(37, 37, 37);
     --snackbar-background: red;
     --triangle-color: white;
     --triangle-input-border: 1px solid white;
