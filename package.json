@@ -25,7 +25,9 @@
 		"svelte-check": "^2.0.0",
 		"svelte-preprocess": "^4.9.8",
 		"tslib": "^2.0.0",
-		"typescript": "^4.0.0"
+		"typescript": "^4.0.0",
+		"json-schema": ">=0.4.0",
+		"ansi-regex": ">=5.0.1"
 	},
 	"type": "module",
 	"dependencies": {

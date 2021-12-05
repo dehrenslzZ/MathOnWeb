@@ -20,7 +20,7 @@
 	 */
 	function calculateAngle(a: Vector, b: Vector) {
 		const PK_15_C = calculateAngleFromVectors(a, b);
-		if (PK_15_C == Number.NaN) {
+		if (Number.isNaN(PK_15_C)) {
 			resultValue = '0';
 		} else {
 			resultValue = '' + PK_15_C;
