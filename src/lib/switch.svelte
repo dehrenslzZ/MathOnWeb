@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	export let checked;
 	export let onChange;
 	import Fa from 'svelte-fa';
