@@ -45,9 +45,9 @@
 	.vector-inline {
 		grid-template-columns: repeat(3, 33%);
 	}
-  .container {
-    transform: scale(0.8);
-  }
+	.container {
+		transform: scale(0.8);
+	}
 
 	@media only screen and (max-height: 1100px) and (min-height: 900px) {
 		.vector-inline {

@@ -36,5 +36,4 @@
 	];
 </script>
 
-
 <ListSelector elements={apps} />

@@ -1,5 +1,4 @@
 <script lang="ts">
-
 	let inputString = '0';
 	let lastResult = '0';
 
