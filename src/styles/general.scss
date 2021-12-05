@@ -2,9 +2,8 @@
 	display: grid;
 	place-items: center;
 	width: 100vw;
-	height: 70vh;
-	position: absolute;
-	top: 30%;
+	height: 100vh;
+	overflow: hidden;
 }
 .container {
 	width: 30vw;
@@ -15,8 +14,8 @@
 	gap: 10px;
 }
 .calculate-button {
-	background-color: rgb(16, 75, 109);
-	color: white;
+	background-color: var(--calculate-button-background);
+	color: var(--text-color);
 	border: none;
 	font-family: 'Roboto', sans-serif;
 	font-size: 2em;
@@ -30,11 +29,13 @@
 .result-form {
 	height: 6em;
 	width: 18em;
-	background-color: white;
+	background-color: var(--result-form-color);
 	display: grid;
 	place-items: center;
 	font-size: 2em;
 	text-overflow: clip;
+}
+.theme-selector {
 }
 
 @media only screen and (max-width: 680px) {
@@ -56,10 +57,5 @@
 	.result-form {
 		margin-top: 60px;
 		transform: scale(1.2);
-	}
-	.centered {
-		height: 70vh;
-		position: absolute;
-		top: 30%;
 	}
 }

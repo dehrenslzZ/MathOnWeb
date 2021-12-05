@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { DefaultsProvider } from '$lib/defaults-provider';
-	import Navbar from '$lib/navbar.svelte';
 	import type { Vector } from 'src/typings/vector';
 	import VectorInput from '$lib/vector-input.svelte';
 	import { checkLinearDependency } from '$lib/vector/vector-dependency';
@@ -27,7 +26,6 @@
 	}
 </script>
 
-<Navbar />
 <div class="centered">
 	<div class="container">
 		<div class="vector-inline">
@@ -46,4 +44,7 @@
 <style lang="scss">
 	@import '../../styles/general.scss';
 	@import '../../styles/vector.scss';
+	.container {
+		transform: scale(0.7);
+	}
 </style>

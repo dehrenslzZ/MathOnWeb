@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { DefaultsProvider } from '$lib/defaults-provider';
-	import Navbar from '$lib/navbar.svelte';
 	import Snackbar from '$lib/snackbar.svelte';
 	import solveTriangle from '$lib/triangle-calculator';
 	let triangle = new DefaultsProvider().getDefaultTriangle();
@@ -40,7 +39,6 @@
 	}
 </script>
 
-<Navbar />
 {#if showSnackbar}
 	<Snackbar message={errorSnackbar} />
 {/if}

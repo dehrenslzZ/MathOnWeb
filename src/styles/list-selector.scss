@@ -19,16 +19,16 @@
 	height: fit-content;
 	display: grid;
 	grid-template-columns: 30% 70%;
-	background: #232228;
+	background: var(--list-selector-background);
 	text-align: center;
 	text-decoration: none;
-	color: white;
+	color: var(--text-color);
 	border-radius: 10px;
 	font-family: 'Roboto', sans-serif;
 	transition: 0.3s;
 }
 .list-element:hover {
-	filter: brightness(1.4);
+	filter: var(--list-selector-hover-brightness);
 }
 @media only screen and (max-width: 680px) {
 	.content-container {

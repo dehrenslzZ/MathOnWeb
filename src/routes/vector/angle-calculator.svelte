@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Navbar from '$lib/navbar.svelte';
 	import VectorInput from '$lib/vector-input.svelte';
 	import type { Vector } from '../../typings/vector';
 	import { calculateAngleFromVectors } from '$lib/vector/angle-calculator';
@@ -29,15 +28,6 @@
 	}
 </script>
 
-<svelte:head>
-	<link rel="preconnect" href="https://fonts.gstatic.com" />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-		rel="stylesheet"
-	/>
-</svelte:head>
-
-<Navbar />
 <div class="centered">
 	<div class="container">
 		<div class="vector-inline">
@@ -58,4 +48,7 @@
 <style lang="scss">
 	@import '../../styles/general.scss';
 	@import '../../styles/vector.scss';
+	.container {
+		transform: scale(0.7);
+	}
 </style>

@@ -5,11 +5,11 @@
 	left: 20px;
 	width: 350px;
 	height: 50px;
-	background-color: red;
+	background-color: var(--snackbar-background);
 	border-radius: 10px;
 	animation: FadeIn 0.7s;
 	animation-fill-mode: forwards;
-	color: white;
+	color: var(--text-color);
 	font-size: 1.3em;
 	display: grid;
 	place-items: center;

@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { DefaultsProvider } from '$lib/defaults-provider';
-	import type { Vector } from 'src/typings/vector';
-	import Navbar from '$lib/navbar.svelte';
 	import VectorInput from '$lib/vector-input.svelte';
 	import { calculateAngleFromVectors } from '$lib/vector/angle-calculator';
 	import { generateVectorDependency } from '$lib/vector/vector-dependency';
@@ -25,7 +23,6 @@
 	}
 </script>
 
-<Navbar />
 <div class="centered">
 	<div class="container">
 		<div class="vector-inline">
@@ -48,21 +45,25 @@
 	.vector-inline {
 		grid-template-columns: repeat(3, 33%);
 	}
+	.container {
+		transform: scale(0.8);
+	}
 
 	@media only screen and (max-height: 1100px) and (min-height: 900px) {
 		.vector-inline {
 			transform: scale(1.4) !important;
+			width: 120% !important;
 		}
 		.calculate-button {
-			margin-left: 250px;
 			margin-top: 0;
 		}
 	}
 	@media only screen and (max-width: 680px) {
 		.vector-inline {
-			grid-template-columns: repeat(2, 50%);
-			grid-template-rows: repeat(2, 50%);
+			grid-template-columns: 100%;
+			grid-template-rows: repeat(3, 33%);
 			width: 90vw;
+			height: 70vh;
 		}
 	}
 </style>

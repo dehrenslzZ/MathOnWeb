@@ -12,6 +12,7 @@
 		grid-template-columns: 100%;
 		grid-template-rows: repeat(2, 50%);
 		margin-top: -5em;
+		width: 60% !important;
 	}
 }
 
@@ -19,5 +20,6 @@
 	.vector-inline {
 		transform: scale(1.8);
 		margin-bottom: 3em;
+		width: 100% !important;
 	}
 }

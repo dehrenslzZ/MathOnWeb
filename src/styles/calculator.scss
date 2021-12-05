@@ -7,6 +7,8 @@
 	border-radius: 0;
 	border: none;
 	font-size: 3em;
+	background: var(--calculator-data-display-background);
+	color: var(--inverted-text-color);
 }
 .button-row {
 	width: 100%;
@@ -17,11 +19,12 @@
 .container {
 	width: 27vw;
 	height: 90vh !important;
-	margin-top: 10vh;
+	margin-top: 5%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 0px !important;
+	transform: scale(1);
 }
 
 @mixin btnBase($name, $background) {
@@ -44,24 +47,17 @@
 @include btnBase(action-button, #dc5f11);
 @include btnBase(extra-button, #9e9e9e);
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 680px) and (min-width: 350px) {
 	.container {
-		height: 70vh;
-		margin-top: 20vh;
-		width: 90vw !important;
+		height: 50vh;
+		width: 95vw !important;
 		margin-left: -5vw;
-	}
-}
-@media only screen and (max-width: 680px) and (min-width: 500px) {
-	.container {
-		height: 75vh;
-		margin-top: 25vh;
-		width: 70vw !important;
-		margin-left: -5vw;
+		margin-top: 35%;
 	}
 }
 @media only screen and (max-width: 970px) and (min-width: 680px) {
 	.container {
 		width: 50vw !important;
+		margin-top: 15%;
 	}
 }

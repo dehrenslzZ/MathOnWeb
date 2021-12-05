@@ -1,6 +1,5 @@
 $triangleWidth: 500px;
 $triangleHeight: 250px;
-
 .triangle-container {
 	@import './general.scss';
 	@extend .container;
@@ -34,7 +33,7 @@ $triangleHeight: 250px;
 		transform: rotate($rotation);
 		width: $length;
 		height: 2px;
-		background-color: white;
+		background-color: var(--triangle-color);
 	}
 }
 @include KathMixin(bottom-kath, 240px, 0, $triangleWidth, 0deg);
@@ -69,7 +68,7 @@ $triangleHeight: 250px;
 	width: fit-content;
 	height: fit-content;
 	padding: 10px;
-	border: 1px solid white;
+	border: var(--triangle-input-border);
 	margin-top: 40px;
 }
 
@@ -82,14 +81,18 @@ $triangleHeight: 250px;
 }
 
 .input-flex p {
-	color: white;
+	color: var(--text-color);
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.2em;
+}
+.triangle-container .calculate-button {
+	transform: scale(1.5);
 }
 
 @media only screen and (max-width: 680px) {
 	.triangle-container {
 		transform: scale(0.7);
+		margin-top: -100%;
 	}
 	.input-container {
 		margin-top: 120px;
@@ -100,10 +103,9 @@ $triangleHeight: 250px;
 		transform: scale(2);
 	}
 }
-@media only screen and (max-height: 1100px) and (min-height: 900px) {
+
+@media only screen and (max-height: 1025px) and (max-width: 1367px) and (min-height: 950px) and (min-width: 1024px) {
 	.triangle-container {
-		margin-top: -10%;
-		width: 70%;
-		transform: scale(1.4);
+		transform: scale(1.2);
 	}
 }

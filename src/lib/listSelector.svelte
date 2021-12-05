@@ -21,6 +21,6 @@
 	{/each}
 </div>
 
-<style lang="css">
+<style lang="scss">
 	@import '../styles/list-selector.scss';
 </style>

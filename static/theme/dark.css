@@ -1,0 +1,27 @@
+:root {
+    --four-field-table-border: 1px solid white;
+    --four-field-table-background: #0b0d11;
+    --four-field-table-special-background: linear-gradient(to bottom right, rgb(233, 233, 233), rgb(105, 105, 105));
+    --four-field-table-focus-background: rgb(172, 172, 172);
+    --text-color: white;
+    --exterimental-text: red;
+    --calculate-button-background: rgb(16, 75, 109);
+    --navbar-hover-color: #acacac;
+    --navbar-background: #2e2d35;
+    --navbar-toggler-background: #48474e;
+    --navbar-toggler-border: 1px solid rgb(37, 37, 37);
+    --snackbar-background: red;
+    --triangle-color: white;
+    --triangle-input-border: 1px solid white;
+    --list-selector-background: #232228;
+    --list-selector-hover-brightness: brightness(1.4);
+    --calculator-data-display-background: white;
+    --inverted-text-color: black;
+    --result-form-color: white;
+}
+body {
+    background: #0b0d11; overflow: hidden
+}
+input {
+    background: white;
+}
