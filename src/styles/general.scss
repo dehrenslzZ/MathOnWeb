@@ -2,9 +2,7 @@
 	display: grid;
 	place-items: center;
 	width: 100vw;
-	height: 70vh;
-	position: absolute;
-	top: 30%;
+	height: 100vh;
 }
 .container {
 	width: 30vw;
@@ -56,10 +54,5 @@
 	.result-form {
 		margin-top: 60px;
 		transform: scale(1.2);
-	}
-	.centered {
-		height: 70vh;
-		position: absolute;
-		top: 30%;
 	}
 }
