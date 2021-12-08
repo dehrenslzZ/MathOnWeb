@@ -40,7 +40,7 @@
 			<p>=</p>
 			<input class="wanted-input" bind:value={wanted} />
 		</div>
-		<button class="calculate-button" on:click={solve}> Solve </button>
+		<button class="calculate-button" on:click={solve}>{$_('general.calculate')}</button>
 		{#if resultExists}
 			<div class="result-form">
 				{resultText}

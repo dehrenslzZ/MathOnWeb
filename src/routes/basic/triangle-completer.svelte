@@ -92,7 +92,7 @@
 				<p>{$_('basic.triangle-completer.gamma-angle')}</p>
 			</div>
 		</div>
-		<button class="calculate-button" on:click={solve}>Solve</button>
+		<button class="calculate-button" on:click={solve}>{$_('general.calculate')}</button>
 	</div>
 </div>
 
