@@ -5,5 +5,26 @@
         "basic": "Basic",
         "vector": "Vector",
         "stochastics": "Stochastics"
+    },
+    "general": {
+        "error": "ERROR",
+        "experimental-text": "This feature is still experimental! So there are big performance issues and the results are not 100% trustable."
+    },
+    "basic": {
+        "calculator": {
+            "title": "Calculator",
+            "description": "A basic calculator"
+        },
+        "triangle-completer": {
+            "title": "triangle completer",
+            "description": "Completes a triangle",
+            "alpha-angle": "Alpha angle",
+            "beta-angle": "Beta angle",
+            "gamma-angle": "Gamma angle"
+        },
+        "function-solver": {
+            "title": "function solver",
+            "description": "solves a math function"
+        }
     }
 }

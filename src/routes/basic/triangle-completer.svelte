@@ -2,6 +2,7 @@
 	import { DefaultsProvider } from '$lib/defaults-provider';
 	import Snackbar from '$lib/snackbar.svelte';
 	import solveTriangle from '$lib/triangle-calculator';
+	import {_} from 'svelte-i18n';
 	let triangle = new DefaultsProvider().getDefaultTriangle();
 	let showSnackbar = false;
 	let errorSnackbar = '';
@@ -72,7 +73,7 @@
 		<div class="input-container">
 			<div class="input-flex">
 				<input class="triangle-input" value="90" disabled />
-				<p>Alpha angle</p>
+				<p>{$_('basic.triangle-completer.alpha-angle')}</p>
 			</div>
 			<div class="input-flex">
 				<input
@@ -80,7 +81,7 @@
 					on:change={(event) => onChange(event, 'beta')}
 					value={parseAngle(triangle.beta)}
 				/>
-				<p>Beta angle</p>
+				<p>{$_('basic.triangle-completer.beta-angle')}</p>
 			</div>
 			<div class="input-flex">
 				<input
@@ -88,7 +89,7 @@
 					on:change={(event) => onChange(event, 'gamma')}
 					value={parseAngle(triangle.gamma)}
 				/>
-				<p>Gamma angle</p>
+				<p>{$_('basic.triangle-completer.gamma-angle')}</p>
 			</div>
 		</div>
 		<button class="calculate-button" on:click={solve}>Solve</button>

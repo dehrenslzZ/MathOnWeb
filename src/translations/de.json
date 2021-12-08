@@ -5,5 +5,26 @@
         "basic": "Standard",
         "vector": "Vektoren",
         "stochastics": "Stochastik"
+    },
+    "general": {
+        "error": "Fehler",
+        "experimental-text": "Diese Funktion ist noch nicht ausgereift! Es könnte also Performace Probleme geben und die Ergebnisse der Berechnungen könnten von der Wahrheit abweichen."
+    },
+    "basic": {
+        "calculator": {
+            "title": "Taschenrechner",
+            "description": "Ein gewöhnlicher Taschenrechner"
+        },
+        "triangle-completer": {
+            "title": "Dreieck vervollständigen",
+            "description": "Vervollständigt ein Dreieck, wenn genug Daten gegeben sind",
+            "alpha-angle": "Alpha Winkel",
+            "beta-angle": "Beta Winkel",
+            "gamma-angle": "Gamma Winkel"
+        },
+        "function-solver": {
+            "title": "Funktionen lösen",
+            "description": "Löst einfache mathematische Funktionen"
+        }
     }
 }
