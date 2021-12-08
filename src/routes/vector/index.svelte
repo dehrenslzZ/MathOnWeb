@@ -1,36 +1,38 @@
 <script lang="ts">
+import { _ } from 'svelte-i18n';
+
 	import ListSelector from '../../lib/listSelector.svelte';
 	import type { ListSelectorElement } from '../../typings/ListSelectorElement';
 
 	let apps: ListSelectorElement[] = [
 		{
-			name: 'Vector angle calculator',
-			description: 'Calculates the angle between to vectors',
+			name: $_('vector.angle-calculator.title'),
+			description: $_('vector.angle-calculator.description'),
 			route: '/vector/angle-calculator'
 		},
 		{
-			name: 'Vector linear dependency',
-			description: 'checks if two vectors are linear dependent',
+			name: $_('vector.linear-dependency.title'),
+			description:$_('vector.linear-dependency.description'),
 			route: '/vector/linear-checker'
 		},
 		{
-			name: 'Is Vector on line',
-			description: 'Checks if a vector is on a line',
+			name: $_('vector.is-vector-on-line.title'),
+			description: $_('vector.is-vector-on-line.description'),
 			route: '/vector/check-vector-on-line'
 		},
 		{
-			name: 'Get vector-line from points',
-			description: 'Generates a line from two points (vectors)',
+			name: $_('vector.get-vector-line.title'),
+			description: $_('vector.get-vector-line.description'),
 			route: '/vector/generate-line'
 		},
 		{
-			name: 'Triangle angle calculator',
-			description: 'Calculates all angles of an triangle, with vectors',
+			name: $_('vector.triangle-angle-calculator.title'),
+			description: $_('vector.triangle-angle-calculator.description'),
 			route: '/vector/triangle-angle-calculator'
 		},
 		{
-			name: 'Layer type converter',
-			description: 'Converts the differnt types of layers',
+			name: $_('vector.layer-type-converter.title'),
+			description: $_('vector.layer-type-converter.description'),
 			route: '/vector/layer-type-calculator'
 		}
 	];
