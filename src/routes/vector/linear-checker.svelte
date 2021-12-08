@@ -3,6 +3,7 @@
 	import type { Vector } from 'src/typings/vector';
 	import VectorInput from '$lib/vector-input.svelte';
 	import { checkLinearDependency } from '$lib/vector/vector-dependency';
+	import { _ } from 'svelte-i18n';
 
 	let v1 = new DefaultsProvider().getVectorDefault();
 	let v2 = new DefaultsProvider().getVectorDefault();
@@ -19,9 +20,9 @@
 	 */
 	function calc(v1: Vector, v2: Vector) {
 		if (checkLinearDependency(v1, v2)) {
-			resultText = 'The vectors are linear dependent';
+			resultText = $_('vector.linear-dependency.is-dependent');
 		} else {
-			resultText = 'The vectors are linear independent';
+			resultText = $_('vector.linear-dependency.is-independent');
 		}
 	}
 </script>
@@ -32,7 +33,8 @@
 			<VectorInput vector={v1} />
 			<VectorInput vector={v2} />
 		</div>
-		<button class="calculate-button" on:click={() => calc(v1, v2)}>calculate</button>
+		<button class="calculate-button" on:click={() => calc(v1, v2)}>{$_('general.calculate')}</button
+		>
 		<div class="result-form">
 			{#if resultText != ''}
 				{resultText}

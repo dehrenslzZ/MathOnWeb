@@ -1,17 +1,22 @@
 <script lang="ts">
 	import ListSelector from '../../lib/listSelector.svelte';
 	import type { ListSelectorElement } from '../../typings/ListSelectorElement';
+	import { _ } from 'svelte-i18n';
 
 	let apps: ListSelectorElement[] = [
-		{ name: 'Calculator', description: 'A basic calculator', route: '/basic/calculator' },
 		{
-			name: 'Triangle completer',
-			description: 'completes a triangle',
+			name: $_('basic.calculator.title'),
+			description: $_('basic.calculator.description'),
+			route: '/basic/calculator'
+		},
+		{
+			name: $_('basic.triangle-completer.title'),
+			description: $_('basic.triangle-completer.description'),
 			route: '/basic/triangle-completer'
 		},
 		{
-			name: 'Function solver',
-			description: 'solves an matn function',
+			name: $_('basic.function-solver.title'),
+			description: $_('basic.function-solver.description'),
 			route: '/basic/function-solver'
 		}
 	];

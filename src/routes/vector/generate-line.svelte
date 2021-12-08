@@ -2,6 +2,7 @@
 	import { DefaultsProvider } from '$lib/defaults-provider';
 	import VectorInput from '$lib/vector-input.svelte';
 	import { generateVectorDependency } from '$lib/vector/vector-dependency';
+	import { _ } from 'svelte-i18n';
 
 	let v1 = new DefaultsProvider().getVectorDefault();
 	let v2 = new DefaultsProvider().getVectorDefault();
@@ -23,7 +24,7 @@
 			<VectorInput vector={v1} />
 			<VectorInput vector={v2} />
 		</div>
-		<button class="calculate-button" on:click={() => calc()}>calculate</button>
+		<button class="calculate-button" on:click={() => calc()}>{$_('general.calculate')}</button>
 		<div class="result-form">
 			{#if resultValue != ''}
 				{resultValue}

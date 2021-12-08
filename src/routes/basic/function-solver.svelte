@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Snackbar from '$lib/snackbar.svelte';
 	import solveFunction from '$lib/solve-function';
+	import { _ } from 'svelte-i18n';
 
 	let func = '';
 	let wanted = '';
@@ -30,8 +31,7 @@
 {/if}
 <div class="centered">
 	<div class="experimental-text">
-		This feature is still experimental!<br />
-		So there are big performance issues and<br /> the results are not 100% trustable.
+		{$_('general.experimental-text')}
 	</div>
 	<div class="container">
 		<div class="function-flex">
@@ -40,7 +40,7 @@
 			<p>=</p>
 			<input class="wanted-input" bind:value={wanted} />
 		</div>
-		<button class="calculate-button" on:click={solve}> Solve </button>
+		<button class="calculate-button" on:click={solve}>{$_('general.calculate')}</button>
 		{#if resultExists}
 			<div class="result-form">
 				{resultText}

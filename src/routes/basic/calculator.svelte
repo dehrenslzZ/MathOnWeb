@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { _ } from 'svelte-i18n';
+
 	let inputString = '0';
 	let lastResult = '0';
 
@@ -19,7 +21,7 @@
 			inputString = eval(inputString);
 			lastResult = inputString;
 		} catch (e) {
-			inputString = 'ERROR';
+			inputString = $_('general.error');
 		}
 	}
 

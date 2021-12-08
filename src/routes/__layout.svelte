@@ -1,6 +1,12 @@
 <script lang="ts">
 	import Navbar from '$lib/navbar.svelte';
 	import { theme } from '../lib/theme';
+	import '../i18n.ts';
+	import { waitLocale } from 'svelte-i18n';
+
+	async function preload() {
+		return waitLocale();
+	}
 </script>
 
 <svelte:head>
@@ -12,5 +18,7 @@
 	/>
 </svelte:head>
 
-<Navbar />
-<slot />
+{#await preload() then _}
+	<Navbar />
+	<slot />
+{/await}

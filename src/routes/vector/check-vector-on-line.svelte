@@ -2,6 +2,7 @@
 	import VectorInput from '$lib/vector-input.svelte';
 	import { generateVectorDependency, checkLinearDependency } from '$lib/vector/vector-dependency';
 	import { DefaultsProvider } from '$lib/defaults-provider';
+	import { _ } from 'svelte-i18n';
 
 	let v1 = new DefaultsProvider().getVectorDefault();
 	let v2 = new DefaultsProvider().getVectorDefault();
@@ -20,13 +21,13 @@
 		let AC = generateVectorDependency(v1, v3);
 		let AD = generateVectorDependency(v1, v4);
 		if (checkLinearDependency(AB, AC)) {
-			resultValue = 'D is not on the line';
+			resultValue = `D ${$_('vector.is-vector-on-line.not-on-line')}`;
 		} else if (checkLinearDependency(AC, AD)) {
-			resultValue = 'B is not on the line';
+			resultValue = `B ${$_('vector.is-vector-on-line.not-on-line')}`;
 		} else if (checkLinearDependency(AB, AD)) {
-			resultValue = 'C is not on the line';
+			resultValue = `C ${$_('vector.is-vector-on-line.not-on-line')}`;
 		} else {
-			resultValue = 'A is not on the line';
+			resultValue = `A ${$_('vector.is-vector-on-line.not-on-line')}`;
 		}
 	}
 </script>
@@ -39,7 +40,7 @@
 			<VectorInput vector={v3} />
 			<VectorInput vector={v4} />
 		</div>
-		<button class="calculate-button" on:click={() => calc()}>calculate</button>
+		<button class="calculate-button" on:click={() => calc()}>{$_('general.calculate')}</button>
 		<div class="result-form">
 			{#if resultValue != ''}
 				{resultValue}

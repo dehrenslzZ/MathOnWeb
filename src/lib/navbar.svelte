@@ -2,10 +2,26 @@
 	import ThemeSelector from './theme-selector.svelte';
 	import Fa from 'svelte-fa';
 	import { faAlignJustify } from '@fortawesome/free-solid-svg-icons';
+	import { _ } from 'svelte-i18n';
 	let navbarExtended = false;
+
+	/**
+	 * Checks if the user clicked outside of the navbar and the
+	 * navbar gets minimized, if it was extended before.
+	 *
+	 * @param event The PointerEvent triggered by a click
+	 */
+	const handleClick = (event: PointerEvent) => {
+		if (!document.getElementById('navbar').contains(event.target as Node)) {
+			navbarExtended = false;
+		}
+	};
+
+	// Adding click listener to the whole window
+	window.addEventListener('click', handleClick);
 </script>
 
-<div class={`navbar ${navbarExtended ? 'extended' : ''}`}>
+<div id="navbar" class={`navbar ${navbarExtended ? 'extended' : ''}`}>
 	<div
 		class="navbar-toggler"
 		on:click={() => {
@@ -15,10 +31,10 @@
 		<Fa icon={faAlignJustify} />
 	</div>
 	<div class="navbar-menu">
-		<a href="/">Home</a>
-		<a href="/basic">Basic</a>
-		<a href="/vector">Vector</a>
-		<a href="/stochastics">Stochastics</a>
+		<a href="/">{$_('navbar.home')}</a>
+		<a href="/basic">{$_('navbar.basic')}</a>
+		<a href="/vector">{$_('navbar.vector')}</a>
+		<a href="/stochastics">{$_('navbar.stochastics')}</a>
 	</div>
 	<div class="navbar-actions">
 		<ThemeSelector />

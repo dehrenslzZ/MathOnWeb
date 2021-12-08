@@ -1,11 +1,12 @@
 <script lang="ts">
+	import { _ } from 'svelte-i18n';
 	import ListSelector from '../../lib/listSelector.svelte';
 	import type { ListSelectorElement } from '../../typings/ListSelectorElement';
 
 	let apps: ListSelectorElement[] = [
 		{
-			name: 'four field table completer',
-			description: 'Completes a four field table',
+			name: $_('stochastics.4-field-table.title'),
+			description: $_('stochastics.4-field-table.description'),
 			route: '/stochastics/4-field-table-completer'
 		}
 	];
