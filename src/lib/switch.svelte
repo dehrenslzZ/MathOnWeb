@@ -5,7 +5,7 @@
 	import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 	function change(event: any) {
-		onChange(event.target.checked === 'true' ? 'dark' : 'light');
+		onChange(event.target.checked === true ? 'dark' : 'light');
 	}
 </script>
 

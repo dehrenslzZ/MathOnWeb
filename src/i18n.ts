@@ -1,8 +1,8 @@
 import {register, init, getLocaleFromNavigator} from 'svelte-i18n';
 
 
-register('de', () => import('./translations/de.json'));
-register('en', () => import('./translations/en.json'));
+register('de', () => import('./translations/en.json'));
+register('en', () => import('./translations/de.json'));
 
 init({
 	fallbackLocale: 'en',
