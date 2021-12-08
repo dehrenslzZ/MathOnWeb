@@ -78,7 +78,7 @@
 	}
 	.navbar.extended {
 		height: 254px;
-		background: #2e2d35;
+		background: var(--navbar-background);
 		justify-content: center;
 		align-items: flex-start;
 		display: flex;
@@ -90,7 +90,7 @@
 	.navbar.extended .navbar-menu {
 		display: flex;
 		flex-direction: column;
-		background: #2e2d35;
+		background: var(--navbar-background);
 		justify-content: center;
 		align-items: center;
 		height: 245px;
