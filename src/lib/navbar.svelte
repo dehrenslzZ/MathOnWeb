@@ -2,6 +2,7 @@
 	import ThemeSelector from './theme-selector.svelte';
 	import Fa from 'svelte-fa';
 	import { faAlignJustify } from '@fortawesome/free-solid-svg-icons';
+	import {_} from 'svelte-i18n';
 	let navbarExtended = false;
 </script>
 
@@ -15,10 +16,10 @@
 		<Fa icon={faAlignJustify} />
 	</div>
 	<div class="navbar-menu">
-		<a href="/">Home</a>
-		<a href="/basic">Basic</a>
-		<a href="/vector">Vector</a>
-		<a href="/stochastics">Stochastics</a>
+		<a href="/">{$_('navbar.home')}</a>
+		<a href="/basic">{$_('navbar.basic')}</a>
+		<a href="/vector">{$_('navbar.vector')}</a>
+		<a href="/stochastics">{$_('navbar.stochastics')}</a>
 	</div>
 	<div class="navbar-actions">
 		<ThemeSelector />

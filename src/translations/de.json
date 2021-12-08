@@ -1,3 +1,9 @@
 {
-    "indexText": "Klaas ist ein Nuttensohn"
+    "indexText": "MathOnWeb ist eine open source Webanwendung, welche gebaut wurde, um effizient komplexe mathematische Operationen auszuführen. Deshalb muss diese Andwendung sehr schnell sein, um eine angenehme Nutzererfahrung zu bieten. Svelte benutzt keinen virtualDOM, sondern das native DOM des Browsers, was es sehr sehr schnell macht. Die Anwendung nutzt ES6, was von dem Großteil aller moderen Browser bereits unterstützt wird. Es wird in keinster Weise Virtualisierung genutzt, sondern nur die native Javascript-engine des Browsers. Des weiteren nutzt das Project Typescript, was eine große Type-safety und ein einige Performance Vorteile bietet. Ich würde mich freuen, würden sie einen Blick auf mein Projekt werfen.",
+    "navbar": {
+        "home": "Home",
+        "basic": "Standard",
+        "vector": "Vektoren",
+        "stochastics": "Stochastik"
+    }
 }
