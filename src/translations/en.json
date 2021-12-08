@@ -31,15 +31,19 @@
     "vector": {
         "angle-calculator": {
             "title": "Vector angle calculator",
-            "description": "Calculates the angle between to vectors"
+            "description": "Calculates the angle between to vectors",
+            "the-angle-is": "The angle is"
         },
         "linear-dependency": {
             "title": "Vector linear dependency",
-            "description": "checks if two vectors are linear dependent"
+            "description": "checks if two vectors are linear dependent",
+            "is-dependent": "The vectors are linear dependent",
+            "is-independent": "The vectors are linear independent"
         },
         "is-vector-on-line": {
             "title": "Is vector on line",
-            "description": "Checks if a vector is on a line"
+            "description": "Checks if a vector is on a line",
+            "not-on-line": "is not on the line"
         },
         "get-vector-line": {
             "title": "Get vector line",

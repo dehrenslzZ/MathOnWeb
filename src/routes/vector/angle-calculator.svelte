@@ -3,6 +3,7 @@
 	import type { Vector } from '../../typings/vector';
 	import { calculateAngleFromVectors } from '$lib/vector/angle-calculator';
 	import { DefaultsProvider } from '$lib/defaults-provider';
+import { _ } from 'svelte-i18n';
 
 	let resultValue = '';
 	let vectorA = new DefaultsProvider().getVectorDefault();
@@ -35,11 +36,11 @@
 			<VectorInput vector={vectorB} />
 		</div>
 		<button class="calculate-button" on:click={() => calculateAngle(vectorA, vectorB)}
-			>calculate</button
+			>{$_('general.calculate')}</button
 		>
 		<div class="result-form">
 			{#if resultValue != ''}
-				The angle is {resultValue}°
+				{$_('vector.angle-calculator.the-angle-is')} {resultValue}°
 			{/if}
 		</div>
 	</div>

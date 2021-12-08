@@ -3,6 +3,7 @@
 	import VectorInput from '$lib/vector-input.svelte';
 	import { calculateAngleFromVectors } from '$lib/vector/angle-calculator';
 	import { generateVectorDependency } from '$lib/vector/vector-dependency';
+import { _ } from 'svelte-i18n';
 
 	let VEC_A = new DefaultsProvider().getVectorDefault();
 	let VEC_B = new DefaultsProvider().getVectorDefault();
@@ -30,7 +31,7 @@
 			<VectorInput vector={VEC_B} />
 			<VectorInput vector={VEC_C} />
 		</div>
-		<button class="calculate-button" on:click={() => calc()}>calculate</button>
+		<button class="calculate-button" on:click={() => calc()}>{$_('general.calculate')}</button>
 		<div class="result-form">
 			{#if resultValue != ''}
 				{resultValue}
