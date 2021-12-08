@@ -8,7 +8,8 @@
     },
     "general": {
         "error": "FEHLER",
-        "experimental-text": "Diese Funktion ist noch nicht ausgereift! Es könnte also Performace Probleme geben und die Ergebnisse der Berechnungen könnten von der Wahrheit abweichen."
+        "experimental-text": "Diese Funktion ist noch nicht ausgereift! Es könnte also Performace Probleme geben und die Ergebnisse der Berechnungen könnten von der Wahrheit abweichen.",
+        "calculate": "Berechnen"
     },
     "basic": {
         "calculator": {
@@ -51,6 +52,13 @@
         "layer-type-converter": {
             "title": "Ebenenformen umrechnen",
             "description": "Konvertiert zwischen den verschiedenen Ebenenformen"
+        }
+    },
+    "stochastics": {
+        "4-field-table": {
+            "title": "4-Felder-Tafel",
+            "description": "Vervollständigt eine 4 Felder Tafel",
+            "button-text": "Tafel vervollständigen"
         }
     } 
 }

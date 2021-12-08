@@ -8,7 +8,8 @@
     },
     "general": {
         "error": "ERROR",
-        "experimental-text": "This feature is still experimental! So there are big performance issues and the results are not 100% trustable."
+        "experimental-text": "This feature is still experimental! So there are big performance issues and the results are not 100% trustable.",
+        "calculate": "caclulate"
     },
     "basic": {
         "calculator": {
@@ -52,5 +53,12 @@
             "title": "Layer type converter",
             "description": "Converts a vector layer between the two different types"
         }
-    } 
+    },
+    "stochastics": {
+        "4-field-table": {
+            "title": "4 Field table completer",
+            "description": "Completes a 4 field table, if enough values are given",
+            "button-text": "Complete table"
+        }
+    }
 }
