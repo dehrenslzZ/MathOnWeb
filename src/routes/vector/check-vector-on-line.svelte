@@ -2,7 +2,7 @@
 	import VectorInput from '$lib/vector-input.svelte';
 	import { generateVectorDependency, checkLinearDependency } from '$lib/vector/vector-dependency';
 	import { DefaultsProvider } from '$lib/defaults-provider';
-import { _ } from 'svelte-i18n';
+	import { _ } from 'svelte-i18n';
 
 	let v1 = new DefaultsProvider().getVectorDefault();
 	let v2 = new DefaultsProvider().getVectorDefault();

@@ -3,7 +3,7 @@
 	import FourFieldTable from '$lib/stochastics/four-field-table.component.svelte';
 	import type { FourFieldTableValues } from '$src/typings/four-field-table';
 	import { CompleteTable } from '$lib/stochastics/complete-table';
-import { _ } from 'svelte-i18n';
+	import { _ } from 'svelte-i18n';
 
 	let table: FourFieldTableValues = {
 		AB: null,
@@ -39,7 +39,9 @@ import { _ } from 'svelte-i18n';
 <div class="centered">
 	<div class="container">
 		<FourFieldTable bind:table />
-		<button class="calculate-button" on:click={onClick}>{$_('stochastics.4-field-table.button-text')}</button>
+		<button class="calculate-button" on:click={onClick}
+			>{$_('stochastics.4-field-table.button-text')}</button
+		>
 	</div>
 </div>
 {#if showSnackbar}

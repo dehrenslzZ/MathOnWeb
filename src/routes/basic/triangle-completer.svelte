@@ -2,7 +2,7 @@
 	import { DefaultsProvider } from '$lib/defaults-provider';
 	import Snackbar from '$lib/snackbar.svelte';
 	import solveTriangle from '$lib/triangle-calculator';
-	import {_} from 'svelte-i18n';
+	import { _ } from 'svelte-i18n';
 	let triangle = new DefaultsProvider().getDefaultTriangle();
 	let showSnackbar = false;
 	let errorSnackbar = '';

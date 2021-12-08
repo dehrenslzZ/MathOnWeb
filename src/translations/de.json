@@ -1,68 +1,68 @@
 {
-    "indexText": "MathOnWeb ist eine open source Webanwendung, welche gebaut wurde, um effizient komplexe mathematische Operationen auszuführen. Deshalb muss diese Andwendung sehr schnell sein, um eine angenehme Nutzererfahrung zu bieten. Svelte benutzt keinen virtualDOM, sondern das native DOM des Browsers, was es sehr sehr schnell macht. Die Anwendung nutzt ES6, was von dem Großteil aller moderen Browser bereits unterstützt wird. Es wird in keinster Weise Virtualisierung genutzt, sondern nur die native Javascript-engine des Browsers. Des weiteren nutzt das Project Typescript, was eine große Type-safety und ein einige Performance Vorteile bietet. Ich würde mich freuen, würden sie einen Blick auf mein Projekt werfen.",
-    "navbar": {
-        "home": "Home",
-        "basic": "Standard",
-        "vector": "Vektoren",
-        "stochastics": "Stochastik"
-    },
-    "general": {
-        "error": "FEHLER",
-        "experimental-text": "Diese Funktion ist noch nicht ausgereift! Es könnte also Performace Probleme geben und die Ergebnisse der Berechnungen könnten von der Wahrheit abweichen.",
-        "calculate": "Berechnen"
-    },
-    "basic": {
-        "calculator": {
-            "title": "Taschenrechner",
-            "description": "Ein gewöhnlicher Taschenrechner"
-        },
-        "triangle-completer": {
-            "title": "Dreieck vervollständigen",
-            "description": "Vervollständigt ein Dreieck, wenn genug Daten gegeben sind",
-            "alpha-angle": "Alpha Winkel",
-            "beta-angle": "Beta Winkel",
-            "gamma-angle": "Gamma Winkel"
-        },
-        "function-solver": {
-            "title": "Funktionen lösen",
-            "description": "Löst einfache mathematische Funktionen"
-        }
-    },
-    "vector": {
-        "angle-calculator": {
-            "title": "Winkelberechnung (Vektoren)",
-            "description": "Berechnet den Schnittwinkel von zwei Vektoren",
-            "the-angle-is": "Der Winkel beträgt"
-        },
-        "linear-dependency": {
-            "title": "Lineare Abhängigkeit",
-            "description": "Prüft, ob zwei Vektoren linear abhängig sind",
-            "is-dependent": "Die Vektoren sind linear abhängig",
-            "is-independent": "Die Vektoren sind linear unabhängig"
-        },
-        "is-vector-on-line": {
-            "title": "Geraden Vektor",
-            "description": "Prüft, ob ein Vektor auf einer gegebenen Gerade liegt",
-            "not-on-line": "liegt nicht auf der Geraden."
-        },
-        "get-vector-line": {
-            "title": "Vektorgerade",
-            "description": "Generiert eine Gerade aus Vektoren"
-        },
-        "triangle-angle-calculator": {
-            "title": "Dreieck Winkelberechnung (Vektoren)",
-            "description": "Berechnet die Winkel eines Dreiecks aus drei verschiedenen Vektoren"
-        },
-        "layer-type-converter": {
-            "title": "Ebenenformen umrechnen",
-            "description": "Konvertiert zwischen den verschiedenen Ebenenformen"
-        }
-    },
-    "stochastics": {
-        "4-field-table": {
-            "title": "4-Felder-Tafel",
-            "description": "Vervollständigt eine 4 Felder Tafel",
-            "button-text": "Tafel vervollständigen"
-        }
-    } 
+	"indexText": "MathOnWeb ist eine open source Webanwendung, welche gebaut wurde, um effizient komplexe mathematische Operationen auszuführen. Deshalb muss diese Andwendung sehr schnell sein, um eine angenehme Nutzererfahrung zu bieten. Svelte benutzt keinen virtualDOM, sondern das native DOM des Browsers, was es sehr sehr schnell macht. Die Anwendung nutzt ES6, was von dem Großteil aller moderen Browser bereits unterstützt wird. Es wird in keinster Weise Virtualisierung genutzt, sondern nur die native Javascript-engine des Browsers. Des weiteren nutzt das Project Typescript, was eine große Type-safety und ein einige Performance Vorteile bietet. Ich würde mich freuen, würden sie einen Blick auf mein Projekt werfen.",
+	"navbar": {
+		"home": "Home",
+		"basic": "Standard",
+		"vector": "Vektoren",
+		"stochastics": "Stochastik"
+	},
+	"general": {
+		"error": "FEHLER",
+		"experimental-text": "Diese Funktion ist noch nicht ausgereift! Es könnte also Performace Probleme geben und die Ergebnisse der Berechnungen könnten von der Wahrheit abweichen.",
+		"calculate": "Berechnen"
+	},
+	"basic": {
+		"calculator": {
+			"title": "Taschenrechner",
+			"description": "Ein gewöhnlicher Taschenrechner"
+		},
+		"triangle-completer": {
+			"title": "Dreieck vervollständigen",
+			"description": "Vervollständigt ein Dreieck, wenn genug Daten gegeben sind",
+			"alpha-angle": "Alpha Winkel",
+			"beta-angle": "Beta Winkel",
+			"gamma-angle": "Gamma Winkel"
+		},
+		"function-solver": {
+			"title": "Funktionen lösen",
+			"description": "Löst einfache mathematische Funktionen"
+		}
+	},
+	"vector": {
+		"angle-calculator": {
+			"title": "Winkelberechnung (Vektoren)",
+			"description": "Berechnet den Schnittwinkel von zwei Vektoren",
+			"the-angle-is": "Der Winkel beträgt"
+		},
+		"linear-dependency": {
+			"title": "Lineare Abhängigkeit",
+			"description": "Prüft, ob zwei Vektoren linear abhängig sind",
+			"is-dependent": "Die Vektoren sind linear abhängig",
+			"is-independent": "Die Vektoren sind linear unabhängig"
+		},
+		"is-vector-on-line": {
+			"title": "Geraden Vektor",
+			"description": "Prüft, ob ein Vektor auf einer gegebenen Gerade liegt",
+			"not-on-line": "liegt nicht auf der Geraden."
+		},
+		"get-vector-line": {
+			"title": "Vektorgerade",
+			"description": "Generiert eine Gerade aus Vektoren"
+		},
+		"triangle-angle-calculator": {
+			"title": "Dreieck Winkelberechnung (Vektoren)",
+			"description": "Berechnet die Winkel eines Dreiecks aus drei verschiedenen Vektoren"
+		},
+		"layer-type-converter": {
+			"title": "Ebenenformen umrechnen",
+			"description": "Konvertiert zwischen den verschiedenen Ebenenformen"
+		}
+	},
+	"stochastics": {
+		"4-field-table": {
+			"title": "4-Felder-Tafel",
+			"description": "Vervollständigt eine 4 Felder Tafel",
+			"button-text": "Tafel vervollständigen"
+		}
+	}
 }

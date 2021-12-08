@@ -1,5 +1,5 @@
 <script lang="ts">
-import { _ } from 'svelte-i18n';
+	import { _ } from 'svelte-i18n';
 
 	import ListSelector from '../../lib/listSelector.svelte';
 	import type { ListSelectorElement } from '../../typings/ListSelectorElement';
@@ -12,7 +12,7 @@ import { _ } from 'svelte-i18n';
 		},
 		{
 			name: $_('vector.linear-dependency.title'),
-			description:$_('vector.linear-dependency.description'),
+			description: $_('vector.linear-dependency.description'),
 			route: '/vector/linear-checker'
 		},
 		{

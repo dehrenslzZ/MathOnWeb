@@ -3,7 +3,7 @@
 	import type { Vector } from 'src/typings/vector';
 	import VectorInput from '$lib/vector-input.svelte';
 	import { checkLinearDependency } from '$lib/vector/vector-dependency';
-import { _ } from 'svelte-i18n';
+	import { _ } from 'svelte-i18n';
 
 	let v1 = new DefaultsProvider().getVectorDefault();
 	let v2 = new DefaultsProvider().getVectorDefault();
@@ -33,7 +33,8 @@ import { _ } from 'svelte-i18n';
 			<VectorInput vector={v1} />
 			<VectorInput vector={v2} />
 		</div>
-		<button class="calculate-button" on:click={() => calc(v1, v2)}>{$_('general.calculate')}</button>
+		<button class="calculate-button" on:click={() => calc(v1, v2)}>{$_('general.calculate')}</button
+		>
 		<div class="result-form">
 			{#if resultText != ''}
 				{resultText}

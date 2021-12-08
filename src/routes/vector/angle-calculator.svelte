@@ -3,7 +3,7 @@
 	import type { Vector } from '../../typings/vector';
 	import { calculateAngleFromVectors } from '$lib/vector/angle-calculator';
 	import { DefaultsProvider } from '$lib/defaults-provider';
-import { _ } from 'svelte-i18n';
+	import { _ } from 'svelte-i18n';
 
 	let resultValue = '';
 	let vectorA = new DefaultsProvider().getVectorDefault();
