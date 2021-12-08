@@ -33,7 +33,7 @@ import { _ } from 'svelte-i18n';
 			<VectorInput vector={v1} />
 			<VectorInput vector={v2} />
 		</div>
-		<button class="calculate-button" on:click={() => calc(v1, v2)}>calculate</button>
+		<button class="calculate-button" on:click={() => calc(v1, v2)}>{$_('general.calculate')}</button>
 		<div class="result-form">
 			{#if resultText != ''}
 				{resultText}
