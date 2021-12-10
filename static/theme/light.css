@@ -18,6 +18,7 @@
     --calculator-data-display-background: #4b4b4b;
     --inverted-text-color: white;
     --result-form-color: #b8b8b8;
+    --footer-background: #dddddd;
 }
 body {
     background: white; overflow: hidden
