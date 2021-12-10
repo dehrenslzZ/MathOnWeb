@@ -18,6 +18,11 @@
 			name: $_('basic.function-solver.title'),
 			description: $_('basic.function-solver.description'),
 			route: '/basic/function-solver'
+		},
+		{
+			name: $_('basic.faculty.title'),
+			description: $_('basic.faculty.description'),
+			route: '/basic/faculty'
 		}
 	];
 </script>
