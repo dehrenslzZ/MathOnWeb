@@ -30,6 +30,10 @@
 		"faculty": {
 			"title": "faculty calculator",
 			"description": "calculates the faculty of a value"
+		},
+		"logarithm": {
+			"title": "logarithm calculator",
+			"description": "calculates the logarithm of a number"
 		}
 	},
 	"vector": {

@@ -30,6 +30,10 @@
 		"faculty": {
 			"title": "Fakultät berechnen",
 			"description": "Berechnet die Fakultät einer Zahl"
+		},
+		"logarithm": {
+			"title": "Logarithmus berechnen",
+			"description": "Berenchet den Logarithmus einer Zahl"
 		}
 	},
 	"vector": {
