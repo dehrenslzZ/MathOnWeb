@@ -19,6 +19,7 @@
     --inverted-text-color: black;
     --result-form-color: white;
     --footer-background: #1e1d22;
+    --footer-text-color: #69676e;
 }
 body {
     background: #0b0d11; overflow: hidden
