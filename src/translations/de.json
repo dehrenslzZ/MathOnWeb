@@ -26,6 +26,10 @@
 		"function-solver": {
 			"title": "Funktionen lösen",
 			"description": "Löst einfache mathematische Funktionen"
+		},
+		"faculty": {
+			"title": "Fakultät berechnen",
+			"description": "Berechnet die Fakultät einer Zahl"
 		}
 	},
 	"vector": {

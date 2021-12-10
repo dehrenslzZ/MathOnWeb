@@ -26,6 +26,10 @@
 		"function-solver": {
 			"title": "function solver",
 			"description": "solves a math function"
+		},
+		"faculty": {
+			"title": "faculty calculator",
+			"description": "calculates the faculty of a value"
 		}
 	},
 	"vector": {
