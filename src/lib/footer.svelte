@@ -4,7 +4,7 @@
 
 
 <div class="footer">
-
+    <div class="footer-copyright">©{new Date().getFullYear()} Mathis Burger</div>
 </div>
 
 <style lang="scss">
