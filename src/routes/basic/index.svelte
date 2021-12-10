@@ -2,6 +2,7 @@
 	import ListSelector from '../../lib/listSelector.svelte';
 	import type { ListSelectorElement } from '../../typings/ListSelectorElement';
 	import { _ } from 'svelte-i18n';
+import { roundTo } from '$lib/custom-math';
 
 	let apps: ListSelectorElement[] = [
 		{
@@ -23,6 +24,11 @@
 			name: $_('basic.faculty.title'),
 			description: $_('basic.faculty.description'),
 			route: '/basic/faculty'
+		},
+		{
+			name: $_('basic.logarithm.title'),
+			description: $_('basic.logarithm.description'),
+			route: '/basic/logarithm'
 		}
 	];
 </script>
