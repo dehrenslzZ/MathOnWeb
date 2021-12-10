@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Navbar from '$lib/navbar.svelte';
+	import Footer from '$lib/footer.svelte';
 	import { theme } from '../lib/theme';
 	import '../i18n.ts';
 	import { waitLocale } from 'svelte-i18n';
@@ -21,4 +22,5 @@
 {#await preload() then _}
 	<Navbar />
 	<slot />
+	<Footer />
 {/await}
