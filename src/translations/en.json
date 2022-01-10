@@ -72,6 +72,10 @@
 			"title": "4 Field table completer",
 			"description": "Completes a 4 field table, if enough values are given",
 			"button-text": "Complete table"
+		},
+		"ncr-calculator": {
+			"title": "nCr calculator",
+			"description": "Calculates the nCr of tan stochastical calculation"
 		}
 	}
 }

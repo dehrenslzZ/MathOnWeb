@@ -10,8 +10,8 @@
 			route: '/stochastics/4-field-table-completer'
 		},
 		{
-			name: 'NCR',
-			description: 'NCR',
+			name: $_('stochastics.ncr-calculator.title'),
+			description: $_('stochastics.ncr-calculator.description'),
 			route: '/stochastics/ncr-calculator'
 		}
 	];

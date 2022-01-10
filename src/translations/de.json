@@ -72,6 +72,10 @@
 			"title": "4-Felder-Tafel",
 			"description": "Vervollständigt eine 4 Felder Tafel",
 			"button-text": "Tafel vervollständigen"
+		},
+		"ncr-calculator": {
+			"title": "nCr berechnen",
+			"description": "Berechnet den nCr Wert einer stochastischen Berechnung"
 		}
 	}
 }
