@@ -1,5 +1,6 @@
 {
 	"indexText": "MathOnWeb is an open source web application that executes complex math operations. Therefore it must be very fast to provide an acceptable user experience. This is the reason why it does not use a virtualDOM like React. It uses the default DOM of ES6, supported by the most modern browsers natively. It does not use any type of virtualization. Furthermore it uses Typescript, which is typesafe and has some performance improvements. I would appreciate it, if you suppport this project on",
+	"notFound": "There is no resouce under this URL. If there should be a feature running, contact the server administrator so he can update to the latest version of MathOnWeb.",
 	"navbar": {
 		"home": "Home",
 		"basic": "Basic",
@@ -26,6 +27,14 @@
 		"function-solver": {
 			"title": "function solver",
 			"description": "solves a math function"
+		},
+		"faculty": {
+			"title": "faculty calculator",
+			"description": "calculates the faculty of a value"
+		},
+		"logarithm": {
+			"title": "logarithm calculator",
+			"description": "calculates the logarithm of a number"
 		}
 	},
 	"vector": {
@@ -63,6 +72,10 @@
 			"title": "4 Field table completer",
 			"description": "Completes a 4 field table, if enough values are given",
 			"button-text": "Complete table"
+		},
+		"ncr-calculator": {
+			"title": "nCr calculator",
+			"description": "Calculates the nCr of tan stochastical calculation"
 		}
 	}
 }

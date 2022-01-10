@@ -8,6 +8,11 @@
 			name: $_('stochastics.4-field-table.title'),
 			description: $_('stochastics.4-field-table.description'),
 			route: '/stochastics/4-field-table-completer'
+		},
+		{
+			name: $_('stochastics.ncr-calculator.title'),
+			description: $_('stochastics.ncr-calculator.description'),
+			route: '/stochastics/ncr-calculator'
 		}
 	];
 </script>

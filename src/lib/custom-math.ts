@@ -1,10 +1,9 @@
 /**
+ * This method rounds thhe given number to the fixed number of decimals
  *
  * @param val the initial number
  * @param decimals the number of decimals after the komma
  * @returns the rounded value
- *
- * This method rounds thhe given number to the fixed number of decimals
  */
 function roundTo(val: number, decimals: number): number {
 	const multiplicator = Math.pow(10, decimals);
@@ -13,4 +12,21 @@ function roundTo(val: number, decimals: number): number {
 	return +pre.toFixed(decimals);
 }
 
-export { roundTo };
+/**
+ * Calculates the faculty of the given number and
+ * returns it.
+ *
+ * @param num The´number that faculty should be calculated
+ * @returns The faculty value of the given number
+ */
+function faculty(num: number): number {
+	let cache = 1;
+	let run = 1;
+	while (run <= num) {
+		cache = cache * run;
+		run++;
+	}
+	return cache;
+}
+
+export { roundTo, faculty };

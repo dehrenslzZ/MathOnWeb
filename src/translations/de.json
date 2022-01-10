@@ -1,5 +1,6 @@
 {
 	"indexText": "MathOnWeb ist eine open source Webanwendung, welche gebaut wurde, um effizient komplexe mathematische Operationen auszuführen. Deshalb muss diese Andwendung sehr schnell sein, um eine angenehme Nutzererfahrung zu bieten. Svelte benutzt keinen virtualDOM, sondern das native DOM des Browsers, was es sehr sehr schnell macht. Die Anwendung nutzt ES6, was von dem Großteil aller moderen Browser bereits unterstützt wird. Es wird in keinster Weise Virtualisierung genutzt, sondern nur die native Javascript-engine des Browsers. Des weiteren nutzt das Project Typescript, was eine große Type-safety und ein einige Performance Vorteile bietet. Ich würde mich freuen, würden sie einen Blick auf mein Projekt werfen.",
+	"notFound": "Die angefragte Seite konnte nicht gefunden werden. Falls unter dieser URL ein Feature vorhanden sein sollte, kontaktieren sie den Betreiber dieser Instanz, damit dieser die neuste Version von MathOnWeb installiert.",
 	"navbar": {
 		"home": "Home",
 		"basic": "Standard",
@@ -26,6 +27,14 @@
 		"function-solver": {
 			"title": "Funktionen lösen",
 			"description": "Löst einfache mathematische Funktionen"
+		},
+		"faculty": {
+			"title": "Fakultät berechnen",
+			"description": "Berechnet die Fakultät einer Zahl"
+		},
+		"logarithm": {
+			"title": "Logarithmus berechnen",
+			"description": "Berenchet den Logarithmus einer Zahl"
 		}
 	},
 	"vector": {
@@ -63,6 +72,10 @@
 			"title": "4-Felder-Tafel",
 			"description": "Vervollständigt eine 4 Felder Tafel",
 			"button-text": "Tafel vervollständigen"
+		},
+		"ncr-calculator": {
+			"title": "nCr berechnen",
+			"description": "Berechnet den nCr Wert einer stochastischen Berechnung"
 		}
 	}
 }
