@@ -15,7 +15,7 @@ function roundTo(val: number, decimals: number): number {
 /**
  * Calculates the faculty of the given number and
  * returns it.
- * 
+ *
  * @param num The´number that faculty should be calculated
  * @returns The faculty value of the given number
  */

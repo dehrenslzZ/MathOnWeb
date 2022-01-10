@@ -2,7 +2,7 @@
 	import ListSelector from '../../lib/listSelector.svelte';
 	import type { ListSelectorElement } from '../../typings/ListSelectorElement';
 	import { _ } from 'svelte-i18n';
-import { roundTo } from '$lib/custom-math';
+	import { roundTo } from '$lib/custom-math';
 
 	let apps: ListSelectorElement[] = [
 		{

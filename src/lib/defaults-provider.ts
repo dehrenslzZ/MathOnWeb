@@ -62,6 +62,6 @@ export class DefaultsProvider implements DefaultsProviderInterface {
 	 * @returns The generated NCR
 	 */
 	getDefaultNCR(): NCR {
-		return {n: 0, k: 0};
+		return { n: 0, k: 0 };
 	}
 }
