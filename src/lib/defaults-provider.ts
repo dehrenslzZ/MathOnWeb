@@ -1,4 +1,5 @@
 import type { GeoLayerParameter, GeoLayerCoordinate } from '$src/typings/geo-layer';
+import type { NCR } from '$src/typings/ncr';
 import type { Triangle } from '$src/typings/triangle';
 import type { Vector } from '$src/typings/vector';
 
@@ -7,6 +8,7 @@ interface DefaultsProviderInterface {
 	getGeoLayerParameterDefault(): GeoLayerParameter;
 	getGeoLayerCoordinateDefault(): GeoLayerCoordinate;
 	getDefaultTriangle(): Triangle;
+	getDefaultNCR(): NCR;
 }
 
 // Provides some functions to generate default values.
@@ -53,5 +55,13 @@ export class DefaultsProvider implements DefaultsProviderInterface {
 	 */
 	getVectorDefault(): Vector {
 		return { x: 0, y: 0, z: 0 };
+	}
+
+	/**
+	 * Returns a default NCR.
+	 * @returns The generated NCR
+	 */
+	getDefaultNCR(): NCR {
+		return {n: 0, k: 0};
 	}
 }
