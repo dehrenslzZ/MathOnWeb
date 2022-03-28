@@ -72,6 +72,6 @@ export class DefaultsProvider implements DefaultsProviderInterface {
 	 * @returns The generated benulli chain
 	 */
 	getDefaultBenulliChain(): Benulli {
-		return {n: 0, p: 0, k: 0};
+		return { n: 0, p: 0, k: 0 };
 	}
 }
