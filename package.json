@@ -1,5 +1,5 @@
 {
-	"name": "mathonweb",
+	"name": "mathonweb-serverless",
 	"version": "1.6.0",
 	"scripts": {
 		"dev": "svelte-kit dev",
