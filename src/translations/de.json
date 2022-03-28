@@ -76,6 +76,10 @@
 		"ncr-calculator": {
 			"title": "nCr berechnen",
 			"description": "Berechnet den nCr Wert einer stochastischen Berechnung"
+		},
+		"benulli-calculator": {
+			"title": "Benulli-Ketten-Rechner",
+			"description": "Berechnet das Ergebnis einer binomialen Benullikette"
 		}
 	}
 }

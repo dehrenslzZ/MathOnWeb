@@ -13,6 +13,11 @@
 			name: $_('stochastics.ncr-calculator.title'),
 			description: $_('stochastics.ncr-calculator.description'),
 			route: '/stochastics/ncr-calculator'
+		},
+		{
+			name: $_('stochastics.benulli-calculator.title'),
+			description: $_('stochastics.benulli-calculator.description'),
+			route: '/stochastics/benulli-calculator'
 		}
 	];
 </script>

@@ -91,7 +91,7 @@ function getVariable(func: string): string | null {
  * @returns The result of the eval calculation
  */
 function calculate(func: string, variable: number, variable_letter: string): number {
-	return eval(func.replaceAll(variable_letter, '' + variable));
+	return eval(func.replace(variable_letter, '' + variable));
 }
 
 export default solveFunction;

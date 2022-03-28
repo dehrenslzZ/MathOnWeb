@@ -36,3 +36,4 @@ svelte => 3.44.0<br>
 svelte/kit => 1.0.0-next.195<br>
 prettier => 2.2.1<br>
 typescript => 4.0.0<br>
+compiler => ES2020

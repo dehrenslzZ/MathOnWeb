@@ -1,3 +1,4 @@
+import type { Benulli } from '$src/typings/benulli';
 import type { GeoLayerParameter, GeoLayerCoordinate } from '$src/typings/geo-layer';
 import type { NCR } from '$src/typings/ncr';
 import type { Triangle } from '$src/typings/triangle';
@@ -9,6 +10,7 @@ interface DefaultsProviderInterface {
 	getGeoLayerCoordinateDefault(): GeoLayerCoordinate;
 	getDefaultTriangle(): Triangle;
 	getDefaultNCR(): NCR;
+	getDefaultBenulliChain(): Benulli;
 }
 
 // Provides some functions to generate default values.
@@ -63,5 +65,13 @@ export class DefaultsProvider implements DefaultsProviderInterface {
 	 */
 	getDefaultNCR(): NCR {
 		return { n: 0, k: 0 };
+	}
+
+	/**
+	 * Returns the default benulli chain.
+	 * @returns The generated benulli chain
+	 */
+	getDefaultBenulliChain(): Benulli {
+		return { n: 0, p: 0, k: 0 };
 	}
 }
