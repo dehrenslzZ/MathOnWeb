@@ -76,6 +76,10 @@
 		"ncr-calculator": {
 			"title": "nCr calculator",
 			"description": "Calculates the nCr of tan stochastical calculation"
+		},
+		"benulli-calculator": {
+			"title": "Benulli chain calculator",
+			"description": "Calculates the result of a benulli chain"
 		}
 	}
 }
