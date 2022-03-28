@@ -1,6 +1,6 @@
 {
 	"name": "mathonweb-serverless",
-	"version": "1.6.0",
+	"version": "1.6.5",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build && node src/fix-typos.js",
