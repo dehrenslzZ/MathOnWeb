@@ -1,0 +1,1 @@
+import{r as c}from"./custom-math-d14d206d.js";function o(t,r){return t.x*r.x+t.y*r.y+t.z*r.z}function a(t,r){return Math.sqrt(t.x**2+t.y**2+t.z**2)*Math.sqrt(r.x**2+r.y**2+r.z**2)}function n(t,r){return c(Math.acos(o(t,r)/a(t,r))*(180/Math.PI),2)}export{o as a,n as c};
