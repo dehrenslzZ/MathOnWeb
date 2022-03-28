@@ -1,5 +1,5 @@
 export interface Benulli {
-    n: number;
-    p: number;
-    k: number;
+	n: number;
+	p: number;
+	k: number;
 }
