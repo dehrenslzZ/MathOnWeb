@@ -10,6 +10,7 @@ If you hosted the application yourself, you can validate if your current version
 
 | Version | Secure             |
 | ------- | ------------------ |
+| 1.6.5   | :x:                |
 | 1.6.0   | :white_check_mark: |
 | 1.5.3   | :white_check_mark: |
 | 1.4.0   | :white_check_mark: |
