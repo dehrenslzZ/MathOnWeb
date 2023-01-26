@@ -1,8 +1,8 @@
 <script lang="ts">
-	import nerdamer from "nerdamer/nerdamer.core";
-	import "nerdamer/Solve";
-	import "nerdamer/Algebra";
-	import "nerdamer/Extra";
+	import nerdamer from 'nerdamer/nerdamer.core';
+	import 'nerdamer/Solve';
+	import 'nerdamer/Algebra';
+	import 'nerdamer/Extra';
 	import Snackbar from '$lib/snackbar.svelte';
 	import { _ } from 'svelte-i18n';
 
