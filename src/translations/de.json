@@ -60,11 +60,17 @@
 		"is-vector-on-line": {
 			"title": "Geraden Vektor",
 			"description": "Prüft, ob ein Vektor auf einer gegebenen Gerade liegt",
-			"not-on-line": "liegt nicht auf der Geraden."
+			"not-on-line": "liegt nicht auf der Geraden.",
+			"tooltip": {
+				"vector": "Ein Vektor einer möglichen Gerade"
+			}
 		},
 		"get-vector-line": {
 			"title": "Vektorgerade",
-			"description": "Generiert eine Gerade aus Vektoren"
+			"description": "Generiert eine Gerade aus Vektoren",
+			"tooltip": {
+				"vector": "Ein Vektor der benötigt wird zur Berechnung einer Gerade"
+			}
 		},
 		"triangle-angle-calculator": {
 			"title": "Dreieck Winkelberechnung (Vektoren)",
