@@ -74,7 +74,10 @@
 		},
 		"triangle-angle-calculator": {
 			"title": "Dreieck Winkelberechnung (Vektoren)",
-			"description": "Berechnet die Winkel eines Dreiecks aus drei verschiedenen Vektoren"
+			"description": "Berechnet die Winkel eines Dreiecks aus drei verschiedenen Vektoren",
+			"tooltip": {
+				"vector": "Ein Eck-Vektor des Dreiecks"
+			}
 		},
 		"layer-type-converter": {
 			"title": "Ebenenformen umrechnen",
