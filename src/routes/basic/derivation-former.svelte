@@ -3,12 +3,11 @@
 	import { _ } from 'svelte-i18n';
 
 	let func = '';
-	let wanted = '';
 	let resultExists = false;
 	let resultText = '';
 
 	function solve() {
-		let e = nerdamer(`solveEquations(${func}=${wanted})`);
+		let e = nerdamer(`diff(${func})`);
 		resultText = `The result for the variable is: ${e.text()}`;
 		resultExists = true;
 	}
@@ -19,8 +18,6 @@
 		<div class="function-flex">
 			<p>f(x)=</p>
 			<input class="function-input" bind:value={func} />
-			<p>=</p>
-			<input class="wanted-input" bind:value={wanted} />
 		</div>
 		<button class="calculate-button" on:click={solve}>{$_('general.calculate')}</button>
 		{#if resultExists}

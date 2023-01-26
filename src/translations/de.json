@@ -35,6 +35,10 @@
 		"logarithm": {
 			"title": "Logarithmus berechnen",
 			"description": "Berenchet den Logarithmus einer Zahl"
+		},
+		"derivation-former": {
+			"title": "Ableitungen",
+			"description": "Leitet eine Funktion ab"
 		}
 	},
 	"vector": {

@@ -35,6 +35,10 @@
 		"logarithm": {
 			"title": "logarithm calculator",
 			"description": "calculates the logarithm of a number"
+		},
+		"derivation-former": {
+			"title": "Derivation",
+			"description": "Calculates a derivation of a function"
 		}
 	},
 	"vector": {
