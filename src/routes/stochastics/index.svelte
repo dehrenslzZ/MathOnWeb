@@ -18,7 +18,12 @@
 			name: $_('stochastics.benulli-calculator.title'),
 			description: $_('stochastics.benulli-calculator.description'),
 			route: '/stochastics/benulli-calculator'
-		}
+		},
+        {
+            name: $_('stochastics.expectation-variety.title'),
+            description: $_('stochastics.expectation-variety.description'),
+            route: '/stochastics/expectation-variety'
+        }
 	];
 </script>
 

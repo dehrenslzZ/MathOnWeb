@@ -107,6 +107,13 @@
 				"p": "Die Wahrscheinlichkeit für einen Treffer (50% = 0.5)",
 				"k": "Die Anzahl an Treffern"
 			}
+		},
+		"expectation-variety": {
+			"title": "Erwartungswert und Varianz",
+			"description": "Berechnet beides aus Wahrscheinlichkeiten",
+			"tooltip": {
+
+			}
 		}
 	}
 }
