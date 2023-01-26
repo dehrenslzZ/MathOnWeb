@@ -1,6 +1,9 @@
 <script lang="ts">
+	import nerdamer from "nerdamer/nerdamer.core";
+	import "nerdamer/Solve";
+	import "nerdamer/Algebra";
+	import "nerdamer/Extra";
 	import Snackbar from '$lib/snackbar.svelte';
-	import solveFunction from '$lib/solve-function';
 	import { _ } from 'svelte-i18n';
 
 	let func = '';
@@ -11,18 +14,9 @@
 	let resultText = '';
 
 	function solve() {
-		const [result, err] = solveFunction(func, +wanted);
-		if (err.errorOccurred) {
-			snackbarText = err.message;
-			showSnackbar = true;
-			setTimeout(() => {
-				showSnackbar = false;
-				snackbarText = '';
-			}, 2000);
-		} else {
-			resultText = `The result for the variable is: ${result}`;
-			resultExists = true;
-		}
+		let e = nerdamer(`solveEquations(${func}=${wanted})`);
+		resultText = `The result for the variable is: ${e.text()}`;
+		resultExists = true;
 	}
 </script>
 
@@ -30,9 +24,6 @@
 	<Snackbar message={snackbarText} />
 {/if}
 <div class="centered">
-	<div class="experimental-text">
-		{$_('general.experimental-text')}
-	</div>
 	<div class="container">
 		<div class="function-flex">
 			<p>f(x)=</p>
