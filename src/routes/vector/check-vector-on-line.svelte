@@ -35,10 +35,10 @@
 <div class="centered">
 	<div class="container">
 		<div class="vector-inline">
-			<VectorInput vector={v1} />
-			<VectorInput vector={v2} />
-			<VectorInput vector={v3} />
-			<VectorInput vector={v4} />
+			<VectorInput vector={v1} tooltip={$_('vector.is-vector-on-line.tooltip.vector')} />
+			<VectorInput vector={v2} tooltip={$_('vector.is-vector-on-line.tooltip.vector')} />
+			<VectorInput vector={v3} tooltip={$_('vector.is-vector-on-line.tooltip.vector')} />
+			<VectorInput vector={v4} tooltip={$_('vector.is-vector-on-line.tooltip.vector')} />
 		</div>
 		<button class="calculate-button" on:click={() => calc()}>{$_('general.calculate')}</button>
 		<div class="result-form">

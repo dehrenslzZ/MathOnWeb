@@ -1,0 +1,24 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  max-width: 40vw;
+  height: fit-content;
+  text-align: center;
+  background-color: var(--list-selector-background);
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
