@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {multiview} from "$lib/multiview";
+	import { multiview } from '$lib/multiview';
 
 	let isIframe = window.self !== window.top;
 	let shouldShrink = !isIframe && $multiview;

@@ -4,7 +4,7 @@
 	import Fa from 'svelte-fa';
 	import { faAlignJustify } from '@fortawesome/free-solid-svg-icons';
 	import { _ } from 'svelte-i18n';
-	import {multiview} from "$lib/multiview";
+	import { multiview } from '$lib/multiview';
 	let navbarExtended = false;
 
 	/**
@@ -26,7 +26,11 @@
 	let shouldShrink = !isIframe && $multiview;
 </script>
 
-<div id="navbar" class={`navbar ${navbarExtended ? 'extended' : ''}`} style={shouldShrink ? 'width: 49vw !important' : undefined}>
+<div
+	id="navbar"
+	class={`navbar ${navbarExtended ? 'extended' : ''}`}
+	style={shouldShrink ? 'width: 49vw !important' : undefined}
+>
 	<div
 		class="navbar-toggler"
 		on:click={() => {
@@ -42,8 +46,7 @@
 		<a href="/stochastics">{$_('navbar.stochastics')}</a>
 	</div>
 	<div class="navbar-actions" style={shouldShrink ? 'margin-right: 30px !important;' : undefined}>
-
-		{#if (!isIframe)}
+		{#if !isIframe}
 			<MultiviewSelector />
 		{/if}
 		<ThemeSelector />
