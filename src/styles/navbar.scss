@@ -1,5 +1,6 @@
 .navbar {
-	width: 99vw;
+	width: 100vw;
+	max-width: 99%;
 	height: 70px;
 	background: var(--navbar-background);
 	border-radius: 10px;
@@ -69,7 +70,7 @@
 		display: grid;
 		align-items: center;
 		justify-content: flex-start;
-		width: 99vw;
+		width: 100vw;
 		position: absolute;
 		left: 50%;
 		top: 8px;
