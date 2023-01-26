@@ -13,6 +13,7 @@
 		resultExists = true;
 	}
 </script>
+
 <div class="centered">
 	<div class="container">
 		<div class="function-flex">
