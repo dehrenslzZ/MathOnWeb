@@ -28,7 +28,10 @@
 	<div class="container">
 		<div class="vector-inline">
 			<VectorInput vector={VEC_A} tooltip={$_('vector.triangle-angle-calculator.tooltip.vector')} />
-			<VectorInput vector={VEC_B} tooltip={$_('vector.triangle-angle-calculator.tooltip.vector')}} />
+			<VectorInput
+				vector={VEC_B}
+				tooltip="{$_('vector.triangle-angle-calculator.tooltip.vector')}}"
+			/>
 			<VectorInput vector={VEC_C} tooltip={$_('vector.triangle-angle-calculator.tooltip.vector')} />
 		</div>
 		<button class="calculate-button" on:click={() => calc()}>{$_('general.calculate')}</button>
