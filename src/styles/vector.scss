@@ -1,9 +1,9 @@
 .vector-inline {
-	display: grid;
-	place-items: center;
+	display: flex;
+	justify-content: space-between;
 	grid-template-columns: repeat(2, 50%);
 	height: 50%;
-	width: 90vw;
+	width: 90%;
 }
 
 @media only screen and (max-width: 680px) {

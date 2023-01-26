@@ -1,8 +1,10 @@
 <script lang="ts">
 	import ThemeSelector from './theme-selector.svelte';
+	import MultiviewSelector from './multiview-selector.svelte';
 	import Fa from 'svelte-fa';
 	import { faAlignJustify } from '@fortawesome/free-solid-svg-icons';
 	import { _ } from 'svelte-i18n';
+	import {multiview} from "$lib/multiview";
 	let navbarExtended = false;
 
 	/**
@@ -19,9 +21,12 @@
 
 	// Adding click listener to the whole window
 	window.addEventListener('click', handleClick);
+
+	let isIframe = window.self !== window.top;
+	let shouldShrink = !isIframe && $multiview;
 </script>
 
-<div id="navbar" class={`navbar ${navbarExtended ? 'extended' : ''}`}>
+<div id="navbar" class={`navbar ${navbarExtended ? 'extended' : ''}`} style={shouldShrink ? 'width: 49vw !important' : undefined}>
 	<div
 		class="navbar-toggler"
 		on:click={() => {
@@ -36,7 +41,11 @@
 		<a href="/vector">{$_('navbar.vector')}</a>
 		<a href="/stochastics">{$_('navbar.stochastics')}</a>
 	</div>
-	<div class="navbar-actions">
+	<div class="navbar-actions" style={shouldShrink ? 'margin-right: 30px !important;' : undefined}>
+
+		{#if (!isIframe)}
+			<MultiviewSelector />
+		{/if}
 		<ThemeSelector />
 	</div>
 </div>

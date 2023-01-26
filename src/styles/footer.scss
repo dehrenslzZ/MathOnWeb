@@ -2,11 +2,12 @@
 	width: 100vw;
 	height: 75px;
 	background: var(--footer-background);
-	position: absolute;
-	bottom: 0;
-	left: 0;
+	position: absolute !important;
+	bottom: 0 !important;
+	left: 0 !important;
 	display: grid;
 	place-items: center;
+	z-index: 1;
 	grid-template-columns: 20% 80%;
 }
 
