@@ -29,7 +29,12 @@
 			name: $_('basic.logarithm.title'),
 			description: $_('basic.logarithm.description'),
 			route: '/basic/logarithm'
-		}
+		},
+        {
+            name: $_('basic.derivation-former.title'),
+            description: $_('basic.derivation-former.description'),
+            route: '/basic/derivation-former'
+        }
 	];
 </script>
 

@@ -1,12 +1,9 @@
 <script lang="ts">
 	import nerdamer from 'nerdamer/all.min';
-	import Snackbar from '$lib/snackbar.svelte';
 	import { _ } from 'svelte-i18n';
 
 	let func = '';
 	let wanted = '';
-	let showSnackbar = false;
-	let snackbarText = '';
 	let resultExists = false;
 	let resultText = '';
 
@@ -16,10 +13,6 @@
 		resultExists = true;
 	}
 </script>
-
-{#if showSnackbar}
-	<Snackbar message={snackbarText} />
-{/if}
 <div class="centered">
 	<div class="container">
 		<div class="function-flex">
