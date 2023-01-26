@@ -75,11 +75,16 @@
 		},
 		"ncr-calculator": {
 			"title": "nCr calculator",
-			"description": "Calculates the nCr of tan stochastical calculation"
+			"description": "Calculates the nCr of tan stochastical calculation",
+			"tooltip": "Default type of input for a NCR"
 		},
 		"benulli-calculator": {
 			"title": "Benulli chain calculator",
-			"description": "Calculates the result of a benulli chain"
+			"description": "Calculates the result of a benulli chain",
+			"tooltip": {
+				"n": "Amount of tries",
+				"p": "Propability of a hit",
+				"k": "Amount of hits"
 		}
 	}
 }
