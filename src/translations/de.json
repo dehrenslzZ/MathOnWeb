@@ -92,7 +92,8 @@
 		},
 		"ncr-calculator": {
 			"title": "nCr berechnen",
-			"description": "Berechnet den nCr Wert einer stochastischen Berechnung"
+			"description": "Berechnet den nCr Wert einer stochastischen Berechnung",
+			"tooltip": "Schreibweise zum Eingeben eines NCR"
 		},
 		"benulli-calculator": {
 			"title": "Benulli-Ketten-Rechner",
