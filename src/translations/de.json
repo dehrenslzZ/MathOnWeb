@@ -97,7 +97,12 @@
 		},
 		"benulli-calculator": {
 			"title": "Benulli-Ketten-Rechner",
-			"description": "Berechnet das Ergebnis einer binomialen Benullikette"
+			"description": "Berechnet das Ergebnis einer binomialen Benullikette",
+			"tooltip": {
+				"n": "Die Anzahl an Durchführungen",
+				"p": "Die Wahrscheinlichkeit für einen Treffer (50% = 0.5)",
+				"k": "Die Anzahl an Treffern"
+			}
 		}
 	}
 }

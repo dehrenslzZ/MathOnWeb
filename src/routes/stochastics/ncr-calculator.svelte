@@ -11,7 +11,6 @@
 <div class="centered">
 	<div class="container">
 		<NcrInput bind:bindValue={input} tooltip={$_('stochastics.ncr-calculator.tooltip')} />
-
 		<div class="result-form">
 			{calculateNCr(input)}
 		</div>
