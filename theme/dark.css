@@ -20,6 +20,10 @@
     --result-form-color: white;
     --footer-background: #1e1d22;
     --footer-text-color: #69676e;
+    --toggle-multiview-background: #57575a;
+    --toggle-multiview-border: #434344;
+    --toggle-multiview-selected: #343ca5;
+    --toggle-multiview-selected-border: #292e85;
 }
 body {
     background: #0b0d11; overflow: hidden
