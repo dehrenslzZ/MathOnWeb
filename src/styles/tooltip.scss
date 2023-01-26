@@ -5,17 +5,15 @@
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
-  height: 30px;
+  max-width: 40vw;
+  height: fit-content;
   text-align: center;
   background-color: var(--list-selector-background);
   color: var(--text-color);
-  padding: 5px;
+  padding: 10px;
   border-radius: 6px;
   font-size: 2em;
   font-family: 'Roboto', sans-serif;
-
-  /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
 }

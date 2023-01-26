@@ -32,14 +32,14 @@
 <div class="centered">
 	<div class="container">
 		<div class="vector-inline">
-			<VectorInput vector={vectorA} />
-			<VectorInput vector={vectorB} />
+			<VectorInput vector={vectorA} tooltip={$_('vector.angle-calculator.tooltip.vector-a')} />
+			<VectorInput vector={vectorB} tooltip={$_('vector.angle-calculator.tooltip.vector-b')} />
 		</div>
 		<button class="calculate-button" on:click={() => calculateAngle(vectorA, vectorB)}
 			>{$_('general.calculate')}</button
 		>
 		<div class="result-form">
-			{#if resultValue != ''}
+			{#if resultValue !== ''}
 				{$_('vector.angle-calculator.the-angle-is')} {resultValue}°
 			{/if}
 		</div>

@@ -41,13 +41,21 @@
 		"angle-calculator": {
 			"title": "Winkelberechnung (Vektoren)",
 			"description": "Berechnet den Schnittwinkel von zwei Vektoren",
-			"the-angle-is": "Der Winkel beträgt"
+			"the-angle-is": "Der Winkel beträgt",
+			"tooltip": {
+				"vector-a": "Der erste Vektor der zur Berechnung des Winkels benutzt wird",
+				"vector-b": "Der zweite Vektor der zur Berechnung des Winkels benutzt wird"
+			}
 		},
 		"linear-dependency": {
 			"title": "Lineare Abhängigkeit",
 			"description": "Prüft, ob zwei Vektoren linear abhängig sind",
 			"is-dependent": "Die Vektoren sind linear abhängig",
-			"is-independent": "Die Vektoren sind linear unabhängig"
+			"is-independent": "Die Vektoren sind linear unabhängig",
+			"tooltip": {
+				"vector-a": "Der Winkel der überprüft werden soll",
+				"vector-b": "Der Winkel dessen lineare Abhängigkeit zum anderen Winkel geprüft werden soll"
+			}
 		},
 		"is-vector-on-line": {
 			"title": "Geraden Vektor",

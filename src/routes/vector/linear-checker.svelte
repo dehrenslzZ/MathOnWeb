@@ -30,8 +30,8 @@
 <div class="centered">
 	<div class="container">
 		<div class="vector-inline">
-			<VectorInput vector={v1} />
-			<VectorInput vector={v2} />
+			<VectorInput vector={v1} tooltip={$_('vector.linear-dependency.tooltip.vector-a')} />
+			<VectorInput vector={v2} tooltip={$_('vector.linear-dependency.tooltip.vector-b')} />
 		</div>
 		<button class="calculate-button" on:click={() => calc(v1, v2)}>{$_('general.calculate')}</button
 		>
