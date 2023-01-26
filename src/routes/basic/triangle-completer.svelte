@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { DefaultsProvider } from '$lib/defaults-provider';
 	import Snackbar from '$lib/snackbar.svelte';
-	import Tooltip from '$lib/tooltip.svelte';
 	import solveTriangle from '$lib/triangle-calculator';
 	import { _ } from 'svelte-i18n';
 	let triangle = new DefaultsProvider().getDefaultTriangle();
@@ -53,7 +52,6 @@
 				on:change={(event) => onChange(event, 'kathete1')}
 				value={triangle.kathete1}
 			/>
-			<Tooltip tooltip="Hallo" />
 			<input
 				type="number"
 				class="input-kath-bottom"
