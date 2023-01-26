@@ -41,7 +41,7 @@
 		<a href="/vector">{$_('navbar.vector')}</a>
 		<a href="/stochastics">{$_('navbar.stochastics')}</a>
 	</div>
-	<div class="navbar-actions">
+	<div class="navbar-actions" style={shouldShrink ? 'margin-right: 30px !important;' : undefined}>
 
 		{#if (!isIframe)}
 			<MultiviewSelector />

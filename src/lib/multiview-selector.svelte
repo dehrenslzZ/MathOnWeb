@@ -1,14 +1,17 @@
 <script lang="ts">
     import {multiview} from "$lib/multiview";
+    import Fa from "svelte-fa";
+    import {faWindowRestore} from "@fortawesome/free-solid-svg-icons";
 
-    function change(event: any) {
-        multiview.set(event.target.checked);
+    function change() {
+        multiview.set(!$multiview);
     }
 </script>
 
-<label class="switch">
-    <input type="checkbox" {multiview} on:change={(event) => change(event)} />
-    <span class="slider">
-		<div class="slider-icon" />
-	</span>
-</label>
+<button class={`multiview-button ${$multiview ? 'selected': ''}`} on:click={change}>
+    <Fa icon={faWindowRestore} />
+</button>
+
+<style lang="scss">
+    @import "../styles/multiview.scss";
+</style>

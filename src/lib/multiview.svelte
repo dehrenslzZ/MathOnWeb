@@ -19,7 +19,7 @@
     {:else }
         <div style="width: 49vw !important; height: 100vh !important; position: absolute; left: 0; top: 0">
             <Navbar />
-            <div style="width: 49vw !important;; height: 100vh !important;">
+            <div style="width: 49vw !important; height: 100vh !important;">
                 <slot />
             </div>
             <Footer />
