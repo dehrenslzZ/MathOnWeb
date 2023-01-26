@@ -53,8 +53,8 @@
 			"is-dependent": "Die Vektoren sind linear abhängig",
 			"is-independent": "Die Vektoren sind linear unabhängig",
 			"tooltip": {
-				"vector-a": "Der Winkel der überprüft werden soll",
-				"vector-b": "Der Winkel dessen lineare Abhängigkeit zum anderen Winkel geprüft werden soll"
+				"vector-a": "Der Vektor der überprüft werden soll",
+				"vector-b": "Der Vektor dessen lineare Abhängigkeit zum anderen Winkel geprüft werden soll"
 			}
 		},
 		"is-vector-on-line": {
