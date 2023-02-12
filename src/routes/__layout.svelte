@@ -1,6 +1,5 @@
 <script lang="ts">
-	import Navbar from '$lib/navbar.svelte';
-	import Footer from '$lib/footer.svelte';
+	import Multiview from '$lib/multiview.svelte';
 	import { theme } from '../lib/theme';
 	import '../i18n.ts';
 	import { waitLocale } from 'svelte-i18n';
@@ -20,7 +19,7 @@
 </svelte:head>
 
 {#await preload() then _}
-	<Navbar />
-	<slot />
-	<Footer />
+	<Multiview>
+		<slot />
+	</Multiview>
 {/await}
