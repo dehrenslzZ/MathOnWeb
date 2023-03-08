@@ -17,6 +17,7 @@
     --list-selector-hover-brightness: brightness(0.8);
     --calculator-data-display-background: #4b4b4b;
     --inverted-text-color: white;
+    --input-form-color: #b8b8b8;
     --result-form-color: #b8b8b8;
     --footer-background: #dddddd;
     --footer-text-color: #666666;
@@ -24,6 +25,13 @@
     --toggle-multiview-border: #696868;
     --toggle-multiview-selected: #4a52e5;
     --toggle-multiview-selected-border: #3940b9;
+    /*
+        calculator vars
+    */
+    --text-for-calculator: white;
+    --calculator-normal-button-color: #dcdcdc;
+    --calculator-action-button-color: #eb6715;
+    --calculator-extra-button: #b4b4b4;
 }
 body {
     background: white; overflow: hidden

@@ -17,6 +17,9 @@
 	width: 300px;
 	height: 50px;
 	font-size: 1.3em;
+	border-radius: 10px;
+	color: var(--text-color);
+	background: var(--input-form-color);
 	border: none;
 	outline: none;
 }
@@ -24,6 +27,9 @@
 	width: 100px;
 	height: 50px;
 	font-size: 1.3em;
+	color: var(--text-color);
+	border-radius: 10px;
+	background: var(--input-form-color);
 	border: none;
 	outline: none;
 }

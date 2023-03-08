@@ -7,6 +7,7 @@
 	font-size: 140px;
 	height: 100%;
 	text-align: center;
+	font-family: 'Roboto', thin;
 	margin-top: -20px;
 }
 .vector-flex {
@@ -18,7 +19,12 @@
 	gap: 3px;
 }
 .vector-flex input {
-	width: 40px;
-	height: 40px;
+	width: 45px;
+	height: 45px;
 	border: none;
+	background-color: var(--input-form-color);
+	border-radius: 10px;
+	font-family: 'Roboto';
+	color: var(--text-color);
+	padding-left: 8px;
 }

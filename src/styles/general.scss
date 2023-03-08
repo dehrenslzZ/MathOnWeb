@@ -33,12 +33,19 @@
 	display: grid;
 	place-items: center;
 	font-size: 2em;
+	font-family: 'Roboto', sans-serif;
+	border-radius: 10px;
 	text-overflow: clip;
+	color: var(--text-color);
 }
 .larger-input {
 	width: 75px;
 	height: 75px;
 	font-size: 1.3em;
+	border-radius: 10px;
+	background-color: var(--input-form-color);
+	color: var(--text-color);
+	padding-left: 1%;
 	border: none;
 	outline: none;
 }
@@ -63,4 +70,8 @@
 		margin-top: 60px;
 		transform: scale(1.2);
 	}
+}
+
+@font-face {
+	font-family: 'Roboto', sans-serif;
 }

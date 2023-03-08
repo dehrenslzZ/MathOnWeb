@@ -11,6 +11,7 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	border-radius: 10px;
 }
 
 .benulli-input-container p {
@@ -23,4 +24,9 @@
 	height: 50px;
 	outline: none;
 	border: none;
+	background-color: var(--input-form-color);
+	border-radius: 10px;
+	font-family: 'Roboto';
+	color: var(--text-color);
+	padding-left: 8px;
 }

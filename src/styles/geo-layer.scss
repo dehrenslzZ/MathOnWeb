@@ -7,6 +7,7 @@
 }
 .text-style-default {
 	color: var(--text-color);
+	font-family: 'Roboto', medium;
 	text-align: center;
 }
 .geo-layer .text {
@@ -21,6 +22,11 @@
 	width: 40px;
 	height: 40px;
 	border: none;
+	background-color: var(--input-form-color);
+	border-radius: 10px;
+	font-family: 'Roboto';
+	color: var(--text-color);
+	padding-left: 5px;
 }
 @media only screen and (max-width: 680px) {
 	.geo-layer .text-sm {

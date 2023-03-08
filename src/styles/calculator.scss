@@ -1,26 +1,30 @@
 .data-display {
-	width: 100%;
-	height: 100px;
+	width: 95%;
+	height: 90px;
 	outline: none;
 	padding: 0;
 	margin: 0;
-	border-radius: 0;
+	border-radius: 20px;
 	border: none;
 	font-size: 3em;
 	background: var(--calculator-data-display-background);
-	color: var(--inverted-text-color);
+	color: var(--text-for-calculator);
+	padding-left: 5%;
 }
 .button-row {
 	width: 100%;
 	display: grid;
 	place-items: center;
+	border: none;
+	outline: none;
 	grid-template-columns: repeat(4, 25%);
 }
 .container {
 	width: 27vw;
 	height: 90vh !important;
-	margin-top: 5%;
+	margin-top: 6%;
 	display: flex;
+	outline: none;
 	flex-direction: column;
 	align-items: center;
 	gap: 0px !important;
@@ -29,23 +33,24 @@
 
 @mixin btnBase($name, $background) {
 	.#{$name} {
-		width: 100%;
+		width: 95%;
 		aspect-ratio: 1/1;
 		font-size: x-large;
 		font-weight: bold;
-		color: white;
 		background: $background;
-		border: 1px solid black;
+		color: var(--text-for-calculator);
+		border-radius: 20px;
 		transition: 0.3s;
+		border: none;
 	}
 
 	.#{$name}:hover {
 		filter: brightness(1.4);
 	}
 }
-@include btnBase(normal-button, #313039);
-@include btnBase(action-button, #dc5f11);
-@include btnBase(extra-button, #9e9e9e);
+@include btnBase(normal-button, var(--calculator-data-display-background));
+@include btnBase(action-button, var(--calculator-action-button-color));
+@include btnBase(extra-button, var(--calculator-extra-button));
 
 @media only screen and (max-width: 680px) and (min-width: 350px) {
 	.container {

@@ -11,10 +11,16 @@
 	height: 50px;
 	outline: none;
 	border: none;
+	background-color: var(--input-form-color);
+	border-radius: 10px;
+	font-family: 'Roboto';
+	color: var(--text-color);
+	padding-left: 8px;
 }
 
 .ncr-input-symbols {
 	color: var(--text-color);
+	font-family: 'Roboto', medium;
 	font-size: 135px;
 	height: 100%;
 	text-align: center;
